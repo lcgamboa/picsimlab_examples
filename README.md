@@ -18,10 +18,10 @@ The .pzw file is a directory named **Picsimlab_workspace** with some files compr
 
 The structure of the unzipped file is this:
 - Picsimlab_workspace/
- - mdump_{bname}_{processor}.hex
- - parts_{bname}.pcf
- - picsimlab.ini
- - Readme.html
+   - mdump_{bname}_{processor}.hex
+   - parts_{bname}.pcf
+   - picsimlab.ini
+   - Readme.html
 
 The **mdump_{bname}_{processor}.hex** file is the .hex file to be loaded into the simulator. Where {bname} defines the board and {processor} defines the processor to be used;
 
@@ -39,12 +39,12 @@ And the **Readme.html** file contains information about the file. (Optional).
 
 The structure of example directory is this:
 - {bname}/{processor}/{example}
- - **mdump_{bname}_{processor}.hex (Mandatory)**
- - **parts_{bname}.pcf (Optional)**
- - **{example}.png (Mandatory)**
- - **picsimlab.ini (Mandatory)**
- - **Readme.html (Mandatory)**
- - **src/ (Optional)**
+   - **mdump_{bname}_{processor}.hex (Mandatory)**
+   - **parts_{bname}.pcf (Optional)**
+   - **{example}.png (Mandatory)**
+   - **picsimlab.ini (Mandatory)**
+   - **Readme.html (Mandatory)**
+   - **src/ (Optional)**
 
 ## How to make one example
 
@@ -53,9 +53,9 @@ The simplest way is using PICSimLab.
 2. With everything working, in the **File** menu, use the **Save Workspace** option to generate a .pzw file.
 3. Rename the .pzw file to .zip and unzipped it.
 4. Add in the unzipped directory: 
- - The **Readme.html** file containing the example information.
- - The **{example}.png** file with an example figure.
- - (Optional) One **src/** directory containing the source code, to be referenced by the **Readme.html** file
+   - The **Readme.html** file containing the example information.
+   - The **{example}.png** file with an example figure.
+   - (Optional) One **src/** directory containing the source code, to be referenced by the **Readme.html** file
 
 
 ## How to send the example
