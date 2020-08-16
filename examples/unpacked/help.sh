@@ -1,7 +1,9 @@
 #!/bin/bash 
-
 rm -Rf ../help/ ../examples/
 mkdir -p "../help/"
+cd ../unpacked_exp/
+./compress.sh
+cd ../unpacked/
 echo "<!DOCTYPE html>" >> ../help/examples_index.html 
 echo "<html><head>" >> ../help/examples_index.html 
 echo "<meta charset="utf-8" />" >> ../help/examples_index.html 
@@ -12,9 +14,10 @@ echo "<br><h1>PICSimLab Examples</h1>" >> ../help/examples_index.html
 echo "<br><h2>Boards:</h2>" >> ../help/examples_index.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
-echo "<br><a href="#$board">$board</a>" >> ../help/examples_index.html 
+echo "<br><a href=\"#$board\">$board</a>" >> ../help/examples_index.html 
 done
-echo "<br><a href="#parts">Examples by parts</a><br>" >> ../help/examples_index.html 
+echo "<br><a href=\"#parts\">Examples by parts</a>" >> ../help/examples_index.html 
+echo "<br><a href=\"#experimental\">Experimental boards examples</a><br><br>" >> ../help/examples_index.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
   cd $board	
@@ -50,6 +53,7 @@ do
   cd ..
 done
 ./parts.sh >> ../help/examples_index.html
+cat ../unpacked_exp/exp.html >> ../help/examples_index.html
 echo "</body></html>" >> ../help/examples_index.html 
 cd ..
 mv help examples
