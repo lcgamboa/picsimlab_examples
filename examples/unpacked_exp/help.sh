@@ -32,9 +32,13 @@ do
       cp -R "$name/$name.png" "../../../help/$board/$proc/$name/"
       echo "<tr><td><a name=\"${board}_${proc}_${name}\"></a>$name</td><td width=\"15%\"><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=200></a></td><td width=\"20%\"><a href=$board/$proc/$name/Readme.html>Help / Source Code</a>" >> ../../exp.html 
       echo "<td width=\"20%\"><a href=\"../pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../../exp.html 
-      echo "<td width=\"20%\"><a href=\"../../js_exp/picsimlab.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm)</a><br>" >> ../../exp.html 
-      echo "<a href=\"../../js_exp/picsimlab_mt.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm mt)</a><br>" >> ../../exp.html 
-      echo "<a href=\"../../js_exp/picsimlab_asmjs.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (asm.js)</a></td></tr>" >> ../../exp.html 
+      echo "<td width=\"20%\">" >> ../../exp.html
+      if [ ! -f "${name}/no_online" ]; then
+         echo "<a href=\"../../js_exp/picsimlab.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm)</a><br>" >> ../../exp.html 
+         echo "<a href=\"../../js_exp/picsimlab_mt.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm mt)</a><br>" >> ../../exp.html 
+         echo "<a href=\"../../js_exp/picsimlab_asmjs.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (asm.js)</a>" >> ../../exp.html
+      fi
+      echo "</td></tr>" >> ../../exp.html 
     done
     echo "</table></td></tr>" >> ../../exp.html
     cd ..

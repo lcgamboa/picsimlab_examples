@@ -16,7 +16,7 @@ do
       echo "board: $board  proc: $proc  directory: $name"	
       cp -R $name picsimlab_workspace/
       rm -Rf picsimlab_workspace/src
-      zip -r $name.pzw picsimlab_workspace -x \*.png
+      zip -r $name.pzw picsimlab_workspace -x \*no_online \*.png
       rm -Rf picsimlab_workspace
     done
     mkdir -p "../../../pzw/$board/$proc/"
