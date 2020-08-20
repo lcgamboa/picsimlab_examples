@@ -30,3 +30,4 @@ rsync -rvc pzw/ ../docs/pzw/
 rm -rf examples/ 
 rm -rf pzw/
 rm -rf pzw_exp/
+rm -f  unpacked_exp/exp.html
