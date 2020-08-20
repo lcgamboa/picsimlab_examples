@@ -61,5 +61,4 @@ cat ../unpacked_exp/exp.html >> ../help/examples_index.html
 echo "</body></html>" >> ../help/examples_index.html 
 cd ..
 mv help examples
-rm -Rf ../docs/examples
-mv examples/ ../docs/
+rsync -cr examples/ ../docs/examples/

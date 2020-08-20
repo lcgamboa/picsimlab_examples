@@ -27,5 +27,7 @@ do
 done
 ./help.sh
 cd ..
-rm -Rf ../docs/pzw
-mv pzw/ ../docs/
+rsync -r --size-only pzw/ ../docs/pzw/
+rm -rf examples/ 
+rm -rf pzw/
+rm -rf pzw_exp/

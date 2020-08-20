@@ -1,5 +1,4 @@
 #!/bin/bash 
-rm -Rf ../help/ ../examples/
 rm -Rf exp.html
 echo "<br><hr><br><a name=experimental ></a><h1>PICSimLab Examples (Experimental)</h1>" >> exp.html 
 echo "<br><h2>Boards:</h2>" >> exp.html 

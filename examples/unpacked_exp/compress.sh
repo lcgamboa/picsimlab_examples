@@ -1,5 +1,4 @@
 #!/bin/bash 
-
 rm -Rf ../pzw_exp/
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
@@ -27,5 +26,4 @@ do
 done
 ./help.sh
 cd ..
-rm -Rf ../docs/pzw_exp
-mv pzw_exp/ ../docs/
+rsync -r --size-only pzw_exp/ ../docs/pzw_exp/
