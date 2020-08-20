@@ -13,10 +13,9 @@ do
     for name in `find * -maxdepth 0 -type d 2> /dev/null`
     do
       echo "board: $board  proc: $proc  directory: $name"	
-      cp -R $name picsimlab_workspace/
-      rm -Rf picsimlab_workspace/src
-      zip -r $name.pzw picsimlab_workspace -x \*no_online \*.png 
-      rm -Rf picsimlab_workspace
+      mv $name picsimlab_workspace/
+      zip -rX $name.pzw picsimlab_workspace -x \*no_online \*.png  \*src/\*
+      mv picsimlab_workspace/ $name
     done
     mkdir -p "../../../pzw_exp/$board/$proc/"
     mv -f *.pzw "../../../pzw_exp/$board/$proc/"
@@ -26,4 +25,4 @@ do
 done
 ./help.sh
 cd ..
-rsync -r --size-only pzw_exp/ ../docs/pzw_exp/
+rsync -rvc pzw_exp/ ../docs/pzw_exp/
