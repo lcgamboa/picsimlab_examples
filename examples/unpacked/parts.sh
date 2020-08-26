@@ -12,7 +12,7 @@ done
 
 for part in "${parts[@]}";do
   echo  "<hr><br><h2><a name=\"${part// /_}\"></a>$part</h2>"
-  files=`grep "$part" */*/*/*.pcf`
+  files=`grep -m1 "$part" */*/*/*.pcf`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'`
     proc=`echo $file | awk -F/ '{print $2}'`
