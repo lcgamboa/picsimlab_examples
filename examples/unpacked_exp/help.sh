@@ -1,18 +1,19 @@
 #!/bin/bash 
 rm -Rf exp.html
-echo "<br><hr><br><a name=experimental ></a><h1>PICSimLab Examples (Experimental)</h1>" >> exp.html 
+echo "<a name=experimental ></a><h1>PICSimLab Examples (Experimental)</h1>" >> exp.html 
 echo "<br><h2>Boards:</h2>" >> exp.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
-echo "<br><a href="#$board">$board (Experimental)</a>" >> exp.html 
+echo "<br><a href="#$board">$board</a>" >> exp.html 
 done
-echo "<br><a href="#parts_">Examples by parts (Experimental)</a><br>" >> exp.html 
+echo "<br><a href=\"#parts_\">Examples by parts</a><br>" >> exp.html 
+echo "<br><a href=\"examples_index.html\">Stable boards examples</a><br><br>" >> exp.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
   cd $board	
   echo "board: $board"	
   mkdir -p "../../help/$board/"
-  echo "<hr><br><h1><a name="$board"></a>$board (Experimental)</h1>" >> ../exp.html 
+  echo "<hr><br><h1><a name="$board"></a>$board</h1>" >> ../exp.html 
   echo "<table style=\"width:98%\" border=\"1\">" >> ../exp.html 
   echo "<tr><th width=\"20%\">Processor</th><th>Description</th></tr>" >> ../exp.html 
   for proc in `find * -maxdepth 0 -type d,l 2> /dev/null`

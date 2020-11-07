@@ -17,7 +17,7 @@ do
 echo "<br><a href=\"#$board\">$board</a>" >> ../help/examples_index.html 
 done
 echo "<br><a href=\"#parts\">Examples by parts</a>" >> ../help/examples_index.html 
-echo "<br><a href=\"#experimental\">Experimental boards examples</a><br><br>" >> ../help/examples_index.html 
+echo "<br><br><a href=\"examples_index_exp.html\">Experimental boards examples</a><br><br>" >> ../help/examples_index.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
   cd $board	
@@ -57,8 +57,16 @@ do
   cd ..
 done
 ./parts.sh >> ../help/examples_index.html
-cat ../unpacked_exp/exp.html >> ../help/examples_index.html
 echo "</body></html>" >> ../help/examples_index.html 
+
+echo "<!DOCTYPE html>" >> ../help/examples_index_exp.html 
+echo "<html><head>" >> ../help/examples_index_exp.html 
+echo "<meta charset="utf-8" />" >> ../help/examples_index_exp.html 
+echo "<title>PICSimLab Examples List</title>" >> ../help/examples_index_exp.html 
+echo "</head>" >> ../help/examples_index_exp.html 
+echo "<body>" >> ../help/examples_index_exp.html 
+cat ../unpacked_exp/exp.html >> ../help/examples_index_exp.html
+echo "</body></html>" >> ../help/examples_index_exp.html 
 cd ..
 mv help examples
 rsync -cr examples/ ../docs/examples/
