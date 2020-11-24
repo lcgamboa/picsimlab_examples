@@ -5,7 +5,7 @@ declare -a parts=("7 Segments Display" "Buzzer" "D. Transfer function" "ETH w550
       	"LCD pcd8544"  \
 	"LCD ssd1306" "LED Matrix" "LEDs"  "MEM 24CXXX" "Potentiometers" \
         "Push buttons"  "Push buttons (Analogic)"  "RGB LED"  "RTC ds1307"  "RTC pfc8563" "SD Card" "Servo motor"\
-	"Signal Generator" "Step motor" "Switchs" "Temperature System" "VCD Dump" "VCD Dump (Analogic)" "VCD Play")
+	"Signal Generator" "Step motor" "Switchs" "Temperature System" "VCD Dump" "VCD Dump (Analogic)" "VCD Play" )
 
 echo "<hr><br><hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
 
@@ -15,7 +15,7 @@ done
 
 for part in "${parts[@]}";do
   echo  "<hr><br><h2><a name=\"${part// /_}\"></a>$part</h2>"
-  files=`grep -m1 "$part" */*/*/*.pcf`
+  files=`grep -m1 "$part" */*/*/*.pcf | cut -f1 -d:`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'`
     proc=`echo $file | awk -F/ '{print $2}'`

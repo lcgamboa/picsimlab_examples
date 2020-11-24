@@ -57,7 +57,7 @@ do
   cd ..
 done
 ./parts.sh >> ../help/examples_index.html
-echo "</body></html>" >> ../help/examples_index.html 
+echo "<br><br></body></html>" >> ../help/examples_index.html 
 
 echo "<!DOCTYPE html>" >> ../help/examples_index_exp.html 
 echo "<html><head>" >> ../help/examples_index_exp.html 
@@ -66,7 +66,7 @@ echo "<title>PICSimLab Examples List</title>" >> ../help/examples_index_exp.html
 echo "</head>" >> ../help/examples_index_exp.html 
 echo "<body>" >> ../help/examples_index_exp.html 
 cat ../unpacked_exp/exp.html >> ../help/examples_index_exp.html
-echo "</body></html>" >> ../help/examples_index_exp.html 
+echo "<br><br></body></html>" >> ../help/examples_index_exp.html 
 cd ..
 mv help examples
 rsync -cr examples/ ../docs/examples/
