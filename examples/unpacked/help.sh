@@ -30,7 +30,8 @@ do
     for name in `find * -maxdepth 0 -type d 2> /dev/null`
     do
       echo "<br><a href=\"#${board}_${proc}_${name}\">$proc/$name</a>" >> ../../../help/examples_index.html 
-    done	    
+    done
+    echo "<br>" >> ../../../help/examples_index.html    
     cd ..
   done	  
   for proc in `find * -maxdepth 0 -type d,l 2> /dev/null`
@@ -49,12 +50,12 @@ do
       cp -R "$name/src/" "../../../help/$board/$proc/$name/"
       cp -R "$name/$name.png" "../../../help/$board/$proc/$name/"
       echo "<hr><table style=\"width:100%\" border=\"0\">" >>  ../../../help/examples_index.html
-      echo "<tr><td colspan=4><a name=\"${board}_${proc}_${name}\"></a><div style=\"color:gray;\"><small>[$board/$proc/$name]</small></div>${html}<br><br></td></tr><tr><td width=\"15%\"><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=200></a></td>" >> ../../../help/examples_index.html 
-      echo "<td width=\"20%\"><a href=\"../pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../../../help/examples_index.html 
-      echo "<td width=\"20%\">" >> ../../../help/examples_index.html
+      echo "<tr><td colspan=4><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#$board'>$board</a>/<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"50%\" align=right><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=50%></a></td>" >> ../../../help/examples_index.html 
+      echo "<td width=\"20%\" align=center ><a href=\"../pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../../../help/examples_index.html 
+      echo "<td width=\"20%\" align=center >" >> ../../../help/examples_index.html
       if [ ! -f "${name}/no_online" ]; then
-      echo "<a href=\"../../js/picsimlab.html?../picsimlab_examples/pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm)</a><br>" >> ../../../help/examples_index.html 
-      echo "<a href=\"../../js/picsimlab_mt.html?../picsimlab_examples/pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm mt)</a><br>" >> ../../../help/examples_index.html 
+      echo "<a href=\"../../js/picsimlab.html?../picsimlab_examples/pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm)</a><br><br>" >> ../../../help/examples_index.html 
+      echo "<a href=\"../../js/picsimlab_mt.html?../picsimlab_examples/pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm mt)</a><br><br>" >> ../../../help/examples_index.html 
       echo "<a href=\"../../js/picsimlab_asmjs.html?../picsimlab_examples/pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Online (asm.js)</a>" >> ../../../help/examples_index.html
       fi 
       echo "</td></tr></table>" >> ../../../help/examples_index.html 
