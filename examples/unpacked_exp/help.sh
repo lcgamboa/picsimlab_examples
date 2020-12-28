@@ -41,7 +41,7 @@ do
       cp -R "$name/$name.png" "../../../help/$board/$proc/$name/"
       echo "<hr><table style=\"width:100%\" border=\"0\">" >>  ../../exp.html
       echo "<tr><td colspan=4><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#$board'>$board</a>/<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"50%\" align=right><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=50%></a></td>" >> ../../exp.html 
-      echo "<td width=\"20%\" align=center><a href=\"../pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../../exp.html 
+      echo "<td width=\"20%\" align=center><a href=\"../pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../../exp.html 
       echo "<td width=\"20%\" align=center>" >> ../../exp.html
       if [ ! -f "${name}/no_online" ]; then
          echo "<a href=\"../../js_exp/picsimlab.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm)</a><br><br>" >> ../../exp.html 
