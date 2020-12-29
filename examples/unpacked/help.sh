@@ -49,7 +49,7 @@ do
       cp -R "$name/Readme.html" "../../../help/$board/$proc/$name/" 
       cp -R "$name/src/" "../../../help/$board/$proc/$name/"
       cp -R "$name/$name.png" "../../../help/$board/$proc/$name/"
-      echo "<hr><table style=\"width:100%\" border=\"0\">" >>  ../../../help/examples_index.html
+      echo "<hr><table style=\"width:100%\" border=\"0\" bgcolor='#efefef'>" >>  ../../../help/examples_index.html
       echo "<tr><td colspan=4><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#$board'>$board</a>/<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"50%\" align=right><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=50%></a></td>" >> ../../../help/examples_index.html 
       echo "<td width=\"20%\" align=center ><a href=\"../pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../../../help/examples_index.html 
       echo "<td width=\"20%\" align=center >" >> ../../../help/examples_index.html
