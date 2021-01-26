@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  <h1> Firmata Library - Standard Firmata Ethernet </h1>
+<pre>
+  StandardFirmataEthernet is a TCP client/server implementation. You will need a Firmata client library
+  with a network transport that can act as a TCP server or client in order to establish a connection between
+  StandardFirmataEthernet and the Firmata client application.
+  To use StandardFirmataEthernet you will need to have one of the following
+  boards or shields:
+  - Arduino Ethernet shield (or clone)
+  - Arduino Ethernet board (or clone)
+  - Arduino Yun
+  Follow the instructions in the ethernetConfig.h file (ethernetConfig.h tab in Arduino IDE) to
+  configure your particular hardware.
+  NOTE: If you are using an Arduino Ethernet shield you cannot use the following pins on
+  the following boards. Firmata will ignore any requests to use these pins:
+  - Arduino Uno or other ATMega328 boards: (D4, D10, D11, D12, D13)
+  - Arduino Mega: (D4, D10, D50, D51, D52, D53)
+  - Arduino Leonardo: (D4, D10)
+  - Arduino Due: (D4, D10)
+  - Arduino Zero: (D4, D10)
+  If you are using an ArduinoEthernet board, the following pins cannot be used (same as Uno):
+  - D4, D10, D11, D12, D13
+</pre>
+<br>
+<br>
+<a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmataEthernet/StandardFirmataEthernet.ino" target="_blank">StandardFirmataEthernet.ino</a>
+
+</body>
+</html>
