@@ -5,7 +5,8 @@ declare -a parts=("7 Segments Display" "Buzzer" "D. Transfer function" "DC Motor
       	"LCD pcd8544"  \
 	"LCD ssd1306" "LED Matrix" "LEDs"  "MEM 24CXXX" "Potentiometers" "Potentiometers (Rotary)" \
         "Push buttons"  "Push buttons (Analogic)"  "RGB LED"  "RTC ds1307"  "RTC pfc8563" "SD Card" "Servo motor"\
-	"Signal Generator" "Step motor" "Switchs" "Temperature System" "VCD Dump" "VCD Dump (Analogic)" "VCD Play" )
+	"Signal Generator" "Step motor" "Switchs" "Temperature System" "Ultrasonic HC-SR04" \
+	"VCD Dump" "VCD Dump (Analogic)" "VCD Play" )
 
 echo "<hr><br><hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
 
