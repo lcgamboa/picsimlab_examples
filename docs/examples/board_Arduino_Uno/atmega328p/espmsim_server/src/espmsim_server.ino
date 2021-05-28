@@ -127,7 +127,7 @@ const char resp_e[] = "<form action=test.php method=get>"
 void setup(void)
 {
 
-  Serial.begin(9600);
+  Serial.begin(115200);
   lcd.begin(16, 2);
   lcd.setCursor(0, 0);
   lcd.print("Connect espmsim");

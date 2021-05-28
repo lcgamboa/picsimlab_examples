@@ -28,19 +28,19 @@
 #include"delay.h"
 #include"config.h"
 
-#define B9600H ((_XTAL_FREQ/(16l*9600))-1)
-#define B9600L ((_XTAL_FREQ/(64l*9600))-1)
+#define B115200H ((_XTAL_FREQ/(16l*115200))-1)
+#define B115200L ((_XTAL_FREQ/(64l*115200))-1)
 
 
 void serial_init(void)
 {
                //  brgh=1 baud=FOSC/16(X+1)
                //  brgh=0 baud=FOSC/64(X+1)
-#if B9600H < 255   
-    SPBRG=B9600H; 
+#if B115200H < 255   
+    SPBRG=B115200H; 
     TXSTAbits.BRGH=1;  //high baud rate
 #else
-    SPBRG=B9600L; 
+    SPBRG=B115200L; 
     TXSTAbits.BRGH=0;  //low baud rate   
 #endif    
       

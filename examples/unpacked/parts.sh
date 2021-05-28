@@ -1,5 +1,5 @@
 #!/bin/bash 
-declare -a parts=("7 Segments Display" "Buzzer" "D. Transfer function" "DC Motor" "ETH w5500" "Encoder" "Gamepad" \
+declare -a parts=("7 Segments Display" "7 Segments Display (w/dec)" "Buzzer" "D. Transfer function" "DC Motor" "ETH w5500" "Encoder" "Gamepad" \
 	"Gamepad (Analogic)" "IO 74xx595" "IO MCP23S17" \
         "IO PCF8574" "IO UART" "IO Virtual term" "Jumper Wires" "Keypad" "LCD hd44780"  "LCD ili9341" "LCD pcf8833"\
       	"LCD pcd8544"  \

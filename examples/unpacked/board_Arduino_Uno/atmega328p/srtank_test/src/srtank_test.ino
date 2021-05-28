@@ -30,7 +30,7 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 unsigned int valori;
 
 void setup(void) {
-    Serial.begin(9600);
+    Serial.begin(19200);
     lcd.begin(16, 2);
     lcd.setCursor(0, 0);
     lcd.print(" Connect srtank");
