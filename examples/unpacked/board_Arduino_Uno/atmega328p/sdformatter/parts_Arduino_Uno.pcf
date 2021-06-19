@@ -1,5 +1,5 @@
-version,0,0,0:0.8.2
+version,0,0,0:0.8.9
 scale,0,0,0:1.000000
 useAlias,0,0,0:1
 SD Card,26,60,0:17,19,16,18,/tmp/picsimlab_workspace/sd.img
-IO Virtual term,30,300,0:3,2,1,9600
+IO Virtual Term,30,300,0:3,2,1,9600

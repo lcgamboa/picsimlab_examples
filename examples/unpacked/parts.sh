@@ -1,11 +1,11 @@
 #!/bin/bash 
-declare -a parts=("7 Segments Display" "7 Segments Display (w/dec)" "Buzzer" "D. Transfer function" "DC Motor" "ETH w5500" "Encoder" "Gamepad" \
+declare -a parts=("7 Segments Display" "7 Segments Display (Decoder)" "Buzzer" "D. Transfer Function" "DC Motor" "ETH w5500" "Encoder" "Gamepad" \
 	"Gamepad (Analogic)" "IO 74xx595" "IO MCP23S17" \
-        "IO PCF8574" "IO UART" "IO Virtual term" "Jumper Wires" "Keypad" "LCD hd44780"  "LCD ili9341" "LCD pcf8833"\
+        "IO PCF8574" "IO UART" "IO Virtual Term" "Jumper Wires" "Keypad" "LCD hd44780"  "LCD ili9341" "LCD pcf8833"\
       	"LCD pcd8544"  \
-	"LCD ssd1306" "LED Matrix" "LEDs"  "MEM 24CXXX" "Potentiometers" "Potentiometers (Rotary)" \
-        "Push buttons"  "Push buttons (Analogic)"  "RGB LED"  "RTC ds1307"  "RTC pfc8563" "SD Card" "Servo motor"\
-	"Signal Generator" "Step motor" "Switchs" "Temperature System" "Ultrasonic HC-SR04" \
+	"LCD ssd1306" "LED Matrix" "LEDs"  "MEM 24CXXX" "MPU6050" "Potentiometers" "Potentiometers (Rotary)" \
+        "Push Buttons"  "Push Buttons (Analogic)"  "RGB LED"  "RTC ds1307"  "RTC pfc8563" "SD Card" "Servo Motor"\
+	"Signal Generator" "Step Motor" "Switchs" "Temperature System" "Ultrasonic HC-SR04" \
 	"VCD Dump" "VCD Dump (Analogic)" "VCD Play" )
 
 echo "<hr><br><hr><h1><a name=\"parts\"></a>Examples by parts</h1>"

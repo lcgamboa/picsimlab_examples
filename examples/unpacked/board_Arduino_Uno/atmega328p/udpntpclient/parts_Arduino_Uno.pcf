@@ -1,5 +1,5 @@
-version,0,0,0:0.8.2
+version,0,0,0:0.8.9
 scale,0,0,0:1.000000
 useAlias,0,0,0:0
 ETH w5500,21,51,0:17,1,16,19,18,0
-IO Virtual term,25,299,0:3,2,1,9600
+IO Virtual Term,25,299,0:3,2,1,9600
