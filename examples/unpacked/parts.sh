@@ -1,8 +1,8 @@
 #!/bin/bash 
 declare -a parts=("7 Segments Display" "7 Segments Display (Decoder)" "Buzzer" "D. Transfer Function" "DC Motor" "ETH w5500" "Encoder" "Gamepad" \
 	"Gamepad (Analogic)" "IO 74xx595" "IO MCP23S17" \
-        "IO PCF8574" "IO UART" "IO Virtual Term" "Jumper Wires" "Keypad" "LCD hd44780"  "LCD ili9341" "LCD pcf8833"\
-      	"LCD pcd8544"  \
+        "IO PCF8574" "IO UART" "IO Virtual Term" "Jumper Wires" "Keypad" "LM35" "LCD hd44780"  \
+	"LCD ili9341" "LCD pcf8833" "LCD pcd8544"  \
 	"LCD ssd1306" "LED Matrix" "LEDs"  "MEM 24CXXX" "MPU6050" "Potentiometers" "Potentiometers (Rotary)" \
         "Push Buttons"  "Push Buttons (Analogic)"  "RGB LED"  "RTC ds1307"  "RTC pfc8563" "SD Card" "Servo Motor"\
 	"Signal Generator" "Step Motor" "Switchs" "Temperature System" "Ultrasonic HC-SR04" \
