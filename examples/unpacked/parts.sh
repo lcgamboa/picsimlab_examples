@@ -9,14 +9,14 @@ declare -a parts=("7 Segments Display" "7 Segments Display (Decoder)" "Buzzer" "
 	"Signal Generator" "Step Motor" "SHT3X (Temp. Hum.)" "Switchs" "Temperature System" "Ultrasonic HC-SR04" \
 	"VCD Dump" "VCD Dump (Analogic)" "VCD Play" )
 
-echo "<hr><br><hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
+echo "<hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
 
 for part in "${parts[@]}";do
-  echo  "<br><a href=\"#${part// /_}\">$part</a>"
+  echo  "<br><a href=\"#${part// /_}\">${part}</a>"
 done
 
 for part in "${parts[@]}";do
-  echo  "<hr><br><h2><a name=\"${part// /_}\"></a>$part</h2>"
+  echo  "<hr><br><h2><a name=\"${part// /_}\"></a>${part}</h2>"
   files=`grep -m1 "$part" */*/*/*.pcf | cut -f1 -d:`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'`
@@ -24,7 +24,7 @@ for part in "${parts[@]}";do
     name=`echo $file | awk -F/ '{print $3}'`
     if ! test -z "$name" 
     then
-     echo  "<a href=\"#${board}_${proc}_${name}\">$board | $proc | $name </a><br>";
+     echo  "<a href=\"${board}.html#${board}_${proc}_${name}\">$board | $proc | $name </a><br>";
     fi
   done
 done 
