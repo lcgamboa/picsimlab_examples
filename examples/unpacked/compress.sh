@@ -31,3 +31,5 @@ rm -rf help/
 rm -rf pzw/
 rm -rf pzw_exp/
 rm -f  unpacked_exp/exp.html
+
+cp ../docs/examples_index.html ../docs/index.html
