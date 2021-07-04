@@ -72,7 +72,7 @@ do
     done
     cd ..
   done
-  echo "<br><br></body></html>" >> $file
+  echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> $file
   cd ..
 done
 
