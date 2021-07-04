@@ -9,11 +9,14 @@ declare -a parts=("7 Segments Display" "7 Segments Display (Decoder)" "Buzzer" "
 	"Signal Generator" "Step Motor" "SHT3X (Temp. Hum.)" "Switchs" "Temperature System" "Ultrasonic HC-SR04" \
 	"VCD Dump" "VCD Dump (Analogic)" "VCD Play" )
 
-echo "<hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
+#echo "<hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
+echo "<span class='chapterToc'>Examples by parts</h1></span>"
 
 for part in "${parts[@]}";do
-  echo  "<br><a href=\"#${part// /_}\">${part}</a>"
+  echo  "<span class='sectionToc'><a href=\"#${part// /_}\">${part}</a></span>"
 done
+
+echo "</nav><main class='main-content'>"
 
 for part in "${parts[@]}";do
   echo  "<hr><br><h2><a name=\"${part// /_}\"></a>${part}</h2>"
@@ -24,7 +27,8 @@ for part in "${parts[@]}";do
     name=`echo $file | awk -F/ '{print $3}'`
     if ! test -z "$name" 
     then
-     echo  "<a href=\"${board}.html#${board}_${proc}_${name}\">$board | $proc | $name </a><br>";
+     bname=$(echo $board| cut -d'_' -f 2-)
+     echo  "<a href=\"${board}.html#${board}_${proc}_${name}\">$bname | $proc | $name </a><br>";
     fi
   done
 done 
