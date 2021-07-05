@@ -24,6 +24,7 @@ do
   echo "<html><head>" >> $file   
   echo "<title>PICSimLab Examples Board $bname</title>" >> $file 
   echo "<meta charset='utf-8' />" >> $file  
+  echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> $file
   echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> $file 
   echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> $file  
   echo "</head>" >> $file 
@@ -81,6 +82,7 @@ echo "<!DOCTYPE html>" >> ../help/Parts_exp.html
 echo "<html><head>" >> ../help/Parts_exp.html 
 echo "<title>PICSimLab Examples List</title>" >> ../help/Parts_exp.html 
 echo "<meta charset='utf-8' />" >> ../help/Parts_exp.html  
+echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/Parts_exp.html
 echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/Parts_exp.html  
 echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/Parts_exp.html 
 echo "</head>" >> ../help/Parts_exp.html 

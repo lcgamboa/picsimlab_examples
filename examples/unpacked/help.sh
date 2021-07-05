@@ -8,6 +8,7 @@ echo "<!DOCTYPE html>" >> ../help/examples_index.html
 echo "<html><head>" >> ../help/examples_index.html 
 echo "<title>PICSimLab Examples List</title>" >> ../help/examples_index.html 
 echo "<meta charset='utf-8' />" >> ../help/examples_index.html  
+echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/examples_index.html
 echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/examples_index.html 
 echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/examples_index.html  
 echo "</head>" >> ../help/examples_index.html 
@@ -37,6 +38,7 @@ do
   echo "<html><head>" >> $file   
   echo "<title>PICSimLab Examples Board $bname</title>" >> $file 
   echo "<meta charset='utf-8' />" >> $file  
+  echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> $file
   echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> $file 
   echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> $file  
   echo "</head>" >> $file 
@@ -94,6 +96,7 @@ echo "<html><head>" >> ../help/Parts.html
 echo "<meta charset="utf-8" />" >> ../help/Parts.html 
 echo "<title>PICSimLab Examples List</title>" >> ../help/Parts.html 
 echo "<meta charset='utf-8' />" >> ../help/Parts.html 
+echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/Parts.html 
 echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/Parts.html 
 echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/Parts.html  
 echo "</head>" >> ../help/Parts.html 
@@ -107,6 +110,7 @@ echo "<!DOCTYPE html>" >> ../help/examples_index_exp.html
 echo "<html><head>" >> ../help/examples_index_exp.html 
 echo "<title>PICSimLab Examples List</title>" >> ../help/examples_index_exp.html 
 echo "<meta charset='utf-8' />" >> ../help/examples_index_exp.html 
+echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/examples_index_exp.html
 echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/examples_index_exp.html 
 echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/examples_index_exp.html  
 echo "</head>" >> ../help/examples_index_exp.html 

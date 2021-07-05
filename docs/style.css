@@ -78,6 +78,13 @@ nav.TOC a, nav.TOC a:visited{
   text-decoration:none;
 }
 
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
 /* ************** */
 /* *** Colors *** */
 /* ************** */
