@@ -1,4 +1,4 @@
-
+/*
 let sidebar = document.querySelector("nav.TOC");
 
 let sstop = sessionStorage.getItem("sidebar-scroll");
@@ -16,5 +16,5 @@ window.addEventListener("beforeunload", () => {
             'google_translate_element'
         );
     }
-
+*/
 
