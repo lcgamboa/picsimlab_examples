@@ -61,13 +61,10 @@ do
       cp -R "$name/src/" "../../../help/$board/$proc/$name/"
       cp -R "$name/$name.png" "../../../help/$board/$proc/$name/"
       echo "<hr><table style=\"width:100%\" border=\"0\" bgcolor='#efefef'>" >>  ../$file
-      echo "<tr><td colspan=4><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"50%\" align=right><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=50%></a></td>" >> ../$file 
-      echo "<td width=\"20%\" align=center><a href=\"pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a></td>" >> ../$file 
-      echo "<td width=\"20%\" align=center>" >> ../$file
+      echo "<tr><td colspan=2 width=\"100%\"><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"80%\" align=center><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=60%></a></td>" >> ../$file 
+      echo "<td width=\"20%\" align=left><a href=\"pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a>" >> ../$file 
       if [ ! -f "${name}/no_online" ]; then
-         echo "<a href=\"../js_exp/picsimlab.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm)</a><br><br>" >> ../$file
-         echo "<a href=\"../js_exp/picsimlab_mt.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (wasm mt)</a><br><br>" >> ../$file
-         echo "<a href=\"../js_exp/picsimlab_asmjs.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >Online (asm.js)</a>" >> ../$file
+         echo "<br><br><a href=\"../js_exp/picsimlab.html?../picsimlab_examples/pzw_exp/$board/$proc/$name.pzw\" target=\"_blank\" >View Online</a><br><br>" >> ../$file
       fi
       echo "</td></tr></table>" >> ../$file
     done
