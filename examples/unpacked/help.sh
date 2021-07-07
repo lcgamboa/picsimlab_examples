@@ -14,6 +14,7 @@ echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/exa
 echo "</head>" >> ../help/examples_index.html 
 echo "<body>" >> ../help/examples_index.html 
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/examples_index.html 
+echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/examples_index.html
 echo "<span class='chapterToc'>Boards</span>" >> ../help/examples_index.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
@@ -44,6 +45,7 @@ do
   echo "</head>" >> $file 
   echo "<body>" >> $file 
   echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> $file
+  echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> $file
   echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >> $file 
   echo "<span class='chapterToc'>$bname</span>" >> $file   
 #echo "<hr><a name="$board"></a> <h1><br>Examples: $board</h1>" >> $file 
@@ -99,6 +101,7 @@ echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/Par
 echo "</head>" >> ../help/Parts.html 
 echo "<body>" >> ../help/Parts.html 
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/Parts.html
+echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/Parts.html
 echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >>  ../help/Parts.html
 ./parts.sh >> ../help/Parts.html
 echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/Parts.html 
@@ -113,6 +116,7 @@ echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/exa
 echo "</head>" >> ../help/examples_index_exp.html 
 echo "<body>" >> ../help/examples_index_exp.html 
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/examples_index_exp.html
+echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/examples_index_exp.html
 cat ../unpacked_exp/exp.html >> ../help/examples_index_exp.html
 echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/examples_index_exp.html 
 cd ..
