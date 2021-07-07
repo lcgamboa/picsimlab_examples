@@ -5,6 +5,64 @@
 <meta content='width=device-width,initial-scale=1' name='viewport' />
 <link href='picsimlab.css' rel='stylesheet' type='text/css' />
 <link href='style.css' rel='stylesheet' type='text/css' />
+<style>
+
+
+.board{
+  padding: 10px ;
+  border: 0;
+  width: auto;
+  height:45vh;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  text-align: center;
+  background-color: #222;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 10px;
+  color: white;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 12.5%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
 <body>
 <script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>

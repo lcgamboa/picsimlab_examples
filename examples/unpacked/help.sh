@@ -11,7 +11,7 @@ echo "<meta charset='utf-8' />" >> ../help/examples_index.html
 echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/examples_index.html
 echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/examples_index.html 
 echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/examples_index.html  
-echo"<style>
+echo "<style>
 
 
 .board{
