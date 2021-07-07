@@ -21,6 +21,100 @@
 <span class='chapterToc'><a href="Parts.html">Examples by parts</a></span>
 <span class='chapterToc'><a href="examples_index_exp.html">Experimental boards</a></span>
 </nav><main class='main-content'>
-<br><h1>PICSimLab Examples</h1>
-<br><h2>Boards</h2>
+<h1>PICSimLab Examples</h1>
+<div class='container'>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/picsimlab0.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/picsimlab1.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/picsimlab2.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/picsimlab3.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/picsimlab4.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/board_PQDB.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/picsimlab5.png' >
+  </div>
+  <div class='mySlides'>
+    <img class='board' src='../picsimlab_docs/stable/img/board_Franzininho.png' >
+  </div>
+
+  <div class='caption-container'>
+    <p id='caption' ></p>
+  </div>
+
+  <div class='row' style='background-color: #222;'>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab0.png' style='width:100%' onclick='currentSlide(1)' alt='Breadboard'>
+    </div>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab1.png' style='width:100%' onclick='currentSlide(2)' alt='McLab1'>
+    </div>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab2.png' style='width:100%' onclick='currentSlide(3)' alt='K16F'>
+    </div>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab3.png' style='width:100%' onclick='currentSlide(4)' alt='McLab2'>
+    </div>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab4.png' style='width:100%' onclick='currentSlide(5)' alt='PICGenios'>
+    </div>    
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/board_PQDB.png' style='width:100%' onclick='currentSlide(6)' alt='PQDB'>
+    </div>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab5.png' style='width:100%' onclick='currentSlide(7)' alt='Arduino Uno'>
+    </div>
+    <div class='column'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/board_Franzininho.png' style='width:100%' onclick='currentSlide(8)' alt='Franzininho'>
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName('mySlides');
+  var dots = document.getElementsByClassName('demo');
+  var captionText = document.getElementById('caption');
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+  }
+  slides[slideIndex-1].style.display = 'block';
+  dots[slideIndex-1].className += ' active';
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+function anime() {
+  plusSlides(1)
+  setTimeout(anime, 2000);
+}
+
+anime();
+</script>
 </main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>
