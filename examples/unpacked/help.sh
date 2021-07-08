@@ -19,6 +19,7 @@ echo "<style>
   border: 0;
   width: auto;
   height:45vh;
+  max-width:20rem;
 }
 
 /* Hide the images by default */
