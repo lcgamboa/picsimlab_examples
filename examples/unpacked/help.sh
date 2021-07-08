@@ -17,9 +17,8 @@ echo "<style>
 .board{
   padding: 10px ;
   border: 0;
-  width: auto;
-  height:45vh;
-  max-width:20rem;
+  height:50vmin;
+  max-width: 70vmin;
 }
 
 /* Hide the images by default */
