@@ -106,7 +106,7 @@ echo "<h1>PICSimLab Examples</h1>
     <img class='board' src='../picsimlab_docs/stable/img/picsimlab5.png' >
   </div>
   <div class='mySlides'>
-    <img class='board' src='../picsimlab_docs/stable/img/board_Franzininho.png' >
+    <img class='board' src='../picsimlab_docs/stable/img/board_Franzininho_DIY.png' >
   </div>
 
   <div class='caption-container'>
@@ -136,7 +136,7 @@ echo "<h1>PICSimLab Examples</h1>
       <img class='demo cursor' src='../picsimlab_docs/stable/img/picsimlab5.png' style='width:100%' onclick='currentSlide(7)' alt='Arduino Uno'>
     </div>
     <div class='column'>
-      <img class='demo cursor' src='../picsimlab_docs/stable/img/board_Franzininho.png' style='width:100%' onclick='currentSlide(8)' alt='Franzininho'>
+      <img class='demo cursor' src='../picsimlab_docs/stable/img/board_Franzininho_DIY.png' style='width:100%' onclick='currentSlide(8)' alt='Franzininho DIY'>
     </div>
   </div>
 </div>
