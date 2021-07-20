@@ -7,7 +7,7 @@ cd /tmp
 rm -f test.pzw
 zip -rX test.pzw picsimlab_workspace -x \*no_online \*.png \*src/\*
 picsimlab test.pzw
-#user must save the workspace as /tmp/test.pzw
+#user must save the workspace as /tmp/test.pzw after edition
 rm -rf picsimlab_workspace/
 unzip test.pzw
 cd picsimlab_workspace/

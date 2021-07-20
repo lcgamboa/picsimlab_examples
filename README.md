@@ -1,12 +1,12 @@
 # PICSimLab Examples
 
-[Examples List](https://lcgamboa.github.io/picsimlab_examples/examples/examples_index.html)
+[Examples List](https://lcgamboa.github.io/picsimlab_examples/examples_index.html)
 
 [PICSimLab Github](https://github.com/lcgamboa/picsimlab)
 
 [PICSimLab Download](https://github.com/lcgamboa/picsimlab/releases)
 
-[Online version of PICSimLab](https://lcgamboa.github.io/)
+[Online version of PICSimLab](https://lcgamboa.github.io/picsimlab_docs/stable/OnlineSimulator.html)
 
 
 
@@ -67,7 +67,7 @@ The most suitable is using github:
 
 Another way would be to send to me the compressed folder of the example by email. (less recommended)
 
-![PICSimLab](https://lcgamboa.github.io/picsimlab_examples/examples/board_Arduino_Uno/atmega328p/Oscilloscope/Oscilloscope.png)
+![PICSimLab](https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno/atmega328p/Oscilloscope/Oscilloscope.png)
 
-![PICSimLab](https://lcgamboa.github.io/picsimlab_examples/examples/board_Arduino_Uno/atmega328p/Serial_LCD/Serial_LCD.png)
+![PICSimLab](https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno/atmega328p/Serial_LCD/Serial_LCD.png)
 

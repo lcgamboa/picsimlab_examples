@@ -1,6 +1,6 @@
-version,0,0,0:0.8.6
+version,0,0,0:0.8.9
 scale,0,0,0:1.000000
 useAlias,0,0,0:0
 LCD pcd8544,23,62,0:5,6,11,12,13
-Signal Generator,282,52,0:23,98,109,0,100
+Signal Generator,282,52,0:23,98,109,0,100,0,101
 Potentiometers,296,298,0:24,0,0,0,127,0,0,0
