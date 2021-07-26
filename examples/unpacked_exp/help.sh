@@ -1,5 +1,6 @@
 #!/bin/bash 
 rm -Rf exp.html
+echo "<span class='chapterToc'><a href='../'>Main</a></span>" >> ../help/examples_index.html 
 echo "<span class='chapterToc'>Boards</span>" >> exp.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do

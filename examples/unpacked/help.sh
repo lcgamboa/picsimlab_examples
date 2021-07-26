@@ -73,6 +73,7 @@ echo "</head>" >> ../help/examples_index.html
 echo "<body>" >> ../help/examples_index.html 
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/examples_index.html 
 echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/examples_index.html
+echo "<span class='chapterToc'><a href='../'>Main</a></span>" >> ../help/examples_index.html 
 echo "<span class='chapterToc'>Boards</span>" >> ../help/examples_index.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
