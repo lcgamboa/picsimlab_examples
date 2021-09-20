@@ -286,7 +286,7 @@ void main()
 
   lcd_cmd(L_CLR);
   lcd_cmd(L_L1);
-  lcd_str("  Switchs Test");
+  lcd_str("  Switches Test");
 
   tmp=0;
   
