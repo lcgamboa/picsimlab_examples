@@ -228,9 +228,21 @@ do
       html=`sed -n '/<body/,/<\/body>/{//!p}' $name/Readme.html`
       cp -R "$name/Readme.html" "../../../help/$board/$proc/$name/" 
       cp -R "$name/src/" "../../../help/$board/$proc/$name/"
-      cp -R "$name/$name.png" "../../../help/$board/$proc/$name/"
+      IMG="$name.png"
+      if [ -f "$name/$IMG" ]; then
+        echo "$IMG exists."
+      else 
+        IMG="$name.gif"
+        if [ -f "$name/$IMG" ]; then
+          echo "$IMG exists."
+        else 
+          echo "Error !!!!!! $IMG does not exist.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	  exit 1
+        fi
+      fi
+      cp -R "$name/$IMG" "../../../help/$board/$proc/$name/"
       echo "<hr><table style=\"width:100%\" border=\"0\" bgcolor='#efefef'>" >>  ../$file
-      echo "<tr><td colspan=2 width=\"100%\"><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"80%\" align=center><a target=\"blank_\" href=\"$board/$proc/$name/$name.png\"><img src='$board/$proc/$name/$name.png' width=60%></a></td>" >> ../$file 
+      echo "<tr><td colspan=2 width=\"100%\"><a name=\"${board}_${proc}_${name}\"></a><small>[<a href='#${board}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"80%\" align=center><a target=\"blank_\" href=\"$board/$proc/$name/$IMG\"><img src='$board/$proc/$name/$IMG' width=60%></a></td>" >> ../$file 
       echo "<td width=\"20%\" align=left ><a href=\"pzw/$board/$proc/$name.pzw\" target=\"_blank\" >Download (pzw)</a>" >> ../$file 
       if [ ! -f "${name}/no_online" ]; then
       echo "<br><br><a href=\"../js/picsimlab.html?../picsimlab_examples/pzw/$board/$proc/$name.pzw\" target=\"_blank\" >View Online</a><br><br>" >> ../$file 
