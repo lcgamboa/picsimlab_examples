@@ -8,6 +8,7 @@ do
   echo "<span class='sectionToc'><a href="${board}.html">${bname}</a></span>" >> exp.html 
 done
 echo "<span class='chapterToc'><a href=\"Parts_exp.html\">Examples by parts</a></span>" >> exp.html 
+echo "<span class='chapterToc'><a href=\"UCs_exp.html\">Examples by &#181controllers</a></span>" >> exp.html 
 echo "<span class='chapterToc'><a href=\"examples_index.html\">Stable boards</a></span>" >> exp.html 
 echo "</nav><main class='main-content'>" >> exp.html 
 echo "<br><h1>PICSimLab Examples (Experimental)</h1>" >> exp.html 
@@ -91,4 +92,20 @@ echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https:/
 echo "<span class='chapterToc'><a href=\"examples_index_exp.html\">Exp. Boards Examples Index</a></span>" >>  ../help/Parts_exp.html
 ./parts.sh >> ../help/Parts_exp.html
 echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/Parts_exp.html 
+
+echo "<!DOCTYPE html>" >> ../help/UCs_exp.html 
+echo "<html><head>" >> ../help/UCs_exp.html 
+echo "<title>PICSimLab Examples List</title>" >> ../help/UCs_exp.html 
+echo "<meta charset='utf-8' />" >> ../help/UCs_exp.html  
+echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/UCs_exp.html
+echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/UCs_exp.html  
+echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/UCs_exp.html 
+echo "</head>" >> ../help/UCs_exp.html 
+echo "<body>" >> ../help/UCs_exp.html 
+echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/UCs_exp.html 
+echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/UCs_exp.html
+echo "<span class='chapterToc'><a href=\"examples_index_exp.html\">Exp. Boards Examples Index</a></span>" >>  ../help/UCs_exp.html
+./ucs.sh >> ../help/UCs_exp.html
+echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/UCs_exp.html 
+
 

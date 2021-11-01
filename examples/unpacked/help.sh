@@ -81,6 +81,7 @@ do
   echo "<span class='sectionToc'><a href=\"${board}.html\">${bname}</a></span>" >> ../help/examples_index.html 
 done
 echo "<span class='chapterToc'><a href=\"Parts.html\">Examples by parts</a></span>" >> ../help/examples_index.html 
+echo "<span class='chapterToc'><a href=\"UCs.html\">Examples by &#181controllers</a></span>" >> ../help/examples_index.html 
 echo "<span class='chapterToc'><a href=\"examples_index_exp.html\">Experimental boards</a></span>" >> ../help/examples_index.html 
 echo "</nav><main class='main-content'>" >> ../help/examples_index.html 
 echo "<h1>PICSimLab Examples</h1>
@@ -270,6 +271,22 @@ echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https:/
 echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >>  ../help/Parts.html
 ./parts.sh >> ../help/Parts.html
 echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/Parts.html 
+
+echo "<!DOCTYPE html>" >> ../help/UCs.html 
+echo "<html><head>" >> ../help/UCs.html 
+echo "<meta charset="utf-8" />" >> ../help/UCs.html 
+echo "<title>PICSimLab Examples List</title>" >> ../help/UCs.html 
+echo "<meta charset='utf-8' />" >> ../help/UCs.html 
+echo "<meta content='width=device-width,initial-scale=1' name='viewport' />" >> ../help/UCs.html 
+echo "<link href='picsimlab.css' rel='stylesheet' type='text/css' />" >> ../help/UCs.html 
+echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> ../help/UCs.html  
+echo "</head>" >> ../help/UCs.html 
+echo "<body>" >> ../help/UCs.html 
+echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/UCs.html
+echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/UCs.html
+echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >>  ../help/UCs.html
+./ucs.sh >> ../help/UCs.html
+echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/UCs.html 
 
 echo "<!DOCTYPE html>" >> ../help/examples_index_exp.html 
 echo "<html><head>" >> ../help/examples_index_exp.html 

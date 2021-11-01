@@ -1,19 +1,18 @@
 #!/bin/bash 
-
-. ../unpacked/partsname.sh
+. ucsname.sh
 
 #echo "<hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
-echo "<span class='chapterToc'>Examples by parts</h1></span>"
+echo "<span class='chapterToc'>Examples by &#181controllers</h1></span>"
 
-for part in "${parts[@]}";do
-  echo  "<span class='sectionToc'><a href=\"#${part// /_}\">${part}</a></span>"
+for uc in "${ucs[@]}";do
+  echo  "<span class='sectionToc'><a href=\"#${uc// /_}\">${uc}</a></span>"
 done
 
 echo "</nav><main class='main-content'>"
 
-for part in "${parts[@]}";do
-  echo  "<hr><br><h2><a name=\"${part// /_}\"></a>${part}</h2>"
-  files=`grep -m1 "$part" */*/*/*.pcf | cut -f1 -d:`
+for uc in "${ucs[@]}";do
+  echo  "<hr><br><h2><a name=\"${uc// /_}\"></a>${uc}</h2>"
+  files=`grep -m1 "$uc" */*/*/*.ini | cut -f1 -d:`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'`
     proc=`echo $file | awk -F/ '{print $2}'`
