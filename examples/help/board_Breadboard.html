@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples Board Breadboard</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<span class='chapterToc'><a href="examples_index.html">Boards Examples Index</a></span>
+<span class='chapterToc'>Breadboard</span>
+<span class='sectionToc'><a href="#board_Breadboard_atmega2560">atmega2560</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_atmega2560_graphictest">graphictest</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_atmega328p">atmega328p</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_atmega328p_game_marduino">game_marduino</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC16F628A">PIC16F628A</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC16F628A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC16F628A_test_b0_2">test_b0_2</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC16F648A">PIC16F648A</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC16F648A_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC16F777">PIC16F777</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC16F777_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC16F84A">PIC16F84A</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC16F84A_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC16F877A">PIC16F877A</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC16F877A_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC18F452">PIC18F452</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC18F452_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC18F4520">PIC18F4520</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC18F4520_ADC_7segLatch">ADC_7segLatch</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC18F4550">PIC18F4550</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC18F4550_PID">PID</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC18F4550_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#board_Breadboard_PIC18F4620">PIC18F4620</a></span>
+<span class='subsectionToc'><a href="#board_Breadboard_PIC18F4620_test_b0">test_b0</a></span>
+</nav><main class='main-content'>
+<a name="board_Breadboard_atmega2560"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_atmega2560_graphictest"></a><small>[<a href='#board_Breadboard_atmega2560'>atmega2560</a>/graphictest]</small>  <h1> Adafruit_ILI9341 Library - Graphicstest </h1>
+<pre>
+
+  This is our GFX example for the Adafruit ILI9341 Breakout and Shield
+  ----> http://www.adafruit.com/products/1651
+
+  Check out the links above for our tutorials and wiring diagrams
+  These displays use SPI to communicate, 4 or 5 pins are required to
+  interface (RST is optional)
+  Adafruit invests time and resources providing this open source code,
+  please support Adafruit and open-source hardware by purchasing
+  products from Adafruit!
+
+  Written by Limor Fried/Ladyada for Adafruit Industries.
+  MIT license, all text above must be included in any redistribution
+
+</pre>
+<br>
+<br>
+<a href="https://github.com/adafruit/Adafruit_ILI9341/blob/master/examples/graphicstest/graphicstest.ino" target="_blank">graphicstest.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/atmega2560/graphictest/graphictest.png"><img src='board_Breadboard/atmega2560/graphictest/graphictest.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/atmega2560/graphictest.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/atmega2560/graphictest.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_atmega328p_game_marduino"></a><small>[<a href='#board_Breadboard_atmega328p'>atmega328p</a>/game_marduino]</small>  <h1>Super Marduino</h1>
+<pre>
+ * Super Marduino
+ * A platform game with Arduino Uno.
+ * 
+ * Requirements:
+ * Nokia 5510 display and three buttons.
+ * Additional libraries: Adafruit GFX and Adafruit_PCD8544.
+ * 
+ * Created by Tobias Beise Ulrich
+ * <a href ="http://tobiasbu.github.io/" target="_blank">http://tobiasbu.github.io/</a>
+ * 
+ * GitHub:
+ * <a href ="https://github.com/tobiasbu/marduino" target="_blank">https://github.com/tobiasbu/marduino</a>
+</pre>
+<br>
+Play using gamepad:
+<br>
+Select or Jump:  A button (mapped as computer keyboard "i" key)<br>
+Right         :  B button (mapped as computer keyboard "l" key)<br>
+Left          :  D button (mapped as computer keyboard "j" key)<br>
+<br>
+<br>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/atmega328p/game_marduino/src" target="_blank">marduino source</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/atmega328p/game_marduino/game_marduino.png"><img src='board_Breadboard/atmega328p/game_marduino/game_marduino.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/atmega328p/game_marduino.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/atmega328p/game_marduino.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC16F628A_test_b0"></a><small>[<a href='#board_Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F628A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC16F628A_test_b0_2"></a><small>[<a href='#board_Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0_2]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests LCD display;
+2- Test the red LEDs connected to the PORT.
+3- Tests matrix keyboard
+4- External eeprom test 24LC512
+5- Test RTC PCF8563
+6- Test serial port sending
+7- Tests receiving serial port
+8- Read keyboard and send through serial port
+
+To use the serial port, configure com0com or
+tty0tty as described in the help and open the serial terminal (cutecom).
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F628A/test_b0_2/src/test_b2.X" target="_blank">MPLABX test_b0_2 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png"><img src='board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC16F648A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC16F648A_test_b0"></a><small>[<a href='#board_Breadboard_PIC16F648A'>PIC16F648A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F648A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F648A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F648A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F648A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC16F777"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC16F777_test_b0"></a><small>[<a href='#board_Breadboard_PIC16F777'>PIC16F777</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F777/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F777/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F777/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F777/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC16F84A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC16F84A_test_b0"></a><small>[<a href='#board_Breadboard_PIC16F84A'>PIC16F84A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F84A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F84A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F84A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F84A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC16F877A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC16F877A_test_b0"></a><small>[<a href='#board_Breadboard_PIC16F877A'>PIC16F877A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F877A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F877A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F877A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F877A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC18F452"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC18F452_test_b0"></a><small>[<a href='#board_Breadboard_PIC18F452'>PIC18F452</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F452/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F452/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F452/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F452/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC18F4520"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC18F4520_ADC_7segLatch"></a><small>[<a href='#board_Breadboard_PIC18F4520'>PIC18F4520</a>/ADC_7segLatch]</small>  <h1>Counter with decoder and latch</h1>
+<pre>
+Simple example of how to use the latched 7-segment display with decoder and ADC
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Breadboard/PIC18F4520/ADC_7segLatch/src/main.c" target="_blank">main.c</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4520/ADC_7segLatch/ADC_7segLatch.gif"><img src='board_Breadboard/PIC18F4520/ADC_7segLatch/ADC_7segLatch.gif' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4520/ADC_7segLatch.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4520/ADC_7segLatch.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC18F4550"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC18F4550_PID"></a><small>[<a href='#board_Breadboard_PIC18F4550'>PIC18F4550</a>/PID]</small><h1>Discrete Transfer Function and PID example.</h1>
+
+<pre>
+1- Use potentiometer to define setpoint
+2- Use RB0 switch to select open loop or closed loop with PID controller
+
+Use octave or matlab to calculate transfer function coeficients:
+
+>>gs = tf([1],[0.2 0.25 1]);
+
+Transfer function 'gs' from input 'u1' to output ...
+
+               1
+ y1:  --------------------
+      0.2 s^2 + 0.25 s + 1
+
+Continuous-time model.
+
+>> gd=c2d(gs,0.1)
+
+Transfer function 'gd' from input 'u1' to output ...
+
+       0.02389 z + 0.02291
+ y1:  ----------------------
+      z^2 - 1.836 z + 0.8825
+
+Discrete-time model Ts=0.1.
+
+
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/PID/src/PID.X" target="_blank">MPLABX PID project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4550/PID/PID.png"><img src='board_Breadboard/PIC18F4550/PID/PID.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4550/PID.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4550/PID.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC18F4550_test_b0"></a><small>[<a href='#board_Breadboard_PIC18F4550'>PIC18F4550</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4550/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F4550/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4550/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4550/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="board_Breadboard_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Breadboard_PIC18F4620_test_b0"></a><small>[<a href='#board_Breadboard_PIC18F4620'>PIC18F4620</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4620/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F4620/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

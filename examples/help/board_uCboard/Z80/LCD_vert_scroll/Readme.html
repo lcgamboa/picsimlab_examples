@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  <h1>Z80 LCD HD47780 vertical scroll </h1>
+
+<br>Original link <a href="http://www.dinceraydin.com/lcd/z80example.htm">http://www.dinceraydin.com/lcd/z80example.htm</a>
+<br>
+<pre>
+;
+; Program: v_scroll.asm
+; programmer(s): Dincer Aydin (dinceraydin@altavista.net)
+; function: vertical scroll effect
+; The effect is the same as the one you can see at the entrance of my LCD pages:
+; http://www.dinceraydin.com/lcd/z80example.htm
+;
+;
+; This code requires a 2*16 LCD connected to a 8255 with base address of 00h
+; routines sendcomA & sendcom & sendcharA & sendchar have been tested on 
+; >> 2*16 Hitachi LCD with HD44780 chip 
+; >> Samsung 1*16 LCD with a KS0062F00 chip
+; >> 2*16 Epson LCD marked P300020400 SANTIS 1 ,and 
+; >> noname 1*16 HD44780 based LCD.
+; The Z80 was clocked at 2 MHz and 4,9152 MHz for each display.This was done 
+; because the routines mentioned above take many t states and in most cases 
+; that will be longer that the time a HD44780 will need to execute a command. 
+;
+; Connections:
+; LCD data bus(pins #14-#7) connected to Port A of a 8255 with 00h base address
+; LCD Enable pin(#6) connected to Port C bit #7
+; LCD R/W pin(#5) connected to Port C bit #6
+; LCD RS pin(#4) connected to Port C bit #5                 
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_uCboard/Z80/LCD_vert_scroll/src" target="_blank">Source code</a>
+
+</body>
+</html>
