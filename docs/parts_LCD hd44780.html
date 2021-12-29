@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples Part LCD hd44780</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<span class='chapterToc'><a href="examples_index.html">Boards Examples Index</a></span>
+<span class='chapterToc'><a href="parts_7 Segments Display.html">7 Segments Display</a></span>
+<span class='chapterToc'><a href="parts_7 Segments Display (Decoder).html">7 Segments Display (Decoder)</a></span>
+<span class='chapterToc'><a href="parts_Buzzer.html">Buzzer</a></span>
+<span class='chapterToc'><a href="parts_D. Transfer Function.html">D. Transfer Function</a></span>
+<span class='chapterToc'><a href="parts_DC Motor.html">DC Motor</a></span>
+<span class='chapterToc'><a href="parts_DS1621 (Temperature I2C).html">DS1621 (Temperature I2C)</a></span>
+<span class='chapterToc'><a href="parts_ETH w5500.html">ETH w5500</a></span>
+<span class='chapterToc'><a href="parts_Encoder.html">Encoder</a></span>
+<span class='chapterToc'><a href="parts_FM50 (Temperature).html">FM50 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_Fixed Voltage.html">Fixed Voltage</a></span>
+<span class='chapterToc'><a href="parts_Gamepad.html">Gamepad</a></span>
+<span class='chapterToc'><a href="parts_Gamepad (Analogic).html">Gamepad (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_IO 74xx595.html">IO 74xx595</a></span>
+<span class='chapterToc'><a href="parts_IO MCP23S17.html">IO MCP23S17</a></span>
+<span class='chapterToc'><a href="parts_IO PCF8574.html">IO PCF8574</a></span>
+<span class='chapterToc'><a href="parts_IO UART.html">IO UART</a></span>
+<span class='chapterToc'><a href="parts_IO Virtual Term.html">IO Virtual Term</a></span>
+<span class='chapterToc'><a href="parts_Jumper Wires.html">Jumper Wires</a></span>
+<span class='chapterToc'><a href="parts_Keypad.html">Keypad</a></span>
+<span class='chapterToc'><a href="parts_LM35 (Temperature).html">LM35 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_LCD hd44780.html">LCD hd44780</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_AnalogButtons">AnalogButtons</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_espmsim_server">espmsim_server</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_lcd">game_lcd</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_LCD_hd44780">LCD_hd44780</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Serial_LCD">Serial_LCD</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_srtank_test">srtank_test</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC16F628A">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0_2">test_b0_2</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F777_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F877A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F452_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_PID">PID</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4620_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#PICGenios_PIC18F4550">PICGenios</a></span>
+<span class='subsectionToc'><a href="#PICGenios_PIC18F4550_Parts_Demo">Parts_Demo</a></span>
+<span class='sectionToc'><a href="#uCboard_STM8S103">uCboard</a></span>
+<span class='subsectionToc'><a href="#uCboard_STM8S103_LCD">LCD</a></span>
+<span class='subsectionToc'><a href="#uCboard_Z80_LCD_vert_scroll">LCD_vert_scroll</a></span>
+<span class='chapterToc'><a href="parts_LCD ili9341.html">LCD ili9341</a></span>
+<span class='chapterToc'><a href="parts_LCD pcf8833.html">LCD pcf8833</a></span>
+<span class='chapterToc'><a href="parts_LCD pcd8544.html">LCD pcd8544</a></span>
+<span class='chapterToc'><a href="parts_LCD ssd1306.html">LCD ssd1306</a></span>
+<span class='chapterToc'><a href="parts_LED Matrix.html">LED Matrix</a></span>
+<span class='chapterToc'><a href="parts_LEDs.html">LEDs</a></span>
+<span class='chapterToc'><a href="parts_MEM 24CXXX.html">MEM 24CXXX</a></span>
+<span class='chapterToc'><a href="parts_MPU6050.html">MPU6050</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers.html">Potentiometers</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers (Rotary).html">Potentiometers (Rotary)</a></span>
+<span class='chapterToc'><a href="parts_Push Buttons.html">Push Buttons</a></span>
+<span class='chapterToc'><a href="parts_Push Buttons (Analogic).html">Push Buttons (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_RGB LED.html">RGB LED</a></span>
+<span class='chapterToc'><a href="parts_RTC ds1307.html">RTC ds1307</a></span>
+<span class='chapterToc'><a href="parts_RTC pfc8563.html">RTC pfc8563</a></span>
+<span class='chapterToc'><a href="parts_SD Card.html">SD Card</a></span>
+<span class='chapterToc'><a href="parts_Servo Motor.html">Servo Motor</a></span>
+<span class='chapterToc'><a href="parts_Signal Generator.html">Signal Generator</a></span>
+<span class='chapterToc'><a href="parts_Step Motor.html">Step Motor</a></span>
+<span class='chapterToc'><a href="parts_SHT3X (Temp. Hum.).html">SHT3X (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_Switches.html">Switches</a></span>
+<span class='chapterToc'><a href="parts_Temperature System.html">Temperature System</a></span>
+<span class='chapterToc'><a href="parts_Ultrasonic HC-SR04.html">Ultrasonic HC-SR04</a></span>
+<span class='chapterToc'><a href="parts_VCD Dump.html">VCD Dump</a></span>
+<span class='chapterToc'><a href="parts_VCD Dump (Analogic).html">VCD Dump (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_VCD Play.html">VCD Play</a></span>
+</nav><main class='main-content'>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_AnalogButtons"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/AnalogButtons]</small>  <h1>  Analog Buttons </h1>
+<pre>
+Arduino analog input push buttons.
+
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/AnalogButtons/src/AnalogButtons.ino" target="_blank">AnalogButtons.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/AnalogButtons/AnalogButtons.png"><img src='board_Arduino_Uno/atmega328p/AnalogButtons/AnalogButtons.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/AnalogButtons.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/AnalogButtons.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_espmsim_server"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/espmsim_server]</small>  <h1> Serial esp8266/espmsim TCP server</h1>
+<pre>
+Open the esp8266 modem simulator in tools menu and connect the serial 
+(or a real esp8266 connected in a real serial port).
+
+To use the serial port, first configure the com0com or tty0tty as 
+described in the help and open the serial terminal (cutecom).
+
+When the server is loaded, open a browser in the address http://127.0.0.1:2000 
+
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/espmsim_server/src/espmsim_server.ino" target="_blank">espmsim_server.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/espmsim_server/espmsim_server.png"><img src='board_Arduino_Uno/atmega328p/espmsim_server/espmsim_server.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/espmsim_server.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/espmsim_server.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_game_lcd"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/game_lcd]</small>  <h1>Arduino LCD Game</h1>
+<pre>
+//  _ ___ _______     ___ ___ ___  ___ _   _ ___ _____ ___ 
+// / |_  )__ /   \   / __|_ _| _ \/ __| | | |_ _|_   _/ __| 
+// | |/ / |_ \ |) | | (__ | ||   / (__| |_| || |  | | \__ \ 
+// |_/___|___/___/   \___|___|_|_\\___|\___/|___| |_| |___/ 
+// 
+// Arduino LCD Game
+// 
+// Made by 123d Circuits
+// License: CC-BY-SA 3.0
+// Downloaded from: <a href="https://circuits.io/circuits/1073419-arduino-lcd-game" target="_blank">https://circuits.io/circuits/1073419-arduino-lcd-game</a>
+
+</pre>
+
+Play using gamepad A button (mapped as computer keyboard "i" key)
+<br>
+<br>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/game_lcd/src/ArduinoLCDGame.ino" target="_blank">ArduinoLCDGame.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/game_lcd/game_lcd.png"><img src='board_Arduino_Uno/atmega328p/game_lcd/game_lcd.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/game_lcd.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/game_lcd.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_LCD_hd44780"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/LCD_hd44780]</small>  <h1>LCD hd44780 -  LiquidCrystal Library - Custom Characters  </h1>
+<pre>
+ Demonstrates how to add custom characters on an LCD  display.
+ The LiquidCrystal library works with all LCD displays that are
+ compatible with the  Hitachi HD44780 driver. There are many of
+ them out there, and you can usually tell them by the 16-pin interface.
+
+ This sketch prints "I <heart> Arduino!" and a little dancing man
+ to the LCD.
+
+  The circuit:
+ * LCD RS pin to digital pin 12
+ * LCD Enable pin to digital pin 11
+ * LCD D4 pin to digital pin 5
+ * LCD D5 pin to digital pin 4
+ * LCD D6 pin to digital pin 3
+ * LCD D7 pin to digital pin 2
+ * LCD R/W pin to ground
+ * 10K potentiometer:
+ * ends to +5V and ground
+ * wiper to LCD VO pin (pin 3)
+ * 10K poterntiometer on pin A0
+
+ created 21 Mar 2011
+ by Tom Igoe
+ modified 11 Nov 2013
+ by Scott Fitzgerald
+ modified 7 Nov 2016
+ by Arturo Guadalupi
+
+ Based on Adafruit's example at
+ https://github.com/adafruit/SPI_VFD/blob/master/examples/createChar/createChar.pde
+
+ This example code is in the public domain.
+ http://www.arduino.cc/en/Tutorial/LiquidCrystalCustomCharacter
+
+ Also useful:
+ http://icontexto.com/charactercreator/
+
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/LCD_hd44780/src/CustomCharacter.ino" target="_blank">CustomCharacter.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/LCD_hd44780/LCD_hd44780.png"><img src='board_Arduino_Uno/atmega328p/LCD_hd44780/LCD_hd44780.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/LCD_hd44780.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/LCD_hd44780.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_Serial_LCD"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/Serial_LCD]</small>  <h1> Serial LCD LiquidCrystal_I2C</h1>
+<pre>
+LiquidCrystal_I2C CustomChars example
+//YWROBOT
+//Compatible with the Arduino IDE 1.0
+//Library version:1.1
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/Serial_LCD/src/CustomChars.ino" target="_blank">CustomChars.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/Serial_LCD/Serial_LCD.png"><img src='board_Arduino_Uno/atmega328p/Serial_LCD/Serial_LCD.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/Serial_LCD.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Serial_LCD.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_srtank_test"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/srtank_test]</small>  <h1> Serial remote tank simple test </h1>
+<pre>
+Open the Serial remote tank in tools menu and connect the serial.
+
+To use the serial port, first configure the com0com or tty0tty as 
+described in the help and open the serial terminal (cutecom).
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/srtank_test/src/srtank_test.ino" target="_blank">srtank_test.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/srtank_test/srtank_test.png"><img src='board_Arduino_Uno/atmega328p/srtank_test/srtank_test.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/srtank_test.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/srtank_test.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F628A_test_b0_2"></a><small>[<a href='#Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0_2]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests LCD display;
+2- Test the red LEDs connected to the PORT.
+3- Tests matrix keyboard
+4- External eeprom test 24LC512
+5- Test RTC PCF8563
+6- Test serial port sending
+7- Tests receiving serial port
+8- Read keyboard and send through serial port
+
+To use the serial port, configure com0com or
+tty0tty as described in the help and open the serial terminal (cutecom).
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F628A/test_b0_2/src/test_b2.X" target="_blank">MPLABX test_b0_2 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png"><img src='board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F777"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F777_test_b0"></a><small>[<a href='#Breadboard_PIC16F777'>PIC16F777</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F777/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F777/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F777/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F777/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F877A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F877A_test_b0"></a><small>[<a href='#Breadboard_PIC16F877A'>PIC16F877A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F877A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F877A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F877A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F877A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC18F452"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F452_test_b0"></a><small>[<a href='#Breadboard_PIC18F452'>PIC18F452</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F452/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F452/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F452/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F452/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC18F4550"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4550_PID"></a><small>[<a href='#Breadboard_PIC18F4550'>PIC18F4550</a>/PID]</small><h1>Discrete Transfer Function and PID example.</h1>
+
+<pre>
+1- Use potentiometer to define setpoint
+2- Use RB0 switch to select open loop or closed loop with PID controller
+
+Use octave or matlab to calculate transfer function coeficients:
+
+>>gs = tf([1],[0.2 0.25 1]);
+
+Transfer function 'gs' from input 'u1' to output ...
+
+               1
+ y1:  --------------------
+      0.2 s^2 + 0.25 s + 1
+
+Continuous-time model.
+
+>> gd=c2d(gs,0.1)
+
+Transfer function 'gd' from input 'u1' to output ...
+
+       0.02389 z + 0.02291
+ y1:  ----------------------
+      z^2 - 1.836 z + 0.8825
+
+Discrete-time model Ts=0.1.
+
+
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/PID/src/PID.X" target="_blank">MPLABX PID project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4550/PID/PID.png"><img src='board_Breadboard/PIC18F4550/PID/PID.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4550/PID.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4550/PID.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC18F4550"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4550_test_b0"></a><small>[<a href='#Breadboard_PIC18F4550'>PIC18F4550</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4550/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F4550/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4550/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4550/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4620_test_b0"></a><small>[<a href='#Breadboard_PIC18F4620'>PIC18F4620</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4620/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F4620/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="PICGenios_PIC18F4550"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="PICGenios_PIC18F4550_Parts_Demo"></a><small>[<a href='#PICGenios_PIC18F4550'>PIC18F4550</a>/Parts_Demo]</small><h1> Simple example for servomotor and stepper motor testing. </h1>
+
+<pre>
+Servo motor connected in RB0 controlled by AN0 analog channel.
+Stepper motor connected to RB7, RB6, RB5 and RB4.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_PICGenios/PIC18F4550/Parts_Demo/src/parts_test.X" target="_blank">MPLABX Parts_Demo project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_PICGenios/PIC18F4550/Parts_Demo/Parts_Demo.png"><img src='board_PICGenios/PIC18F4550/Parts_Demo/Parts_Demo.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_PICGenios/PIC18F4550/Parts_Demo.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_PICGenios/PIC18F4550/Parts_Demo.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="uCboard_STM8S103"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="uCboard_STM8S103_LCD"></a><small>[<a href='#uCboard_STM8S103'>STM8S103</a>/LCD]</small>  <h1>STM8 SDCC LCD example </h1>
+Original link<a href="https://github.com/polprog/stm8-hd44780">https://github.com/polprog/stm8-hd44780</a>
+<br>
+<pre>
+/*
+ * HD44780 LCD test/demo program for STM8
+ * By Chris "polprog" Lasocki
+ * 2018
+ */       
+</pre>
+
+
+<a href="https://github.com/polprog/stm8-hd44780" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_uCboard/STM8S103/LCD/LCD.png"><img src='board_uCboard/STM8S103/LCD/LCD.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_uCboard/STM8S103/LCD.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_uCboard/STM8S103/LCD.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="uCboard_Z80"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="uCboard_Z80_LCD_vert_scroll"></a><small>[<a href='#uCboard_Z80'>Z80</a>/LCD_vert_scroll]</small>  <h1>Z80 LCD HD47780 vertical scroll </h1>
+
+<br>Original link <a href="http://www.dinceraydin.com/lcd/z80example.htm">http://www.dinceraydin.com/lcd/z80example.htm</a>
+<br>
+<pre>
+;
+; Program: v_scroll.asm
+; programmer(s): Dincer Aydin (dinceraydin@altavista.net)
+; function: vertical scroll effect
+; The effect is the same as the one you can see at the entrance of my LCD pages:
+; http://www.dinceraydin.com/lcd/z80example.htm
+;
+;
+; This code requires a 2*16 LCD connected to a 8255 with base address of 00h
+; routines sendcomA & sendcom & sendcharA & sendchar have been tested on 
+; >> 2*16 Hitachi LCD with HD44780 chip 
+; >> Samsung 1*16 LCD with a KS0062F00 chip
+; >> 2*16 Epson LCD marked P300020400 SANTIS 1 ,and 
+; >> noname 1*16 HD44780 based LCD.
+; The Z80 was clocked at 2 MHz and 4,9152 MHz for each display.This was done 
+; because the routines mentioned above take many t states and in most cases 
+; that will be longer that the time a HD44780 will need to execute a command. 
+;
+; Connections:
+; LCD data bus(pins #14-#7) connected to Port A of a 8255 with 00h base address
+; LCD Enable pin(#6) connected to Port C bit #7
+; LCD R/W pin(#5) connected to Port C bit #6
+; LCD RS pin(#4) connected to Port C bit #5                 
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_uCboard/Z80/LCD_vert_scroll/src" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_uCboard/Z80/LCD_vert_scroll/LCD_vert_scroll.png"><img src='board_uCboard/Z80/LCD_vert_scroll/LCD_vert_scroll.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_uCboard/Z80/LCD_vert_scroll.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_uCboard/Z80/LCD_vert_scroll.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

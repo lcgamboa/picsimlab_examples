@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples Part Gamepad</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<span class='chapterToc'><a href="examples_index.html">Boards Examples Index</a></span>
+<span class='chapterToc'><a href="parts_7 Segments Display.html">7 Segments Display</a></span>
+<span class='chapterToc'><a href="parts_7 Segments Display (Decoder).html">7 Segments Display (Decoder)</a></span>
+<span class='chapterToc'><a href="parts_Buzzer.html">Buzzer</a></span>
+<span class='chapterToc'><a href="parts_D. Transfer Function.html">D. Transfer Function</a></span>
+<span class='chapterToc'><a href="parts_DC Motor.html">DC Motor</a></span>
+<span class='chapterToc'><a href="parts_DS1621 (Temperature I2C).html">DS1621 (Temperature I2C)</a></span>
+<span class='chapterToc'><a href="parts_ETH w5500.html">ETH w5500</a></span>
+<span class='chapterToc'><a href="parts_Encoder.html">Encoder</a></span>
+<span class='chapterToc'><a href="parts_FM50 (Temperature).html">FM50 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_Fixed Voltage.html">Fixed Voltage</a></span>
+<span class='chapterToc'><a href="parts_Gamepad.html">Gamepad</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_lcd">game_lcd</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_marduino">game_marduino</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_snake">game_snake</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_lode_runner">lode_runner</a></span>
+<span class='sectionToc'><a href="#Breadboard_atmega328p">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_atmega328p_game_marduino">game_marduino</a></span>
+<span class='chapterToc'><a href="parts_Gamepad (Analogic).html">Gamepad (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_IO 74xx595.html">IO 74xx595</a></span>
+<span class='chapterToc'><a href="parts_IO MCP23S17.html">IO MCP23S17</a></span>
+<span class='chapterToc'><a href="parts_IO PCF8574.html">IO PCF8574</a></span>
+<span class='chapterToc'><a href="parts_IO UART.html">IO UART</a></span>
+<span class='chapterToc'><a href="parts_IO Virtual Term.html">IO Virtual Term</a></span>
+<span class='chapterToc'><a href="parts_Jumper Wires.html">Jumper Wires</a></span>
+<span class='chapterToc'><a href="parts_Keypad.html">Keypad</a></span>
+<span class='chapterToc'><a href="parts_LM35 (Temperature).html">LM35 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_LCD hd44780.html">LCD hd44780</a></span>
+<span class='chapterToc'><a href="parts_LCD ili9341.html">LCD ili9341</a></span>
+<span class='chapterToc'><a href="parts_LCD pcf8833.html">LCD pcf8833</a></span>
+<span class='chapterToc'><a href="parts_LCD pcd8544.html">LCD pcd8544</a></span>
+<span class='chapterToc'><a href="parts_LCD ssd1306.html">LCD ssd1306</a></span>
+<span class='chapterToc'><a href="parts_LED Matrix.html">LED Matrix</a></span>
+<span class='chapterToc'><a href="parts_LEDs.html">LEDs</a></span>
+<span class='chapterToc'><a href="parts_MEM 24CXXX.html">MEM 24CXXX</a></span>
+<span class='chapterToc'><a href="parts_MPU6050.html">MPU6050</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers.html">Potentiometers</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers (Rotary).html">Potentiometers (Rotary)</a></span>
+<span class='chapterToc'><a href="parts_Push Buttons.html">Push Buttons</a></span>
+<span class='chapterToc'><a href="parts_Push Buttons (Analogic).html">Push Buttons (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_RGB LED.html">RGB LED</a></span>
+<span class='chapterToc'><a href="parts_RTC ds1307.html">RTC ds1307</a></span>
+<span class='chapterToc'><a href="parts_RTC pfc8563.html">RTC pfc8563</a></span>
+<span class='chapterToc'><a href="parts_SD Card.html">SD Card</a></span>
+<span class='chapterToc'><a href="parts_Servo Motor.html">Servo Motor</a></span>
+<span class='chapterToc'><a href="parts_Signal Generator.html">Signal Generator</a></span>
+<span class='chapterToc'><a href="parts_Step Motor.html">Step Motor</a></span>
+<span class='chapterToc'><a href="parts_SHT3X (Temp. Hum.).html">SHT3X (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_Switches.html">Switches</a></span>
+<span class='chapterToc'><a href="parts_Temperature System.html">Temperature System</a></span>
+<span class='chapterToc'><a href="parts_Ultrasonic HC-SR04.html">Ultrasonic HC-SR04</a></span>
+<span class='chapterToc'><a href="parts_VCD Dump.html">VCD Dump</a></span>
+<span class='chapterToc'><a href="parts_VCD Dump (Analogic).html">VCD Dump (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_VCD Play.html">VCD Play</a></span>
+</nav><main class='main-content'>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_game_lcd"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/game_lcd]</small>  <h1>Arduino LCD Game</h1>
+<pre>
+//  _ ___ _______     ___ ___ ___  ___ _   _ ___ _____ ___ 
+// / |_  )__ /   \   / __|_ _| _ \/ __| | | |_ _|_   _/ __| 
+// | |/ / |_ \ |) | | (__ | ||   / (__| |_| || |  | | \__ \ 
+// |_/___|___/___/   \___|___|_|_\\___|\___/|___| |_| |___/ 
+// 
+// Arduino LCD Game
+// 
+// Made by 123d Circuits
+// License: CC-BY-SA 3.0
+// Downloaded from: <a href="https://circuits.io/circuits/1073419-arduino-lcd-game" target="_blank">https://circuits.io/circuits/1073419-arduino-lcd-game</a>
+
+</pre>
+
+Play using gamepad A button (mapped as computer keyboard "i" key)
+<br>
+<br>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/game_lcd/src/ArduinoLCDGame.ino" target="_blank">ArduinoLCDGame.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/game_lcd/game_lcd.png"><img src='board_Arduino_Uno/atmega328p/game_lcd/game_lcd.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/game_lcd.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/game_lcd.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_game_marduino"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/game_marduino]</small>  <h1>Super Marduino</h1>
+<pre>
+ * Super Marduino
+ * A platform game with Arduino Uno.
+ * 
+ * Requirements:
+ * Nokia 5510 display and three buttons.
+ * Additional libraries: Adafruit GFX and Adafruit_PCD8544.
+ * 
+ * Created by Tobias Beise Ulrich
+ * <a href ="http://tobiasbu.github.io/" target="_blank">http://tobiasbu.github.io/</a>
+ * 
+ * GitHub:
+ * <a href ="https://github.com/tobiasbu/marduino" target="_blank">https://github.com/tobiasbu/marduino</a>
+</pre>
+<br>
+Play using gamepad:
+<br>
+Select or Jump:  A button (mapped as computer keyboard "i" key)<br>
+Right         :  B button (mapped as computer keyboard "l" key)<br>
+Left          :  D button (mapped as computer keyboard "j" key)<br>
+<br>
+<br>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Arduino_Uno/atmega328p/game_marduino/src" target="_blank">marduino source</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/game_marduino/game_marduino.png"><img src='board_Arduino_Uno/atmega328p/game_marduino/game_marduino.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/game_marduino.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/game_marduino.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_game_snake"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/game_snake]</small>  <h1>Snake Game</h1>
+<pre>
+
+/**** Snake Game by Abhinav Faujdar *****/
+
+</pre>
+
+<br>
+Play using gamepad:
+<br>
+Up         :  A button (mapped as computer keyboard "i" key)<br>
+Down       :  C button (mapped as computer keyboard "k" key)<br>
+Right      :  B button (mapped as computer keyboard "l" key)<br>
+Left       :  D button (mapped as computer keyboard "j" key)<br>
+Pause      :  E button (mapped as computer keyboard "e" key)<br>
+<br>
+<br>
+<br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/game_snake/src/snake.ino" target="_blank">snake.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/game_snake/game_snake.png"><img src='board_Arduino_Uno/atmega328p/game_snake/game_snake.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/game_snake.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/game_snake.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_lode_runner"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/lode_runner]</small>  <h1> Library lcdgfx example: lode runner </h1>
+<pre>
+/*
+ *   Attiny85 PINS
+ *             ____
+ *   RESET   -|_|  |- 3V
+ *   SCL (3) -|    |- (2)
+ *   SDA (4) -|    |- (1) - BUZZER
+ *   GND     -|____|- (0) - BUTTONS module
+ *
+ *   Atmega328 PINS with i2c SSD1306 to A4/A5, BUZZER on D8,
+ *   Z-keypad ADC module on A0 pin.
+ *   If you want to use GPIO keys, uncomment USE_GPIO_BUTTONS below
+ *
+ *   Atmega328 PINS with spi Nokia 5110 LCD:
+ *   LCD RST to D3
+ *   LCD CES to D4
+ *   LCD DC to  D5
+ *   LCD DIN to D11
+ *   LCD CLK to D13
+ *   LCD BL to  VCC
+ */
+</pre>
+<br>
+<br>Play using gamepad (analogic):
+<br>Up:     B button (mapped as computer keyboard "i" key)
+<br>Right:  A button (mapped as computer keyboard "l" key)
+<br>Left:   D button (mapped as computer keyboard "j" key)
+<br>Down:   C button (mapped as computer keyboard "k" key) 
+<br>
+<br>
+<a href="https://github.com/lexus2k/lcdgfx/blob/master/examples/games/lode_runner/lode_runner.ino" target="_blank">lode_runner.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/lode_runner/lode_runner.png"><img src='board_Arduino_Uno/atmega328p/lode_runner/lode_runner.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/lode_runner.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/lode_runner.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_atmega328p_game_marduino"></a><small>[<a href='#Breadboard_atmega328p'>atmega328p</a>/game_marduino]</small>  <h1>Super Marduino</h1>
+<pre>
+ * Super Marduino
+ * A platform game with Arduino Uno.
+ * 
+ * Requirements:
+ * Nokia 5510 display and three buttons.
+ * Additional libraries: Adafruit GFX and Adafruit_PCD8544.
+ * 
+ * Created by Tobias Beise Ulrich
+ * <a href ="http://tobiasbu.github.io/" target="_blank">http://tobiasbu.github.io/</a>
+ * 
+ * GitHub:
+ * <a href ="https://github.com/tobiasbu/marduino" target="_blank">https://github.com/tobiasbu/marduino</a>
+</pre>
+<br>
+Play using gamepad:
+<br>
+Select or Jump:  A button (mapped as computer keyboard "i" key)<br>
+Right         :  B button (mapped as computer keyboard "l" key)<br>
+Left          :  D button (mapped as computer keyboard "j" key)<br>
+<br>
+<br>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/atmega328p/game_marduino/src" target="_blank">marduino source</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/atmega328p/game_marduino/game_marduino.png"><img src='board_Breadboard/atmega328p/game_marduino/game_marduino.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/atmega328p/game_marduino.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/atmega328p/game_marduino.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

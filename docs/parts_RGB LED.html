@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples Part RGB LED</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<span class='chapterToc'><a href="examples_index.html">Boards Examples Index</a></span>
+<span class='chapterToc'><a href="parts_7 Segments Display.html">7 Segments Display</a></span>
+<span class='chapterToc'><a href="parts_7 Segments Display (Decoder).html">7 Segments Display (Decoder)</a></span>
+<span class='chapterToc'><a href="parts_Buzzer.html">Buzzer</a></span>
+<span class='chapterToc'><a href="parts_D. Transfer Function.html">D. Transfer Function</a></span>
+<span class='chapterToc'><a href="parts_DC Motor.html">DC Motor</a></span>
+<span class='chapterToc'><a href="parts_DS1621 (Temperature I2C).html">DS1621 (Temperature I2C)</a></span>
+<span class='chapterToc'><a href="parts_ETH w5500.html">ETH w5500</a></span>
+<span class='chapterToc'><a href="parts_Encoder.html">Encoder</a></span>
+<span class='chapterToc'><a href="parts_FM50 (Temperature).html">FM50 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_Fixed Voltage.html">Fixed Voltage</a></span>
+<span class='chapterToc'><a href="parts_Gamepad.html">Gamepad</a></span>
+<span class='chapterToc'><a href="parts_Gamepad (Analogic).html">Gamepad (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_IO 74xx595.html">IO 74xx595</a></span>
+<span class='chapterToc'><a href="parts_IO MCP23S17.html">IO MCP23S17</a></span>
+<span class='chapterToc'><a href="parts_IO PCF8574.html">IO PCF8574</a></span>
+<span class='chapterToc'><a href="parts_IO UART.html">IO UART</a></span>
+<span class='chapterToc'><a href="parts_IO Virtual Term.html">IO Virtual Term</a></span>
+<span class='chapterToc'><a href="parts_Jumper Wires.html">Jumper Wires</a></span>
+<span class='chapterToc'><a href="parts_Keypad.html">Keypad</a></span>
+<span class='chapterToc'><a href="parts_LM35 (Temperature).html">LM35 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_LCD hd44780.html">LCD hd44780</a></span>
+<span class='chapterToc'><a href="parts_LCD ili9341.html">LCD ili9341</a></span>
+<span class='chapterToc'><a href="parts_LCD pcf8833.html">LCD pcf8833</a></span>
+<span class='chapterToc'><a href="parts_LCD pcd8544.html">LCD pcd8544</a></span>
+<span class='chapterToc'><a href="parts_LCD ssd1306.html">LCD ssd1306</a></span>
+<span class='chapterToc'><a href="parts_LED Matrix.html">LED Matrix</a></span>
+<span class='chapterToc'><a href="parts_LEDs.html">LEDs</a></span>
+<span class='chapterToc'><a href="parts_MEM 24CXXX.html">MEM 24CXXX</a></span>
+<span class='chapterToc'><a href="parts_MPU6050.html">MPU6050</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers.html">Potentiometers</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers (Rotary).html">Potentiometers (Rotary)</a></span>
+<span class='chapterToc'><a href="parts_Push Buttons.html">Push Buttons</a></span>
+<span class='chapterToc'><a href="parts_Push Buttons (Analogic).html">Push Buttons (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_RGB LED.html">RGB LED</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_AnalogInOutSerial">AnalogInOutSerial</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Arduino_sound">Arduino_sound</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata_ethernet">firmata_ethernet</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata">firmata</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC16F628A">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F648A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F84A_test_b0">test_b0</a></span>
+<span class='chapterToc'><a href="parts_RTC ds1307.html">RTC ds1307</a></span>
+<span class='chapterToc'><a href="parts_RTC pfc8563.html">RTC pfc8563</a></span>
+<span class='chapterToc'><a href="parts_SD Card.html">SD Card</a></span>
+<span class='chapterToc'><a href="parts_Servo Motor.html">Servo Motor</a></span>
+<span class='chapterToc'><a href="parts_Signal Generator.html">Signal Generator</a></span>
+<span class='chapterToc'><a href="parts_Step Motor.html">Step Motor</a></span>
+<span class='chapterToc'><a href="parts_SHT3X (Temp. Hum.).html">SHT3X (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_Switches.html">Switches</a></span>
+<span class='chapterToc'><a href="parts_Temperature System.html">Temperature System</a></span>
+<span class='chapterToc'><a href="parts_Ultrasonic HC-SR04.html">Ultrasonic HC-SR04</a></span>
+<span class='chapterToc'><a href="parts_VCD Dump.html">VCD Dump</a></span>
+<span class='chapterToc'><a href="parts_VCD Dump (Analogic).html">VCD Dump (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_VCD Play.html">VCD Play</a></span>
+</nav><main class='main-content'>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_AnalogInOutSerial"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/AnalogInOutSerial]</small>  <h1>Analog input, analog output, serial output</h1>
+<pre>
+  Reads an analog input pin, maps the result to a range from 0 to 255 and uses
+  the result to set the pulse width modulation (PWM) of an output pin.
+  Also prints the results to the Serial Monitor.
+
+  The circuit:
+  - potentiometer connected to analog pin 0.
+    Center pin of the potentiometer goes to the analog pin.
+    side pins of the potentiometer go to +5V and ground
+  - LED connected from digital pin 9 to ground
+
+  created 29 Dec. 2008
+  modified 9 Apr 2012
+  by Tom Igoe
+
+  This example code is in the public domain.
+
+  http://www.arduino.cc/en/Tutorial/AnalogInOutSerial
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/AnalogInOutSerial/src/AnalogInOutSerial.ino" target="_blank">AnalogInOutSerial.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/AnalogInOutSerial/AnalogInOutSerial.png"><img src='board_Arduino_Uno/atmega328p/AnalogInOutSerial/AnalogInOutSerial.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/AnalogInOutSerial.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/AnalogInOutSerial.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_Arduino_sound"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/Arduino_sound]</small>  <h1>  Arduino Star Wars Song for Piezo </h1>
+<pre>
+Nick James nicksort
+<a href="https://gist.github.com/nicksort/4736535">https://gist.github.com/nicksort/4736535</a>
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/Arduino_sound/src/arduino_sound.ino" target="_blank">arduino_sound.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/Arduino_sound/Arduino_sound.png"><img src='board_Arduino_Uno/atmega328p/Arduino_sound/Arduino_sound.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/Arduino_sound.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Arduino_sound.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_firmata_ethernet"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/firmata_ethernet]</small>  <h1> Firmata Library - Standard Firmata Ethernet </h1>
+<pre>
+  StandardFirmataEthernet is a TCP client/server implementation. You will need a Firmata client library
+  with a network transport that can act as a TCP server or client in order to establish a connection between
+  StandardFirmataEthernet and the Firmata client application.
+  To use StandardFirmataEthernet you will need to have one of the following
+  boards or shields:
+  - Arduino Ethernet shield (or clone)
+  - Arduino Ethernet board (or clone)
+  - Arduino Yun
+  Follow the instructions in the ethernetConfig.h file (ethernetConfig.h tab in Arduino IDE) to
+  configure your particular hardware.
+  NOTE: If you are using an Arduino Ethernet shield you cannot use the following pins on
+  the following boards. Firmata will ignore any requests to use these pins:
+  - Arduino Uno or other ATMega328 boards: (D4, D10, D11, D12, D13)
+  - Arduino Mega: (D4, D10, D50, D51, D52, D53)
+  - Arduino Leonardo: (D4, D10)
+  - Arduino Due: (D4, D10)
+  - Arduino Zero: (D4, D10)
+  If you are using an ArduinoEthernet board, the following pins cannot be used (same as Uno):
+  - D4, D10, D11, D12, D13
+</pre>
+<br>
+<br>
+<a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmataEthernet/StandardFirmataEthernet.ino" target="_blank">StandardFirmataEthernet.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/firmata_ethernet/firmata_ethernet.png"><img src='board_Arduino_Uno/atmega328p/firmata_ethernet/firmata_ethernet.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/firmata_ethernet.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/firmata_ethernet.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_firmata"></a><small>[<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/firmata]</small>  <h1> Firmata Library - Standard Firmata  </h1>
+<pre>
+  Firmata is a generic protocol for communicating with microcontrollers
+  from software on a host computer. It is intended to work with
+  any host computer software package.
+  To download a host software package, please click on the following link
+  to open the list of Firmata client libraries in your default browser.
+  https://github.com/firmata/arduino#firmata-client-libraries
+  Copyright (C) 2006-2008 Hans-Christoph Steiner.  All rights reserved.
+  Copyright (C) 2010-2011 Paul Stoffregen.  All rights reserved.
+  Copyright (C) 2009 Shigeru Kobayashi.  All rights reserved.
+  Copyright (C) 2009-2016 Jeff Hoefs.  All rights reserved.
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
+  See file LICENSE.txt for further informations on licensing terms.
+  Last updated August 17th, 2017
+</pre>
+<br>
+<br>
+<a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank">StandardFirmata.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/firmata/firmata.png"><img src='board_Arduino_Uno/atmega328p/firmata/firmata.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F628A_test_b0"></a><small>[<a href='#Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F628A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F648A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F648A_test_b0"></a><small>[<a href='#Breadboard_PIC16F648A'>PIC16F648A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F648A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F648A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F648A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F648A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F84A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F84A_test_b0"></a><small>[<a href='#Breadboard_PIC16F84A'>PIC16F84A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F84A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F84A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F84A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F84A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

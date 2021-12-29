@@ -185,6 +185,7 @@ echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.
 ./boards.sh
 
 ./parts.sh 
+./parts2.sh 
 
 ./ucs.sh 
  
