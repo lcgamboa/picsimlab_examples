@@ -14,10 +14,10 @@ for part in "${parts[@]}";do
   echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> "$file"  
   echo "</head>" >> "$file" 
   echo "<body>" >> "$file" 
-  echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> "$file"
+  echo "<script src='picsimlab.js' type='text/javascript'></script>" >> "$file"
   echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> "$file"
+  echo "<nav class='TOC'>" >> "$file"
   echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >> "$file" 
-
 
 for chpart in "${parts[@]}";do
   echo "<span class='chapterToc'><a href=\"parts_${chpart}.html\">$chpart</a></span>" >> "$file" 
