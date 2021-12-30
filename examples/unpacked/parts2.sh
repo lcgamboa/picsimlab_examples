@@ -14,8 +14,6 @@ for part in "${parts[@]}";do
   echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> "$file"  
   echo "</head>" >> "$file" 
   echo "<body>" >> "$file" 
-  echo "<script src='picsimlab.js' type='text/javascript'></script>" >> "$file"
-  echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> "$file"
   echo "<nav class='TOC'>" >> "$file"
   echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >> "$file" 
 
@@ -86,6 +84,9 @@ done
     
 
   done
-  echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> "$file"
+  echo "</main>" >> "$file"
+  echo "<script src='picsimlab.js' type='text/javascript'></script>" >> "$file"
+  echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> "$file"
+  echo "<div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> "$file"
 
 done
