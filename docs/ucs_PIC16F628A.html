@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples &#181controllers PIC16F628A</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<nav class='TOC'>
+<span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
+<span class='chapterToc'><a href="ucs_atmega328p.html">atmega328p</a></span>
+<span class='chapterToc'><a href="ucs_atmega2560.html">atmega2560</a></span>
+<span class='chapterToc'><a href="ucs_attiny85.html">attiny85</a></span>
+<span class='chapterToc'><a href="ucs_C51.html">C51</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F18324.html">PIC16F18324</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F18855.html">PIC16F18855</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1619.html">PIC16F1619</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1788.html">PIC16F1788</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1789.html">PIC16F1789</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1939.html">PIC16F1939</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F628A.html">PIC16F628A</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC16F628A">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0_2">test_b0_2</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#K16F_PIC16F628A">K16F</a></span>
+<span class='subsectionToc'><a href="#K16F_PIC16F628A_LCD_pcf8833">LCD_pcf8833</a></span>
+<span class='subsectionToc'><a href="#K16F_PIC16F628A_test_b2">test_b2</a></span>
+<span class='sectionToc'><a href="#McLab1_PIC16F628A">McLab1</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_dimmer">desbravando_o_pic_dimmer</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_ex1">desbravando_o_pic_ex1</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_ex2">desbravando_o_pic_ex2</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_ex3">desbravando_o_pic_ex3</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_ex4">desbravando_o_pic_ex4</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_ex5">desbravando_o_pic_ex5</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_desbravando_o_pic_ex6">desbravando_o_pic_ex6</a></span>
+<span class='subsectionToc'><a href="#McLab1_PIC16F628A_test_b1">test_b1</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F648A.html">PIC16F648A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F84A.html">PIC16F84A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F777.html">PIC16F777</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F877A.html">PIC16F877A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F887.html">PIC16F887</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F452.html">PIC18F452</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4520.html">PIC18F4520</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4550.html">PIC18F4550</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F45K50.html">PIC18F45K50</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4620.html">PIC18F4620</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F27K40.html">PIC18F27K40</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F46J50.html">PIC18F46J50</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F47K40.html">PIC18F47K40</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F67J94.html">PIC18F67J94</a></span>
+<span class='chapterToc'><a href="ucs_STM8S103.html">STM8S103</a></span>
+<span class='chapterToc'><a href="ucs_Z80.html">Z80</a></span>
+</nav><main class='main-content'>
+<a name="Breadboard_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F628A_test_b0_2"></a><small>[Breadboard/<a href='#Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0_2]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests LCD display;
+2- Test the red LEDs connected to the PORT.
+3- Tests matrix keyboard
+4- External eeprom test 24LC512
+5- Test RTC PCF8563
+6- Test serial port sending
+7- Tests receiving serial port
+8- Read keyboard and send through serial port
+
+To use the serial port, configure com0com or
+tty0tty as described in the help and open the serial terminal (cutecom).
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F628A/test_b0_2/src/test_b2.X" target="_blank">MPLABX test_b0_2 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png"><img src='board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F628A_test_b0"></a><small>[Breadboard/<a href='#Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F84A/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0/test_b0.png"><img src='board_Breadboard/PIC16F628A/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="K16F_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="K16F_PIC16F628A_LCD_pcf8833"></a><small>[K16F/<a href='#K16F_PIC16F628A'>PIC16F628A</a>/LCD_pcf8833]</small>
+<h1> Test pcf8833 LCD display </h1>
+
+<pre>
+LCD pcf8833 test code 
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_K16F/PIC16F628A/LCD_pcf8833/src/pcf8833.X" target="_blank">MPLABX pcf8833 project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_K16F/PIC16F628A/LCD_pcf8833/LCD_pcf8833.png"><img src='board_K16F/PIC16F628A/LCD_pcf8833/LCD_pcf8833.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_K16F/PIC16F628A/LCD_pcf8833.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_K16F/PIC16F628A/LCD_pcf8833.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="K16F_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="K16F_PIC16F628A_test_b2"></a><small>[K16F/<a href='#K16F_PIC16F628A'>PIC16F628A</a>/test_b2]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests LCD display;
+2- Test the red LEDs connected to the PORTA.
+3- Tests matrix keyboard
+4- External eeprom test 24LC512
+5- Test RTC PCF8563
+6- Test serial port sending
+7- Tests receiving serial port
+8- Read keyboard and send through serial port
+
+To use the serial port, configure com0com or
+tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_K16F/PIC16F84A/test_b2/src/test_b2.X" target="_blank">MPLABX test_b2 project</a>
+<br>
+<br><a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_K16F/PIC16F84A/test_b2/src/others" target="_blank">Others compilers test_b2 project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_K16F/PIC16F628A/test_b2/test_b2.png"><img src='board_K16F/PIC16F628A/test_b2/test_b2.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_K16F/PIC16F628A/test_b2.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_K16F/PIC16F628A/test_b2.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_dimmer"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_dimmer]</small><h1>DESBRAVANDO O PIC - Dimmer</h1>
+
+<pre>
+Dimmer
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_dimmer/src/dimmer.asm" target="_blank">dimmer.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_dimmer/desbravando_o_pic_dimmer.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_dimmer/desbravando_o_pic_dimmer.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_dimmer.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_dimmer.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_ex1"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_ex1]</small><h1>DESBRAVANDO O PIC - ex1.asm</h1>
+
+<pre>
+SISTEMA MUITO SIMPLES PARA REPRESENTAR O ESTADO DE UM BOTÃO ATRAVÉS DE UM LED.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_ex1/src/ex1.asm" target="_blank">ex1.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_ex1/desbravando_o_pic_ex1.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_ex1/desbravando_o_pic_ex1.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex1.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex1.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_ex2"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_ex2]</small><h1>DESBRAVANDO O PIC - ex2.asm</h1>
+
+<pre>
+SISTEMA MUITO SIMPLES PARA INCREMENTAR ATÉ UM DETERMINADO VALOR (MAX) DE DEPOIS DECREMENTAR ATÉ OUTRO (MIN).
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_ex2/src/ex2.asm" target="_blank">ex2.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_ex2/desbravando_o_pic_ex2.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_ex2/desbravando_o_pic_ex2.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex2.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex2.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_ex3"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_ex3]</small><h1>DESBRAVANDO O PIC - ex3.asm</h1>
+
+<pre>
+PISCA-PISCA VARIÁVEL PARA DEMONSTRAR A IMPLEMENTAÇÃO DE DELAYS E A INVERSÃO DE PORTAS.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_ex3/src/ex3.asm" target="_blank">ex3.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_ex3/desbravando_o_pic_ex3.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_ex3/desbravando_o_pic_ex3.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex3.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex3.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_ex4"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_ex4]</small><h1>DESBRAVANDO O PIC - ex4.asm</h1>
+
+<pre>
+CONTADOR QUE UTILIZA DOIS BOTÕES PARA INCREMENTAR E DECREMENTAR O VALOR CONTROLADO PELA VARIÁVEL "CONTADOR". 
+ESTA VARIÁVEL ESTÁ LIMITADA PELAS CONSTANTES "MIN" E "MAX". O VALOR DO CONTADOR É MOSTRADO NO DISPLAY.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_ex4/src/ex4.asm" target="_blank">ex4.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_ex4/desbravando_o_pic_ex4.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_ex4/desbravando_o_pic_ex4.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex4.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex4.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_ex5"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_ex5]</small><h1>DESBRAVANDO O PIC - ex5.asm</h1>
+
+<pre>
+TIMER DECRESCENTE EM SEGUNDOS. O VALOR INICIAL É DETERMINADO   
+PELA CONSTANTE V_INICIO E PODE ESTAR ENTRE 1 E 9 SEGUNDOS.     
+O BOTÃO 1 DISPARA O TIMER, MOSTRANDO O TEMPO RESTANTE NO       
+DISPLAY. O BOTÃO 2 PARALIZA O TIMER. O LED É UTILIZADO PARA    
+INDICAR O ESTADO ATUAL DO TIMER: ACESO=RODANDO E APAGADO=PARADO 
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_ex5/src/ex5.asm" target="_blank">ex5.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_ex5/desbravando_o_pic_ex5.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_ex5/desbravando_o_pic_ex5.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex5.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex5.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_desbravando_o_pic_ex6"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/desbravando_o_pic_ex6]</small><h1>DESBRAVANDO O PIC - ex6.asm</h1>
+
+<pre>
+CONTADOR QUE UTILIZA DOIS BOTÕES PARA INCREMENTAR E DECRE-     
+MENTAR O VALOR CONTROLADO PELA VARIÁVEL "CONTADOR". ESTA       
+VARIÁVEL ESTÁ LIMITADA PELAS CONSTANTES "MIN" E "MAX".         
+O VALOR DO CONTADOR É MOSTRADO NO DISPLAY E ARMAZENADO NA      
+EEPROM PARA NÃO SER PERDIDO MESMO NO CASO DE RESET. 
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_McLab1/PIC16F628A/desbravando_o_pic16F628A_ex6/src/ex6.asm" target="_blank">ex6.asm</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/desbravando_o_pic_ex6/desbravando_o_pic_ex6.png"><img src='board_McLab1/PIC16F628A/desbravando_o_pic_ex6/desbravando_o_pic_ex6.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex6.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/desbravando_o_pic_ex6.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab1_PIC16F628A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab1_PIC16F628A_test_b1"></a><small>[McLab1/<a href='#McLab1_PIC16F628A'>PIC16F628A</a>/test_b1]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests 7-segment display;
+2- Lamp flashes in RA0 (At this moment, change the jumper position to "LED");
+3- Tests red LEDs connected to the PORTB;
+4- Test the buttons;
+5- Test the green LEDs connected to the PORTA.
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_McLab1/PIC16F84A/test_b1/src/teste_b1.X" target="_blank">MPLABX test_b1 project</a>
+<br>
+<br><a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_McLab1/PIC16F84A/test_b1/src/others/" target="_blank">Others compilers test_b1 project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab1/PIC16F628A/test_b1/test_b1.png"><img src='board_McLab1/PIC16F628A/test_b1/test_b1.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab1/PIC16F628A/test_b1.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab1/PIC16F628A/test_b1.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main>
+<script src='picsimlab.js' type='text/javascript'></script>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

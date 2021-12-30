@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples &#181controllers Z80</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<nav class='TOC'>
+<span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
+<span class='chapterToc'><a href="ucs_atmega328p.html">atmega328p</a></span>
+<span class='chapterToc'><a href="ucs_atmega2560.html">atmega2560</a></span>
+<span class='chapterToc'><a href="ucs_attiny85.html">attiny85</a></span>
+<span class='chapterToc'><a href="ucs_C51.html">C51</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F18324.html">PIC16F18324</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F18855.html">PIC16F18855</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1619.html">PIC16F1619</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1788.html">PIC16F1788</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1789.html">PIC16F1789</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1939.html">PIC16F1939</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F628A.html">PIC16F628A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F648A.html">PIC16F648A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F84A.html">PIC16F84A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F777.html">PIC16F777</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F877A.html">PIC16F877A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F887.html">PIC16F887</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F452.html">PIC18F452</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4520.html">PIC18F4520</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4550.html">PIC18F4550</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F45K50.html">PIC18F45K50</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4620.html">PIC18F4620</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F27K40.html">PIC18F27K40</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F46J50.html">PIC18F46J50</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F47K40.html">PIC18F47K40</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F67J94.html">PIC18F67J94</a></span>
+<span class='chapterToc'><a href="ucs_STM8S103.html">STM8S103</a></span>
+<span class='chapterToc'><a href="ucs_Z80.html">Z80</a></span>
+<span class='sectionToc'><a href="#uCboard_Z80">uCboard</a></span>
+<span class='subsectionToc'><a href="#uCboard_Z80_LCD_vert_scroll">LCD_vert_scroll</a></span>
+<span class='subsectionToc'><a href="#uCboard_Z80_LED_blink">LED_blink</a></span>
+</nav><main class='main-content'>
+<a name="uCboard_Z80"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="uCboard_Z80_LCD_vert_scroll"></a><small>[uCboard/<a href='#uCboard_Z80'>Z80</a>/LCD_vert_scroll]</small>  <h1>Z80 LCD HD47780 vertical scroll </h1>
+
+<br>Original link <a href="http://www.dinceraydin.com/lcd/z80example.htm">http://www.dinceraydin.com/lcd/z80example.htm</a>
+<br>
+<pre>
+;
+; Program: v_scroll.asm
+; programmer(s): Dincer Aydin (dinceraydin@altavista.net)
+; function: vertical scroll effect
+; The effect is the same as the one you can see at the entrance of my LCD pages:
+; http://www.dinceraydin.com/lcd/z80example.htm
+;
+;
+; This code requires a 2*16 LCD connected to a 8255 with base address of 00h
+; routines sendcomA & sendcom & sendcharA & sendchar have been tested on 
+; >> 2*16 Hitachi LCD with HD44780 chip 
+; >> Samsung 1*16 LCD with a KS0062F00 chip
+; >> 2*16 Epson LCD marked P300020400 SANTIS 1 ,and 
+; >> noname 1*16 HD44780 based LCD.
+; The Z80 was clocked at 2 MHz and 4,9152 MHz for each display.This was done 
+; because the routines mentioned above take many t states and in most cases 
+; that will be longer that the time a HD44780 will need to execute a command. 
+;
+; Connections:
+; LCD data bus(pins #14-#7) connected to Port A of a 8255 with 00h base address
+; LCD Enable pin(#6) connected to Port C bit #7
+; LCD R/W pin(#5) connected to Port C bit #6
+; LCD RS pin(#4) connected to Port C bit #5                 
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_uCboard/Z80/LCD_vert_scroll/src" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_uCboard/Z80/LCD_vert_scroll/LCD_vert_scroll.png"><img src='board_uCboard/Z80/LCD_vert_scroll/LCD_vert_scroll.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_uCboard/Z80/LCD_vert_scroll.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_uCboard/Z80/LCD_vert_scroll.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="uCboard_Z80"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="uCboard_Z80_LED_blink"></a><small>[uCboard/<a href='#uCboard_Z80'>Z80</a>/LED_blink]</small>  <h1>Z80 SDCC led blink </h1>
+
+<br>
+<pre>
+// Example of use of uCboard 8255
+// compile with:  sdcc -mz80 led.c -o led.hex                
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_uCboard/Z80/LED_blink/src" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_uCboard/Z80/LED_blink/LED_blink.png"><img src='board_uCboard/Z80/LED_blink/LED_blink.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_uCboard/Z80/LED_blink.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_uCboard/Z80/LED_blink.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main>
+<script src='picsimlab.js' type='text/javascript'></script>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

@@ -13,7 +13,7 @@ echo "</head>" >> ../help/UCs.html
 echo "<body>" >> ../help/UCs.html 
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/UCs.html
 echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/UCs.html
-echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >>  ../help/UCs.html
+echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >>  ../help/UCs.html
 
 echo "<span class='chapterToc'>Examples by &#181controllers</h1></span>" >> ../help/UCs.html
 
@@ -24,7 +24,7 @@ done
 echo "</nav><main class='main-content'>" >> ../help/UCs.html
 
 for uc in "${ucs[@]}";do
-  echo  "<hr><br><h2><a name=\"${uc// /_}\"></a>${uc}</h2>" >> ../help/UCs.html
+  echo  "<hr><br><h2><a name=\"${uc// /_}\"></a><a href=\"ucs_${uc}.html\">${uc}</a></h2>" >> ../help/UCs.html
   files=`grep -m1 "$uc" */*/*/*.ini | cut -f1 -d:`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'`

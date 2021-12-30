@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples &#181controllers PIC18F4620</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<nav class='TOC'>
+<span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
+<span class='chapterToc'><a href="ucs_atmega328p.html">atmega328p</a></span>
+<span class='chapterToc'><a href="ucs_atmega2560.html">atmega2560</a></span>
+<span class='chapterToc'><a href="ucs_attiny85.html">attiny85</a></span>
+<span class='chapterToc'><a href="ucs_C51.html">C51</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F18324.html">PIC16F18324</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F18855.html">PIC16F18855</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1619.html">PIC16F1619</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1788.html">PIC16F1788</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1789.html">PIC16F1789</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F1939.html">PIC16F1939</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F628A.html">PIC16F628A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F648A.html">PIC16F648A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F84A.html">PIC16F84A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F777.html">PIC16F777</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F877A.html">PIC16F877A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F887.html">PIC16F887</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F452.html">PIC18F452</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4520.html">PIC18F4520</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4550.html">PIC18F4550</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F45K50.html">PIC18F45K50</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4620.html">PIC18F4620</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC18F4620">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4620_test_b0">test_b0</a></span>
+<span class='sectionToc'><a href="#McLab2_PIC18F4620">McLab2</a></span>
+<span class='subsectionToc'><a href="#McLab2_PIC18F4620_test_b3">test_b3</a></span>
+<span class='sectionToc'><a href="#PICGenios_PIC18F4620">PICGenios</a></span>
+<span class='subsectionToc'><a href="#PICGenios_PIC18F4620_test_b4">test_b4</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F27K40.html">PIC18F27K40</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F46J50.html">PIC18F46J50</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F47K40.html">PIC18F47K40</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F67J94.html">PIC18F67J94</a></span>
+<span class='chapterToc'><a href="ucs_STM8S103.html">STM8S103</a></span>
+<span class='chapterToc'><a href="ucs_Z80.html">Z80</a></span>
+</nav><main class='main-content'>
+<a name="Breadboard_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4620_test_b0"></a><small>[Breadboard/<a href='#Breadboard_PIC18F4620'>PIC18F4620</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/test_b0/src/teste_b0.X" target="_blank">MPLABX test_b0 project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4620/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F4620/test_b0/test_b0.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab2_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab2_PIC18F4620_test_b3"></a><small>[McLab2/<a href='#McLab2_PIC18F4620'>PIC18F4620</a>/test_b3]</small>
+<h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Tests LCD display;
+2- Tests 7-segment displays;
+2- Test the red LEDs;
+3- Tests push buttons;
+4- Tests internal eeprom;
+5- Tests external eeprom 24C04;
+6- Test serial sending and receiving data;
+7- Tests AD converter connected to the potentiometer;
+8- Tests temperature measurement;
+9- Turn on the Heater;
+10- Turn on the fan and measure the speed.
+
+
+To use the serial port, configure com0com in advance
+or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_McLab2/PIC16F877A/test_b3/src/test_b3.X" target="_blank">MPLABX test_b3 project</a>
+<br>
+<br><a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_McLab2/PIC16F877A/test_b3/src/others" target="_blank">Others compilers test_b3 project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab2/PIC18F4620/test_b3/test_b3.png"><img src='board_McLab2/PIC18F4620/test_b3/test_b3.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab2/PIC18F4620/test_b3.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab2/PIC18F4620/test_b3.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="PICGenios_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="PICGenios_PIC18F4620_test_b4"></a><small>[PICGenios/<a href='#PICGenios_PIC18F4620'>PIC18F4620</a>/test_b4]</small><h1> Simple example for testing board features. </h1>
+
+<pre>
+1- Ask to turn on all dip switches;
+2- Tests LCD display;
+3- Tests 7-segment displays;
+4- Test the red LEDs connected to the PORTB and PORTD;
+5- Tests push buttons;
+6- Test the serial port transmitting;
+7- Test the serial port receiving;
+8- Tests AD converters connected to potentiometers;
+9- Test Relays
+10- Tests temperature measurement;
+11- Turn on the Heater;
+12- Turn on the fan and measure the speed.
+13- Tests the matrix keyboard
+14- Tests internal eeprom
+
+To use the serial port, previously configure com0com or tty0tty as described in the PICSimLab help and open the serial terminal (cutecom).
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_PICGenios/PIC18F4550/test_b4/src/test_b4.X" target="_blank">MPLABX test_b4 project</a>
+<br>
+<br><a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_PICGenios/PIC18F4550/test_b4/src/others" target="_blank">Others compilers test_b4 project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_PICGenios/PIC18F4620/test_b4/test_b4.png"><img src='board_PICGenios/PIC18F4620/test_b4/test_b4.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_PICGenios/PIC18F4620/test_b4.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_PICGenios/PIC18F4620/test_b4.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main>
+<script src='picsimlab.js' type='text/javascript'></script>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>

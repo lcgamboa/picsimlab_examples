@@ -1,5 +1,8 @@
 #!/bin/bash 
-for board in `find * -maxdepth 0 -type d 2> /dev/null`
+
+readarray -d '' boardlist < <(find * -maxdepth 0 -type d -print0 2> /dev/null)
+
+for board in "${boardlist[@]}"
 do
   file=../../help/$board.html 
   bname=$(echo $board| cut -d'_' -f 2-) 
@@ -15,11 +18,16 @@ do
   echo "<link href='style.css' rel='stylesheet' type='text/css' />" >> $file  
   echo "</head>" >> $file 
   echo "<body>" >> $file 
-  echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> $file
-  echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> $file
-  echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >> $file 
-  echo "<span class='chapterToc'>$bname</span>" >> $file   
-#echo "<hr><a name="$board"></a> <h1><br>Examples: $board</h1>" >> $file 
+  echo "<nav class='TOC'>" >> $file
+  echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >> $file 
+
+
+for chboard in "${boardlist[@]}"
+do
+  chbname=$(echo $chboard| cut -d'_' -f 2-) 
+  echo "<span class='chapterToc'><a href=\"${chboard}.html\">$chbname</a></span>" >> $file   
+
+  if [ "$chboard" == "$board" ]; then 
   for proc in `find * -maxdepth 0 -type d,l 2> /dev/null`
   do
     cd $proc	
@@ -31,6 +39,9 @@ do
     #echo "<br>" >> ../$file    
     cd ..
   done	
+  fi
+done
+
   echo "</nav><main class='main-content'>" >> $file  
   for proc in `find * -maxdepth 0 -type d,l 2> /dev/null`
   do
@@ -69,6 +80,9 @@ do
     done
     cd ..
   done
-  echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> $file
+  echo "</main>" >> $file
+  echo "<script src='picsimlab.js' type='text/javascript'></script>" >> $file
+  echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> $file
+  echo "<div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> $file
   cd ..
 done

@@ -15,7 +15,7 @@ echo "</head>" >> ../help/Parts.html
 echo "<body>" >> ../help/Parts.html 
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/Parts.html
 echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/Parts.html
-echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >>  ../help/Parts.html
+echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >>  ../help/Parts.html
 
 echo "<span class='chapterToc'>Examples by parts</h1></span>" >> ../help/Parts.html
 

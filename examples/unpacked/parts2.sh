@@ -15,7 +15,7 @@ for part in "${parts[@]}";do
   echo "</head>" >> "$file" 
   echo "<body>" >> "$file" 
   echo "<nav class='TOC'>" >> "$file"
-  echo "<span class='chapterToc'><a href=\"examples_index.html\">Boards Examples Index</a></span>" >> "$file" 
+  echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >> "$file" 
 
 for chpart in "${parts[@]}";do
   echo "<span class='chapterToc'><a href=\"parts_${chpart}.html\">$chpart</a></span>" >> "$file" 
@@ -75,7 +75,7 @@ done
       fi
 
       echo "<hr><table style=\"width:100%\" border=\"0\" bgcolor='#efefef'>" >> "$file"
-      echo "<tr><td colspan=2 width=\"100%\"><a name=\"${bname}_${proc}_${name}\"></a><small>[<a href='#${bname}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"80%\" align=center><a target=\"blank_\" href=\"${board}/${proc}/${name}/$IMG\"><img src='${board}/${proc}/${name}/$IMG' width=60%></a></td>" >> "$file" 
+      echo "<tr><td colspan=2 width=\"100%\"><a name=\"${bname}_${proc}_${name}\"></a><small>[${bname}/<a href='#${bname}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"80%\" align=center><a target=\"blank_\" href=\"${board}/${proc}/${name}/$IMG\"><img src='${board}/${proc}/${name}/$IMG' width=60%></a></td>" >> "$file" 
       echo "<td width=\"20%\" align=left ><a href=\"pzw/${board}/${proc}/${name}.pzw\" target=\"_blank\" >Download (pzw)</a>" >> "$file" 
       if [ ! -f "${name}/no_online" ]; then
       echo "<br><br><a href=\"../js/picsimlab.html?../picsimlab_examples/pzw/${board}/${proc}/${name}.pzw\" target=\"_blank\" >View Online</a><br><br>" >> "$file" 

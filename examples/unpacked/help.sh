@@ -74,14 +74,14 @@ echo "<body>" >> ../help/examples_index.html
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/examples_index.html 
 echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/examples_index.html
 echo "<span class='chapterToc'><a href='../'>Main</a></span>" >> ../help/examples_index.html 
-echo "<span class='chapterToc'>Boards</span>" >> ../help/examples_index.html 
+echo "<span class='chapterToc'><a href=\"board_Arduino_Uno.html\">Examples by boards</a></span>" >> ../help/examples_index.html 
 for board in `find * -maxdepth 0 -type d 2> /dev/null`
 do
   bname=$(echo $board| cut -d'_' -f 2-)
   echo "<span class='sectionToc'><a href=\"${board}.html\">${bname}</a></span>" >> ../help/examples_index.html 
 done
-echo "<span class='chapterToc'><a href=\"Parts.html\">Examples by parts</a></span>" >> ../help/examples_index.html 
-echo "<span class='chapterToc'><a href=\"UCs.html\">Examples by &#181controllers</a></span>" >> ../help/examples_index.html 
+echo "<span class='chapterToc'><a href=\"parts_7 Segments Display.html\">Examples by parts</a></span>" >> ../help/examples_index.html 
+echo "<span class='chapterToc'><a href=\"ucs_atmega328p.html\">Examples by &#181controllers</a></span>" >> ../help/examples_index.html 
 echo "<span class='chapterToc'><a href=\"examples_index_exp.html\">Experimental boards</a></span>" >> ../help/examples_index.html 
 echo "</nav><main class='main-content'>" >> ../help/examples_index.html 
 echo "<h1>PICSimLab Examples</h1>
@@ -188,6 +188,7 @@ echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.
 ./parts2.sh 
 
 ./ucs.sh 
+./ucs2.sh 
  
 #experimental
 echo "<!DOCTYPE html>" >> ../help/examples_index_exp.html 
