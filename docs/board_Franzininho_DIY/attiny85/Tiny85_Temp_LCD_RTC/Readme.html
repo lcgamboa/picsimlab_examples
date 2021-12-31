@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  <h1> Example Tiny85_Temp_LCD_RTC of TinyWireM library</h1>
+<br>
+<br>
+<pre>
+ATtiny85 as an I2C Master   Ex3        BroHogan                         1/22/11
+I2C master reading DS1621 temperature sensor & DS1307 RTC. Display to I2C GPIO LED.
+SETUP:
+ATtiny Pin 1 = (RESET) N/U                      ATtiny Pin 2 = (D3) N/U
+ATtiny Pin 3 = (D4) to LED1                     ATtiny Pin 4 = GND
+ATtiny Pin 5 = SDA on all devices               ATtiny Pin 6 = (D1) to LED2
+ATtiny Pin 7 = SCK on all devices               ATtiny Pin 8 = VCC (2.7-5.5V)
+NOTE! - It's very important to use pullups on the SDA & SCL lines!
+DS1621 wired per data sheet. This ex assumes A0-A2 are set LOW for an addeess of 0x48
+DS1307 wired per data sheet. This ex assumes A0-A2 are set LOW for an addeess of 0x68
+PCA8574A GPIO was used wired per instructions in "info" folder in the LiquidCrystal_I2C lib.
+This ex assumes A0-A2 are set HIGH for an addeess of 0x3F
+LiquidCrystal_I2C lib was modified for ATtiny - on Playground with TinyWireM lib.
+TinyWireM USAGE & CREDITS: - see TinyWireM.h
+</pre>
+<br>
+<br>
+
+Link to source code: <a href="https://github.com/adafruit/TinyWireM/blob/master/examples/Tiny85_Temp_LCD_RTC/Tiny85_Temp_LCD_RTC.pde" target="_blank">Tiny85_Temp_LCD_RTC.pde</a>
+
+</body>
+</html>
