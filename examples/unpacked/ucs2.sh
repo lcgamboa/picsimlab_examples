@@ -2,8 +2,7 @@
 . ucsname.sh
 
 for uc in "${ucs[@]}";do
-  file="../help/ucs_${uc}.html" 
-  file="${file// /_}"
+  file="../help/ucs_${uc// /_}.html" 
 
   echo "uc: $uc => '$file'"	
   echo "<!DOCTYPE html>" > "$file" 
@@ -19,8 +18,7 @@ for uc in "${ucs[@]}";do
   echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >> "$file" 
 
 for chuc in "${ucs[@]}";do
-  chucl="${chuc// /_}"
-  echo "<span class='chapterToc'><a href=\"ucs_${chucl}.html\">$chuc</a></span>" >> "$file" 
+  echo "<span class='chapterToc'><a href=\"ucs_${chuc// /_}.html\">$chuc</a></span>" >> "$file" 
 
   if [ "$chuc" == "$uc" ]; then  
   bname_old="z"

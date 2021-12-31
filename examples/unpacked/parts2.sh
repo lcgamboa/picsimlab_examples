@@ -2,8 +2,7 @@
 . partsname.sh
 
 for part in "${parts[@]}";do
-  file="../help/parts_${part}.html" 
-  file="${file// /_}"
+  file="../help/parts_${part// /_}.html" 
 
   echo "part: $part => '$file'"	
   echo "<!DOCTYPE html>" > "$file" 
@@ -19,8 +18,7 @@ for part in "${parts[@]}";do
   echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >> "$file" 
 
 for chpart in "${parts[@]}";do
-  chpartl="${chpart// /_}"
-  echo "<span class='chapterToc'><a href=\"parts_${chpartl}.html\">$chpart</a></span>" >> "$file" 
+  echo "<span class='chapterToc'><a href=\"parts_${chpart// /_}.html\">$chpart</a></span>" >> "$file" 
 
   if [ "$chpart" == "$part" ]; then  
   bname_old="z"

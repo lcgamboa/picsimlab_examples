@@ -24,7 +24,7 @@ done
 echo "</nav><main class='main-content'>" >> ../help/UCs.html
 
 for uc in "${ucs[@]}";do
-  echo  "<hr><br><h2><a name=\"${uc// /_}\"></a><a href=\"ucs_${uc}.html\">${uc}</a></h2>" >> ../help/UCs.html
+  echo  "<hr><br><h2><a name=\"${uc// /_}\"></a><a href=\"ucs_${uc// /_}.html\">${uc}</a></h2>" >> ../help/UCs.html
   files=`grep -m1 "$uc" */*/*/*.ini | cut -f1 -d:`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'`
