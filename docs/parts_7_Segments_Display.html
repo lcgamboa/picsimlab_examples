@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>PICSimLab Examples Part LEDs</title>
+<title>PICSimLab Examples Part 7 Segments Display</title>
 <meta charset='utf-8' />
 <meta content='width=device-width,initial-scale=1' name='viewport' />
 <link href='picsimlab.css' rel='stylesheet' type='text/css' />
@@ -10,6 +10,19 @@
 <nav class='TOC'>
 <span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
 <span class='chapterToc'><a href="parts_7_Segments_Display.html">7 Segments Display</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_counter_dec">counter_dec</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_counter_latch">counter_latch</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC16F628A">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F648A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F777_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F84A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC16F877A_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4520_ADC_7segLatch">ADC_7segLatch</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F452_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_test_b0">test_b0</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4620_test_b0">test_b0</a></span>
 <span class='chapterToc'><a href="parts_7_Segments_Display_(Decoder).html">7 Segments Display (Decoder)</a></span>
 <span class='chapterToc'><a href="parts_Buzzer.html">Buzzer</a></span>
 <span class='chapterToc'><a href="parts_D._Transfer_Function.html">D. Transfer Function</a></span>
@@ -37,28 +50,6 @@
 <span class='chapterToc'><a href="parts_LCD_ssd1306.html">LCD ssd1306</a></span>
 <span class='chapterToc'><a href="parts_LED_Matrix.html">LED Matrix</a></span>
 <span class='chapterToc'><a href="parts_LEDs.html">LEDs</a></span>
-<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_display_bargraph">display_bargraph</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata">firmata</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_IO_expander">IO_expander</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Piano">Piano</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_wires">wires</a></span>
-<span class='sectionToc'><a href="#Breadboard_PIC16F628A">Breadboard</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0_2">test_b0_2</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC16F628A_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC16F648A_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC16F777_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC16F84A_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC16F877A_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC18F452_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_test_b0">test_b0</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC18F4620_test_b0">test_b0</a></span>
-<span class='sectionToc'><a href="#Franzininho_DIY_attiny85">Franzininho_DIY</a></span>
-<span class='subsectionToc'><a href="#Franzininho_DIY_attiny85_Contador_v3">Contador_v3</a></span>
-<span class='subsectionToc'><a href="#Franzininho_DIY_attiny85_timer0_ovf">timer0_ovf</a></span>
-<span class='sectionToc'><a href="#uCboard_C51">uCboard</a></span>
-<span class='subsectionToc'><a href="#uCboard_C51_Blink">Blink</a></span>
-<span class='subsectionToc'><a href="#uCboard_Z80_LED_blink">LED_blink</a></span>
 <span class='chapterToc'><a href="parts_MEM_24CXXX.html">MEM 24CXXX</a></span>
 <span class='chapterToc'><a href="parts_MPU6050.html">MPU6050</a></span>
 <span class='chapterToc'><a href="parts_Potentiometers.html">Potentiometers</a></span>
@@ -82,121 +73,27 @@
 </nav><main class='main-content'>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_display_bargraph"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/display_bargraph]</small>  <h1>  LED bar graph</h1>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_counter_dec"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/counter_dec]</small>  <h1>Counter with decoder</h1>
 <pre>
-
-  Turns on a series of LEDs based on the value of an analog sensor.
-  This is a simple way to make a bar graph display. Though this graph uses 10
-  LEDs, you can use any number by changing the LED count and the pins in the
-  array.
-
-  This method can be used to control any series of digital outputs that depends
-  on an analog input.
-
-  The circuit:
-  - LEDs from pins 2 through 9 to ground
-
-  created 4 Sep 2010
-  by Tom Igoe
-
-  This example code is in the public domain.
-
-  http://www.arduino.cc/en/Tutorial/BarGraph
+Simple example of how to use the multiplexed 7-segment display with decoder 
 </pre>
 
 
-<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/display_bargraph/src/barGraph.ino" target="_blank">barGraph.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/display_bargraph/display_bargraph.png"><img src='board_Arduino_Uno/atmega328p/display_bargraph/display_bargraph.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/display_bargraph.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/display_bargraph.pzw" target="_blank" >View Online</a><br><br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/counter_dec/src/counter_dec.ino" target="_blank">counter_dec.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/counter_dec/counter_dec.png"><img src='board_Arduino_Uno/atmega328p/counter_dec/counter_dec.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/counter_dec.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/counter_dec.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_firmata"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/firmata]</small>  <h1> Firmata Library - Standard Firmata  </h1>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_counter_latch"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/counter_latch]</small>  <h1>Counter with decoder and latch</h1>
 <pre>
-  Firmata is a generic protocol for communicating with microcontrollers
-  from software on a host computer. It is intended to work with
-  any host computer software package.
-  To download a host software package, please click on the following link
-  to open the list of Firmata client libraries in your default browser.
-  https://github.com/firmata/arduino#firmata-client-libraries
-  Copyright (C) 2006-2008 Hans-Christoph Steiner.  All rights reserved.
-  Copyright (C) 2010-2011 Paul Stoffregen.  All rights reserved.
-  Copyright (C) 2009 Shigeru Kobayashi.  All rights reserved.
-  Copyright (C) 2009-2016 Jeff Hoefs.  All rights reserved.
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or (at your option) any later version.
-  See file LICENSE.txt for further informations on licensing terms.
-  Last updated August 17th, 2017
-</pre>
-<br>
-<br>
-<a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank">StandardFirmata.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/firmata/firmata.png"><img src='board_Arduino_Uno/atmega328p/firmata/firmata.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_IO_expander"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/IO_expander]</small>  <h1> MCP23S17 IO expander </h1>
-<pre>
-   MCP23S17_outtest.ino
-  
-   <a href="https://github.com/MajenkoLibraries/MCP23S17" target="_blank" >MCP23S17 library example</a>
-
+Simple example of how to use the latched 7-segment display with decoder 
 </pre>
 
 
-<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/IO_expander/src/MCP23S17_outtest.ino" target="_blank">MCP23S17_outtest.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/IO_expander/IO_expander.png"><img src='board_Arduino_Uno/atmega328p/IO_expander/IO_expander.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/IO_expander.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/IO_expander.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_Piano"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/Piano]</small>  <h1> Arduino Piano </h1>
-<pre>
-<a href="https://www.instructables.com/id/Arduino-Tutorial-Mini-Piano/">https://www.instructables.com/id/Arduino-Tutorial-Mini-Piano/</a>
-
-Visit the Channel for more interesting projects
-
-<a href="https://www.youtube.com/channel/UCks-9JSnVb22dlqtMgPjrlg">https://www.youtube.com/channel/UCks-9JSnVb22dlqtMgPjrlg</a>
-</pre>
-
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/Piano/src/piano.ino" target="_blank">piano.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/Piano/Piano.png"><img src='board_Arduino_Uno/atmega328p/Piano/Piano.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/Piano.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Piano.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_wires"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/wires]</small>  <h1> Jumper Wires example</h1>
-
-This examples show the use of jumper wires to direct connect parts. The microcontroller is not used on example.<br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/wires/wires.png"><img src='board_Arduino_Uno/atmega328p/wires/wires.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/wires.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/wires.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Breadboard_PIC16F628A"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Breadboard_PIC16F628A_test_b0_2"></a><small>[Breadboard/<a href='#Breadboard_PIC16F628A'>PIC16F628A</a>/test_b0_2]</small><h1> Simple example for testing board features. </h1>
-
-<pre>
-1- Tests LCD display;
-2- Test the red LEDs connected to the PORT.
-3- Tests matrix keyboard
-4- External eeprom test 24LC512
-5- Test RTC PCF8563
-6- Test serial port sending
-7- Tests receiving serial port
-8- Read keyboard and send through serial port
-
-To use the serial port, configure com0com or
-tty0tty as described in the help and open the serial terminal (cutecom).
-</pre>
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC16F628A/test_b0_2/src/test_b2.X" target="_blank">MPLABX test_b0_2 project</a>
-<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png"><img src='board_Breadboard/PIC16F628A/test_b0_2/test_b0_2.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F628A/test_b0_2.pzw" target="_blank" >View Online</a><br><br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/counter_latch/src/counter_latch.ino" target="_blank">counter_latch.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/counter_latch/counter_latch.png"><img src='board_Arduino_Uno/atmega328p/counter_latch/counter_latch.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/counter_latch.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/counter_latch.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Breadboard_PIC16F628A"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
@@ -303,6 +200,18 @@ To use the serial port, previously configure com0com or tty0tty as described in 
 <td width="20%" align=left ><a href="pzw/board_Breadboard/PIC16F877A/test_b0.pzw" target="_blank" >Download (pzw)</a>
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC16F877A/test_b0.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
+<a name="Breadboard_PIC18F4520"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4520_ADC_7segLatch"></a><small>[Breadboard/<a href='#Breadboard_PIC18F4520'>PIC18F4520</a>/ADC_7segLatch]</small>  <h1>Counter with decoder and latch</h1>
+<pre>
+Simple example of how to use the latched 7-segment display with decoder and ADC
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Breadboard/PIC18F4520/ADC_7segLatch/src/main.c" target="_blank">main.c</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4520/ADC_7segLatch/ADC_7segLatch.gif"><img src='board_Breadboard/PIC18F4520/ADC_7segLatch/ADC_7segLatch.gif' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4520/ADC_7segLatch.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4520/ADC_7segLatch.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
 <a name="Breadboard_PIC18F452"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F452_test_b0"></a><small>[Breadboard/<a href='#Breadboard_PIC18F452'>PIC18F452</a>/test_b0]</small><h1> Simple example for testing board features. </h1>
@@ -383,62 +292,6 @@ To use the serial port, previously configure com0com or tty0tty as described in 
 <br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4620/test_b0/test_b0.png"><img src='board_Breadboard/PIC18F4620/test_b0/test_b0.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >Download (pzw)</a>
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4620/test_b0.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Franzininho_DIY_attiny85"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Franzininho_DIY_attiny85_Contador_v3"></a><small>[Franzininho_DIY/<a href='#Franzininho_DIY_attiny85'>attiny85</a>/Contador_v3]</small>  <h1> Franzininho DIY - Contador de pulsos externos  </h1>
-<br>
-<br>
-Exemplos AVR Libc – Franzininho DIY do site <a href="https://www.embarcados.com.br/" target="_blank">Embarcados</a>
-<br>
-<br>
-
-Link para o artigo e código: <a href="https://www.embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/" target="_blank">Contador de pulsos externos</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Franzininho_DIY/attiny85/Contador_v3/Contador_v3.png"><img src='board_Franzininho_DIY/attiny85/Contador_v3/Contador_v3.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Franzininho_DIY/attiny85/Contador_v3.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Franzininho_DIY/attiny85/Contador_v3.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Franzininho_DIY_attiny85"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Franzininho_DIY_attiny85_timer0_ovf"></a><small>[Franzininho_DIY/<a href='#Franzininho_DIY_attiny85'>attiny85</a>/timer0_ovf]</small>  <h1> Franzininho DIY - AVR LibC: Timer0  </h1>
-<br>
-<br>
-Exemplos AVR Libc – Franzininho DIY <a href="https://franzininho.github.io/docs-franzininho-site" target="_blank">Documentação Franzininho</a>
-<br>
-<br>
-
-Link para o texto e código: <a href="https://franzininho.github.io/docs-franzininho-site/docs/franzininho-diy/exemplos-avr-libc/0x04_timer0" target="_blank">Franzininho DIY - AVR LibC: Timer0 </a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Franzininho_DIY/attiny85/timer0_ovf/timer0_ovf.png"><img src='board_Franzininho_DIY/attiny85/timer0_ovf/timer0_ovf.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Franzininho_DIY/attiny85/timer0_ovf.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Franzininho_DIY/attiny85/timer0_ovf.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="uCboard_C51"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="uCboard_C51_Blink"></a><small>[uCboard/<a href='#uCboard_C51'>C51</a>/Blink]</small>  <h1>8051 SDCC led blink </h1>
-
-<br>
-<pre>
-// Blink LEDs : Using Delay Function
-// compiled with: sdcc -mmcs51 blink.c -o blink.hex           
-</pre>
-
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_uCboard/C51/Blink/src" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_uCboard/C51/Blink/Blink.png"><img src='board_uCboard/C51/Blink/Blink.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_uCboard/C51/Blink.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_uCboard/C51/Blink.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="uCboard_Z80"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="uCboard_Z80_LED_blink"></a><small>[uCboard/<a href='#uCboard_Z80'>Z80</a>/LED_blink]</small>  <h1>Z80 SDCC led blink </h1>
-
-<br>
-<pre>
-// Example of use of uCboard 8255
-// compile with:  sdcc -mz80 led.c -o led.hex                
-</pre>
-
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_uCboard/Z80/LED_blink/src" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_uCboard/Z80/LED_blink/LED_blink.png"><img src='board_uCboard/Z80/LED_blink/LED_blink.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_uCboard/Z80/LED_blink.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_uCboard/Z80/LED_blink.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 </main>
 <script src='picsimlab.js' type='text/javascript'></script>

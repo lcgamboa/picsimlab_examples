@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>PICSimLab Examples Part Switches</title>
+<title>PICSimLab Examples Part VCD Dump</title>
 <meta charset='utf-8' />
 <meta content='width=device-width,initial-scale=1' name='viewport' />
 <link href='picsimlab.css' rel='stylesheet' type='text/css' />
@@ -52,51 +52,92 @@
 <span class='chapterToc'><a href="parts_Step_Motor.html">Step Motor</a></span>
 <span class='chapterToc'><a href="parts_SHT3X_(Temp._Hum.).html">SHT3X (Temp. Hum.)</a></span>
 <span class='chapterToc'><a href="parts_Switches.html">Switches</a></span>
-<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata">firmata</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_wires">wires</a></span>
-<span class='sectionToc'><a href="#Breadboard_PIC18F4550">Breadboard</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_PID">PID</a></span>
 <span class='chapterToc'><a href="parts_Temperature_System.html">Temperature System</a></span>
 <span class='chapterToc'><a href="parts_Ultrasonic_HC-SR04.html">Ultrasonic HC-SR04</a></span>
 <span class='chapterToc'><a href="parts_VCD_Dump.html">VCD Dump</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Encoder_basic">Encoder_basic</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_l293_motor">l293_motor</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Serial_LCD">Serial_LCD</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_softserial">softserial</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC18F4550">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_PID">PID</a></span>
 <span class='chapterToc'><a href="parts_VCD_Dump_(Analogic).html">VCD Dump (Analogic)</a></span>
 <span class='chapterToc'><a href="parts_VCD_Play.html">VCD Play</a></span>
 </nav><main class='main-content'>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_firmata"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/firmata]</small>  <h1> Firmata Library - Standard Firmata  </h1>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_Encoder_basic"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/Encoder_basic]</small>  <h1> Encoder Library - Basic Example </h1>
 <pre>
-  Firmata is a generic protocol for communicating with microcontrollers
-  from software on a host computer. It is intended to work with
-  any host computer software package.
-  To download a host software package, please click on the following link
-  to open the list of Firmata client libraries in your default browser.
-  https://github.com/firmata/arduino#firmata-client-libraries
-  Copyright (C) 2006-2008 Hans-Christoph Steiner.  All rights reserved.
-  Copyright (C) 2010-2011 Paul Stoffregen.  All rights reserved.
-  Copyright (C) 2009 Shigeru Kobayashi.  All rights reserved.
-  Copyright (C) 2009-2016 Jeff Hoefs.  All rights reserved.
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or (at your option) any later version.
-  See file LICENSE.txt for further informations on licensing terms.
-  Last updated August 17th, 2017
+/* Encoder Library - Basic Example
+ * http://www.pjrc.com/teensy/td_libs_Encoder.html
+ *
+ * This example code is in the public domain.
+ */
 </pre>
 <br>
 <br>
-<a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank">StandardFirmata.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/firmata/firmata.png"><img src='board_Arduino_Uno/atmega328p/firmata/firmata.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >View Online</a><br><br>
+<a href="https://github.com/PaulStoffregen/Encoder/blob/master/examples/Basic/Basic.pde" target="_blank">Basic.pde</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/Encoder_basic/Encoder_basic.png"><img src='board_Arduino_Uno/atmega328p/Encoder_basic/Encoder_basic.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/Encoder_basic.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Encoder_basic.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_wires"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/wires]</small>  <h1> Jumper Wires example</h1>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_l293_motor"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/l293_motor]</small>  <h1> L293 Library - MotorControl Demo </h1>
+<pre>
+ * Bidirectional Motor Control with standalone L293
+ *
+ * Example of using L293 library to control one or more DC Birirectional Motors with the standalone configuration of the L293
+ *
+ * Created by Giuseppe Masino, 25 may 2016
+ * Author URL http://www.facebook.com/dev.giuseppemasino
+ *
+ * This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+ *
+</pre>
+<br>
+<br>
+<a href="https://github.com/qub1750ul/Arduino_L293/blob/develop/examples/MotorControl_Demo/MotorControl_Demo.ino" target="_blank">MotorControl_Demo.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/l293_motor/l293_motor.png"><img src='board_Arduino_Uno/atmega328p/l293_motor/l293_motor.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/l293_motor.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/l293_motor.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_Serial_LCD"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/Serial_LCD]</small>  <h1> Serial LCD LiquidCrystal_I2C</h1>
+<pre>
+LiquidCrystal_I2C CustomChars example
+//YWROBOT
+//Compatible with the Arduino IDE 1.0
+//Library version:1.1
+</pre>
 
-This examples show the use of jumper wires to direct connect parts. The microcontroller is not used on example.<br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/wires/wires.png"><img src='board_Arduino_Uno/atmega328p/wires/wires.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/wires.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/wires.pzw" target="_blank" >View Online</a><br><br>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/Serial_LCD/src/CustomChars.ino" target="_blank">CustomChars.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/Serial_LCD/Serial_LCD.png"><img src='board_Arduino_Uno/atmega328p/Serial_LCD/Serial_LCD.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/Serial_LCD.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Serial_LCD.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_softserial"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/softserial]</small>  <h1> library SoftwareSerial example: SoftwareSerial  </h1>
+<pre>
+  Software serial multple serial test
+ Receives from the hardware serial, sends to software serial.
+ Receives from software serial, sends to hardware serial.
+ The circuit:
+ * RX is digital pin 7 (connect to TX of other device)
+ * TX is digital pin 8 (connect to RX of other device)
+ created back in the mists of time
+ modified 25 May 2012
+ by Tom Igoe
+ based on Mikal Hart's example
+ This example code is in the public domain.
+</pre>
+
+
+<a href="https://github.com/PaulStoffregen/SoftwareSerial/blob/master/examples/SoftwareSerialExample/SoftwareSerialExample.ino" target="_blank">SoftwareSerialExample.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/softserial/softserial.png"><img src='board_Arduino_Uno/atmega328p/softserial/softserial.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/softserial.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/softserial.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Breadboard_PIC18F4550"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>PICSimLab Examples Part Gamepad</title>
+<title>PICSimLab Examples Part LCD pcd8544</title>
 <meta charset='utf-8' />
 <meta content='width=device-width,initial-scale=1' name='viewport' />
 <link href='picsimlab.css' rel='stylesheet' type='text/css' />
@@ -20,13 +20,6 @@
 <span class='chapterToc'><a href="parts_FM50_(Temperature).html">FM50 (Temperature)</a></span>
 <span class='chapterToc'><a href="parts_Fixed_Voltage.html">Fixed Voltage</a></span>
 <span class='chapterToc'><a href="parts_Gamepad.html">Gamepad</a></span>
-<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_lcd">game_lcd</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_marduino">game_marduino</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_snake">game_snake</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_lode_runner">lode_runner</a></span>
-<span class='sectionToc'><a href="#Breadboard_atmega328p">Breadboard</a></span>
-<span class='subsectionToc'><a href="#Breadboard_atmega328p_game_marduino">game_marduino</a></span>
 <span class='chapterToc'><a href="parts_Gamepad_(Analogic).html">Gamepad (Analogic)</a></span>
 <span class='chapterToc'><a href="parts_IO_74xx595.html">IO 74xx595</a></span>
 <span class='chapterToc'><a href="parts_IO_MCP23S17.html">IO MCP23S17</a></span>
@@ -41,6 +34,18 @@
 <span class='chapterToc'><a href="parts_LCD_ili9341.html">LCD ili9341</a></span>
 <span class='chapterToc'><a href="parts_LCD_pcf8833.html">LCD pcf8833</a></span>
 <span class='chapterToc'><a href="parts_LCD_pcd8544.html">LCD pcd8544</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_marduino">game_marduino</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_game_snake">game_snake</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_LCD_pcd8544">LCD_pcd8544</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_LCD_pcd8544_test">LCD_pcd8544_test</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Oscilloscope">Oscilloscope</a></span>
+<span class='sectionToc'><a href="#Breadboard_atmega328p">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_atmega328p_game_marduino">game_marduino</a></span>
+<span class='sectionToc'><a href="#Franzininho_DIY_attiny85">Franzininho_DIY</a></span>
+<span class='subsectionToc'><a href="#Franzininho_DIY_attiny85_Termometro">Termometro</a></span>
+<span class='sectionToc'><a href="#McLab2_PIC16F877A">McLab2</a></span>
+<span class='subsectionToc'><a href="#McLab2_PIC16F877A_LCD_pcd8544">LCD_pcd8544</a></span>
 <span class='chapterToc'><a href="parts_LCD_ssd1306.html">LCD ssd1306</a></span>
 <span class='chapterToc'><a href="parts_LED_Matrix.html">LED Matrix</a></span>
 <span class='chapterToc'><a href="parts_LEDs.html">LEDs</a></span>
@@ -65,32 +70,6 @@
 <span class='chapterToc'><a href="parts_VCD_Dump_(Analogic).html">VCD Dump (Analogic)</a></span>
 <span class='chapterToc'><a href="parts_VCD_Play.html">VCD Play</a></span>
 </nav><main class='main-content'>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_game_lcd"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/game_lcd]</small>  <h1>Arduino LCD Game</h1>
-<pre>
-//  _ ___ _______     ___ ___ ___  ___ _   _ ___ _____ ___ 
-// / |_  )__ /   \   / __|_ _| _ \/ __| | | |_ _|_   _/ __| 
-// | |/ / |_ \ |) | | (__ | ||   / (__| |_| || |  | | \__ \ 
-// |_/___|___/___/   \___|___|_|_\\___|\___/|___| |_| |___/ 
-// 
-// Arduino LCD Game
-// 
-// Made by 123d Circuits
-// License: CC-BY-SA 3.0
-// Downloaded from: <a href="https://circuits.io/circuits/1073419-arduino-lcd-game" target="_blank">https://circuits.io/circuits/1073419-arduino-lcd-game</a>
-
-</pre>
-
-Play using gamepad A button (mapped as computer keyboard "i" key)
-<br>
-<br>
-
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/game_lcd/src/ArduinoLCDGame.ino" target="_blank">ArduinoLCDGame.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/game_lcd/game_lcd.png"><img src='board_Arduino_Uno/atmega328p/game_lcd/game_lcd.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/game_lcd.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/game_lcd.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_game_marduino"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/game_marduino]</small>  <h1>Super Marduino</h1>
@@ -147,40 +126,83 @@ Pause      :  E button (mapped as computer keyboard "e" key)<br>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_lode_runner"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/lode_runner]</small>  <h1> Library lcdgfx example: lode runner </h1>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_LCD_pcd8544"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/LCD_pcd8544]</small>  <h1> pcd8544  Graphics Test </h1>
 <pre>
-/*
- *   Attiny85 PINS
- *             ____
- *   RESET   -|_|  |- 3V
- *   SCL (3) -|    |- (2)
- *   SDA (4) -|    |- (1) - BUZZER
- *   GND     -|____|- (0) - BUTTONS module
- *
- *   Atmega328 PINS with i2c SSD1306 to A4/A5, BUZZER on D8,
- *   Z-keypad ADC module on A0 pin.
- *   If you want to use GPIO keys, uncomment USE_GPIO_BUTTONS below
- *
- *   Atmega328 PINS with spi Nokia 5110 LCD:
- *   LCD RST to D3
- *   LCD CES to D4
- *   LCD DC to  D5
- *   LCD DIN to D11
- *   LCD CLK to D13
- *   LCD BL to  VCC
- */
+  GraphicsTest.pde
+   
+  Universal 8bit Graphics Library, https://github.com/olikraus/u8glib/
+  
+  Copyright (c) 2012, olikraus@gmail.com
+  All rights reserved.
 </pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/LCD_pcd8544/src/GraphicsTest.ino" target="_blank">GraphicsTest.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/LCD_pcd8544/LCD_pcd8544.png"><img src='board_Arduino_Uno/atmega328p/LCD_pcd8544/LCD_pcd8544.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/LCD_pcd8544.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/LCD_pcd8544.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_LCD_pcd8544_test"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/LCD_pcd8544_test]</small>  <h1> pcd8544 Test </h1>
+<pre>
+
+This is an example sketch for our Monochrome Nokia 5110 LCD Displays
+
+  Pick one up today in the adafruit shop!
+  ------> http://www.adafruit.com/products/338
+
+These displays use SPI to communicate, 4 or 5 pins are required to
+interface
+
+Adafruit invests time and resources providing this open source code,
+please support Adafruit and open-source hardware by purchasing
+products from Adafruit!
+
+Written by Limor Fried/Ladyada  for Adafruit Industries.
+BSD license, check license.txt for more information
+All text above, and the splash screen must be included in any redistribution
+
+</pre>
+<br><a href="https://github.com/adafruit/Adafruit-PCD8544-Nokia-5110-LCD-library/blob/master/examples/pcdtest/pcdtest.ino" target="_blank">Original Github</a>
 <br>
-<br>Play using gamepad (analogic):
-<br>Up:     B button (mapped as computer keyboard "i" key)
-<br>Right:  A button (mapped as computer keyboard "l" key)
-<br>Left:   D button (mapped as computer keyboard "j" key)
-<br>Down:   C button (mapped as computer keyboard "k" key) 
 <br>
-<br>
-<a href="https://github.com/lexus2k/lcdgfx/blob/master/examples/games/lode_runner/lode_runner.ino" target="_blank">lode_runner.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/lode_runner/lode_runner.png"><img src='board_Arduino_Uno/atmega328p/lode_runner/lode_runner.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/lode_runner.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/lode_runner.pzw" target="_blank" >View Online</a><br><br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/LCD_pcd8544_test/src/pcdtest.ino" target="_blank">pcdtest.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/LCD_pcd8544_test/LCD_pcd8544_test.png"><img src='board_Arduino_Uno/atmega328p/LCD_pcd8544_test/LCD_pcd8544_test.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/LCD_pcd8544_test.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/LCD_pcd8544_test.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_Oscilloscope"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/Oscilloscope]</small>  <h1>  Arduino Uno 3V Oscilloscope </h1>
+<pre>
+This is my version of the Arduino oscilloscope code.  This file is strictly the display code for 
+one analog channel.  It will soon be merged into my data logger project.
+
+This is shared so others may incorporate the display code into their projects.  It has been modified to 
+play nice with the Adafruit 5110 LCD library.
+
+This is a work in progress but hopefully it will help someone else by providing
+a base to start and work from.
+
+Please check out my Youtube videos here and consider a thumbs up if this helped you!
+Youtube : <a href="http://www.youtube.com/mkmeorg">http://www.youtube.com/mkmeorg</a>
+
+Full Arduino Tutorial Playlist here: <a href="https://www.youtube.com/playlist?list=PLxyM2a_cfnzjXms2WRO9OdAr-_7K-Ve2Z">https://www.youtube.com/playlist?list=PLxyM2a_cfnzjXms2WRO9OdAr-_7K-Ve2Z</a>
+
+Original code comment text:
+###########################################################
+  Title:       Arduino Uno 3V Oscilloscope
+  Purpose:     Use a Nokia 5110 LCD screen with the arduino
+  Created by:  Brian O'Dell from the Fileark Arduino Oscilloscope.
+  Note:        Please reuse, repurpose, and redistribute this code.
+  Note:        This code uses the Adafruit PDC8544 LCD library  
+###########################################################
+<a href="https://github.com/Megamemnon/Arduino-Oscilloscope/blob/master/Uno3VOScope.ino">https://github.com/Megamemnon/Arduino-Oscilloscope/blob/master/Uno3VOScope.ino</a>
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/Oscilloscope/src/oscilloscope.ino" target="_blank">oscilloscope.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/Oscilloscope/Oscilloscope.png"><img src='board_Arduino_Uno/atmega328p/Oscilloscope/Oscilloscope.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/Oscilloscope.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Oscilloscope.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Breadboard_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
@@ -211,6 +233,36 @@ Left          :  D button (mapped as computer keyboard "j" key)<br>
 <a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/atmega328p/game_marduino/src" target="_blank">marduino source</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/atmega328p/game_marduino/game_marduino.png"><img src='board_Breadboard/atmega328p/game_marduino/game_marduino.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Breadboard/atmega328p/game_marduino.pzw" target="_blank" >Download (pzw)</a>
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/atmega328p/game_marduino.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Franzininho_DIY_attiny85"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Franzininho_DIY_attiny85_Termometro"></a><small>[Franzininho_DIY/<a href='#Franzininho_DIY_attiny85'>attiny85</a>/Termometro]</small>  <h1> Franzininho DIY: Termômetro </h1>
+<br>
+<br>
+Franzininho: Termômetro  exemplo do site<a href="http://dqsoft.blogspot.com" target="_blank">DQSoft</a>
+<br>
+<br>
+<br>Neste projeto vamos usar o Franzininho para apresentar a temperatura atual em um display LCD.
+
+<br>
+<br>
+
+Link para o artigo e código: <a href="http://dqsoft.blogspot.com/2018/03/franzininho-termometro.html" target="_blank">Termômetro</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Franzininho_DIY/attiny85/Termometro/Termometro.png"><img src='board_Franzininho_DIY/attiny85/Termometro/Termometro.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Franzininho_DIY/attiny85/Termometro.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Franzininho_DIY/attiny85/Termometro.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="McLab2_PIC16F877A"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="McLab2_PIC16F877A_LCD_pcd8544"></a><small>[McLab2/<a href='#McLab2_PIC16F877A'>PIC16F877A</a>/LCD_pcd8544]</small>
+<h1> Test pcd8544 LCD display </h1>
+
+<pre>
+LCD pcd8544 display test 
+</pre>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_McLab2/PIC16F877A/LCD_pcd8544/src/pcd8544.X" target="_blank">MPLABX pcd8544 project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_McLab2/PIC16F877A/LCD_pcd8544/LCD_pcd8544.png"><img src='board_McLab2/PIC16F877A/LCD_pcd8544/LCD_pcd8544.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_McLab2/PIC16F877A/LCD_pcd8544.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_McLab2/PIC16F877A/LCD_pcd8544.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 </main>
 <script src='picsimlab.js' type='text/javascript'></script>

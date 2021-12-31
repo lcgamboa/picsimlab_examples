@@ -3,6 +3,7 @@
 
 for part in "${parts[@]}";do
   file="../help/parts_${part}.html" 
+  file="${file// /_}"
 
   echo "part: $part => '$file'"	
   echo "<!DOCTYPE html>" > "$file" 
@@ -18,7 +19,8 @@ for part in "${parts[@]}";do
   echo "<span class='chapterToc'><a href=\"examples_index.html\">Examples Index</a></span>" >> "$file" 
 
 for chpart in "${parts[@]}";do
-  echo "<span class='chapterToc'><a href=\"parts_${chpart}.html\">$chpart</a></span>" >> "$file" 
+  chpartl="${chpart// /_}"
+  echo "<span class='chapterToc'><a href=\"parts_${chpartl}.html\">$chpart</a></span>" >> "$file" 
 
   if [ "$chpart" == "$part" ]; then  
   bname_old="z"

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>PICSimLab Examples Part Switches</title>
+<title>PICSimLab Examples Part Servo Motor</title>
 <meta charset='utf-8' />
 <meta content='width=device-width,initial-scale=1' name='viewport' />
 <link href='picsimlab.css' rel='stylesheet' type='text/css' />
@@ -48,15 +48,15 @@
 <span class='chapterToc'><a href="parts_RTC_pfc8563.html">RTC pfc8563</a></span>
 <span class='chapterToc'><a href="parts_SD_Card.html">SD Card</a></span>
 <span class='chapterToc'><a href="parts_Servo_Motor.html">Servo Motor</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata">firmata</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_servo_Knob">servo_Knob</a></span>
+<span class='sectionToc'><a href="#PICGenios_PIC18F4550">PICGenios</a></span>
+<span class='subsectionToc'><a href="#PICGenios_PIC18F4550_Parts_Demo">Parts_Demo</a></span>
 <span class='chapterToc'><a href="parts_Signal_Generator.html">Signal Generator</a></span>
 <span class='chapterToc'><a href="parts_Step_Motor.html">Step Motor</a></span>
 <span class='chapterToc'><a href="parts_SHT3X_(Temp._Hum.).html">SHT3X (Temp. Hum.)</a></span>
 <span class='chapterToc'><a href="parts_Switches.html">Switches</a></span>
-<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata">firmata</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_wires">wires</a></span>
-<span class='sectionToc'><a href="#Breadboard_PIC18F4550">Breadboard</a></span>
-<span class='subsectionToc'><a href="#Breadboard_PIC18F4550_PID">PID</a></span>
 <span class='chapterToc'><a href="parts_Temperature_System.html">Temperature System</a></span>
 <span class='chapterToc'><a href="parts_Ultrasonic_HC-SR04.html">Ultrasonic HC-SR04</a></span>
 <span class='chapterToc'><a href="parts_VCD_Dump.html">VCD Dump</a></span>
@@ -92,48 +92,33 @@
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_wires"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/wires]</small>  <h1> Jumper Wires example</h1>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_servo_Knob"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/servo_Knob]</small>  <h1> Controlling a servo position using a potentiometer (variable resistor) </h1>
+<pre>
+ Controlling a servo position using a potentiometer (variable resistor)
+ by Michal Rinott <http://people.interaction-ivrea.it/m.rinott>
 
-This examples show the use of jumper wires to direct connect parts. The microcontroller is not used on example.<br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/wires/wires.png"><img src='board_Arduino_Uno/atmega328p/wires/wires.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/wires.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/wires.pzw" target="_blank" >View Online</a><br><br>
+ modified on 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Knob
+</pre>
+
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/servo_Knob/src/Knob.ino" target="_blank">Knob.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/servo_Knob/servo_Knob.png"><img src='board_Arduino_Uno/atmega328p/servo_Knob/servo_Knob.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/servo_Knob.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/servo_Knob.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
-<a name="Breadboard_PIC18F4550"></a>
+<a name="PICGenios_PIC18F4550"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4550_PID"></a><small>[Breadboard/<a href='#Breadboard_PIC18F4550'>PIC18F4550</a>/PID]</small><h1>Discrete Transfer Function and PID example.</h1>
+<tr><td colspan=2 width="100%"><a name="PICGenios_PIC18F4550_Parts_Demo"></a><small>[PICGenios/<a href='#PICGenios_PIC18F4550'>PIC18F4550</a>/Parts_Demo]</small><h1> Simple example for servomotor and stepper motor testing. </h1>
 
 <pre>
-1- Use potentiometer to define setpoint
-2- Use RB0 switch to select open loop or closed loop with PID controller
-
-Use octave or matlab to calculate transfer function coeficients:
-
->>gs = tf([1],[0.2 0.25 1]);
-
-Transfer function 'gs' from input 'u1' to output ...
-
-               1
- y1:  --------------------
-      0.2 s^2 + 0.25 s + 1
-
-Continuous-time model.
-
->> gd=c2d(gs,0.1)
-
-Transfer function 'gd' from input 'u1' to output ...
-
-       0.02389 z + 0.02291
- y1:  ----------------------
-      z^2 - 1.836 z + 0.8825
-
-Discrete-time model Ts=0.1.
-
-
+Servo motor connected in RB0 controlled by AN0 analog channel.
+Stepper motor connected to RB7, RB6, RB5 and RB4.
 </pre>
-<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4550/PID/src/PID.X" target="_blank">MPLABX PID project</a>
-<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4550/PID/PID.png"><img src='board_Breadboard/PIC18F4550/PID/PID.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4550/PID.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4550/PID.pzw" target="_blank" >View Online</a><br><br>
+
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_PICGenios/PIC18F4550/Parts_Demo/src/parts_test.X" target="_blank">MPLABX Parts_Demo project</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_PICGenios/PIC18F4550/Parts_Demo/Parts_Demo.png"><img src='board_PICGenios/PIC18F4550/Parts_Demo/Parts_Demo.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_PICGenios/PIC18F4550/Parts_Demo.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_PICGenios/PIC18F4550/Parts_Demo.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 </main>
 <script src='picsimlab.js' type='text/javascript'></script>
