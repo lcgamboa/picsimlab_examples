@@ -77,7 +77,7 @@ done
       echo "<hr><table style=\"width:100%\" border=\"0\" bgcolor='#efefef'>" >> "$file"
       echo "<tr><td colspan=2 width=\"100%\"><a name=\"${bname}_${proc}_${name}\"></a><small>[${bname}/<a href='#${bname}_${proc}'>$proc</a>/$name]</small>${html}<br><br></td></tr><tr><td width=\"80%\" align=center><a target=\"blank_\" href=\"${board}/${proc}/${name}/$IMG\"><img src='${board}/${proc}/${name}/$IMG' width=60%></a></td>" >> "$file" 
       echo "<td width=\"20%\" align=left ><a href=\"pzw/${board}/${proc}/${name}.pzw\" target=\"_blank\" >Download (pzw)</a>" >> "$file" 
-      if [ ! -f "${name}/no_online" ]; then
+      if [ ! -f "${board}/${proc}/${name}/no_online" ]; then
       echo "<br><br><a href=\"../js/picsimlab.html?../picsimlab_examples/pzw/${board}/${proc}/${name}.pzw\" target=\"_blank\" >View Online</a><br><br>" >> "$file" 
       fi 
       echo "</td></tr></table>" >> "$file" 
