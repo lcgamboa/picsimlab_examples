@@ -92,18 +92,20 @@ void main()
 #endif
 
   lcd_init();
+  lcd_cmd(L_NCR);
 #ifndef _18F4550  
   i2c_init();
 #endif  
   serial_init();
   adc_init();
   
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x06;
 #else
   ADCON1=0x0F;
   CMCON=0x07;
 #endif
+
 
 //dip
   TRISB=0x03;
@@ -208,7 +210,7 @@ void main()
   lcd_str("   Teste 7 Seg");
 
 
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x06;
 #else
   ADCON1=0x0F;
@@ -238,7 +240,7 @@ void main()
       }
     }
 
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x02;
 #else
   ADCON1=0x0B;
@@ -287,7 +289,7 @@ void main()
   lcd_str("  Teste Chaves");
 
   tmp=0;
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x06;
 #else
   ADCON1=0x0F;
@@ -345,52 +347,9 @@ void main()
   lcd_str("Ok");
   atraso_ms(500);
   
-  
-/*
-  while((tmp & 0x7F) != 0x7F)
-  {
-    TRISB=0x3F;
-
-    if(PORTBbits.RB0 == 0)
-    {
-      tmp|=0x01;
-    }
-    if(PORTBbits.RB1 == 0)
-    {
-      tmp|=0x02;
-    }
-    if(PORTBbits.RB2 == 0)
-    {
-      tmp|=0x04;
-    }
-    if(PORTBbits.RB3 == 0)
-    {
-      tmp|=0x08;
-    }
-    if(PORTBbits.RB4 == 0)
-    {
-      tmp|=0x10;
-    }
-    if(PORTBbits.RB5 == 0)
-    {
-      tmp|=0x20;
-    }
-    if(PORTAbits.RA5 == 0)
-    {
-      tmp|=0x40;
-    }
-
-    
-    TRISB=0x00;
-    PORTB=tmp;
-    atraso_ms(10);
-  }
-
-    atraso_ms(500);
-*/
             
   PORTB=0; 
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x02;
 #else
   ADCON1=0x0B;
@@ -638,12 +597,13 @@ void main()
   PORTCbits.RC2=0;
 
 
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x06;
 #else
   ADCON1=0x0F;
 #endif
 
+          
 #ifndef _18F4550
 //teste RTC
   lcd_cmd(L_CLR);

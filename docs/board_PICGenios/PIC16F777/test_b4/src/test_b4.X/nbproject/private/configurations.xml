@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="62">
+<configurationDescriptor version="65">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>1</defaultConf>
+  <defaultConf>3</defaultConf>
   <confs>
     <conf name="18F452" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v1.35/bin</languageToolchainDir>
+      <languageToolchainDir>/opt/microchip/xc8/v2.20/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -23,7 +23,7 @@
     </conf>
     <conf name="18F4620" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v1.35/bin</languageToolchainDir>
+      <languageToolchainDir>/opt/microchip/xc8/v2.20/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -41,7 +41,7 @@
     </conf>
     <conf name="18F4550" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v1.35/bin</languageToolchainDir>
+      <languageToolchainDir>/opt/microchip/xc8/v2.20/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -59,7 +59,7 @@
     </conf>
     <conf name="16F877A" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v1.35/bin</languageToolchainDir>
+      <languageToolchainDir>/opt/microchip/xc8/v2.20/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -77,7 +77,7 @@
     </conf>
     <conf name="16F777" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v1.35/bin</languageToolchainDir>
+      <languageToolchainDir>/opt/microchip/xc8/v2.20/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>

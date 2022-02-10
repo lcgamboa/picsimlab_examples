@@ -124,7 +124,7 @@ void main()
   ADCON1=0x0F;
   CMCON=0x07;
 #endif
-/*
+
 //dip
   TRISB=0x03;
   lcd_cmd(L_CLR);
@@ -219,7 +219,7 @@ void main()
   lcd_str("   7 Seg Test ");
 
 
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x06;
 #else
 #ifndef _18F45K50
@@ -393,7 +393,7 @@ void main()
   }
   atraso_ms(100);
   }
-  */
+  
 //teste ADC
   
   TRISA=0x07;
@@ -566,7 +566,7 @@ void main()
   PORTCbits.RC2=0;
 
 
-#ifdef _18F452
+#if defined(_18F452) || defined(_16F877A)
   ADCON1=0x06;
 #elif defined(_18F45K50) || defined(_16F1939)
   ANSELA=0x00;

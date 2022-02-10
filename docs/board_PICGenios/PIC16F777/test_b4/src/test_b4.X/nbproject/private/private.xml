@@ -6,5 +6,8 @@
         <group>
             <file>file:/home/gamboa/MPLABXProjects/picsimlab/teste_b4.X/teste_b4.c</file>
         </group>
+        <group name="segunda">
+            <file>file:/home/gamboa/projetos/picsimlab_examples/examples/unpacked/board_PICGenios/PIC16F877A/test_b4/src/test_b4.X/teste_b4.c</file>
+        </group>
     </open-files>
 </project-private>

@@ -12,6 +12,32 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <asminc-extensions/>
             <make-dep-projects/>
+            <sourceRootList/>
+            <confList>
+                <confElem>
+                    <name>18F452</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>18F4620</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>18F4550</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>16F877A</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>16F777</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
         </data>
     </configuration>
 </project>
