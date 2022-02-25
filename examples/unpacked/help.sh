@@ -180,7 +180,7 @@ function anime() {
 
 anime();
 </script>" >> ../help/examples_index.html
-echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/examples_index.html
+echo "</main><div class='footer'>Copyright © 2022 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/examples_index.html
 
 ./boards.sh
 
@@ -203,6 +203,6 @@ echo "<body>" >> ../help/examples_index_exp.html
 echo "<script src='picsimlab.js' type='text/javascript'></script><nav class='TOC'>" >> ../help/examples_index_exp.html
 echo "<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>" >> ../help/examples_index_exp.html
 cat ../unpacked_exp/exp.html >> ../help/examples_index_exp.html
-echo "</main><div class='footer'>Copyright © 2021 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/examples_index_exp.html 
+echo "</main><div class='footer'>Copyright © 2022 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/examples_index_exp.html 
 cd ..
 rsync -cr help/ ../docs/
