@@ -21,6 +21,7 @@
 <span class='chapterToc'><a href="parts_Fixed_Voltage.html">Fixed Voltage</a></span>
 <span class='chapterToc'><a href="parts_Gamepad.html">Gamepad</a></span>
 <span class='chapterToc'><a href="parts_Gamepad_(Analogic).html">Gamepad (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_IO_74xx573.html">IO 74xx573</a></span>
 <span class='chapterToc'><a href="parts_IO_74xx595.html">IO 74xx595</a></span>
 <span class='chapterToc'><a href="parts_IO_MCP23S17.html">IO MCP23S17</a></span>
 <span class='chapterToc'><a href="parts_IO_PCF8574.html">IO PCF8574</a></span>
@@ -42,12 +43,9 @@
 <span class='chapterToc'><a href="parts_Potentiometers.html">Potentiometers</a></span>
 <span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_AnalogInOutSerial">AnalogInOutSerial</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_counter_dec">counter_dec</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_counter_latch">counter_latch</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_display_bargraph">display_bargraph</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_espmsim_server">espmsim_server</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata_ethernet">firmata_ethernet</a></span>
-<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata">firmata</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_LED_matrix_MAX72xx">LED_matrix_MAX72xx</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Oscilloscope">Oscilloscope</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_servo_Knob">servo_Knob</a></span>
@@ -109,30 +107,6 @@
 <a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/AnalogInOutSerial/src/AnalogInOutSerial.ino" target="_blank">AnalogInOutSerial.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/AnalogInOutSerial/AnalogInOutSerial.png"><img src='board_Arduino_Uno/atmega328p/AnalogInOutSerial/AnalogInOutSerial.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/AnalogInOutSerial.pzw" target="_blank" >Download (pzw)</a>
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/AnalogInOutSerial.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_counter_dec"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/counter_dec]</small>  <h1>Counter with decoder</h1>
-<pre>
-Simple example of how to use the multiplexed 7-segment display with decoder 
-</pre>
-
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/counter_dec/src/counter_dec.ino" target="_blank">counter_dec.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/counter_dec/counter_dec.png"><img src='board_Arduino_Uno/atmega328p/counter_dec/counter_dec.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/counter_dec.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/counter_dec.pzw" target="_blank" >View Online</a><br><br>
-</td></tr></table>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_counter_latch"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/counter_latch]</small>  <h1>Counter with decoder and latch</h1>
-<pre>
-Simple example of how to use the latched 7-segment display with decoder 
-</pre>
-
-
-<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/counter_latch/src/counter_latch.ino" target="_blank">counter_latch.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/counter_latch/counter_latch.png"><img src='board_Arduino_Uno/atmega328p/counter_latch/counter_latch.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/counter_latch.pzw" target="_blank" >Download (pzw)</a>
-<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/counter_latch.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
@@ -209,32 +183,6 @@ When the server is loaded, open a browser in the address http://127.0.0.1:2000
 <br>
 <a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmataEthernet/StandardFirmataEthernet.ino" target="_blank">StandardFirmataEthernet.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/firmata_ethernet/firmata_ethernet.png"><img src='board_Arduino_Uno/atmega328p/firmata_ethernet/firmata_ethernet.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/firmata_ethernet.pzw" target="_blank" >Download (pzw)</a>
-</td></tr></table>
-<a name="Arduino_Uno_atmega328p"></a>
-<hr><table style="width:100%" border="0" bgcolor='#efefef'>
-<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_firmata"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/firmata]</small>  <h1> Firmata Library - Standard Firmata  </h1>
-<pre>
-  Firmata is a generic protocol for communicating with microcontrollers
-  from software on a host computer. It is intended to work with
-  any host computer software package.
-  To download a host software package, please click on the following link
-  to open the list of Firmata client libraries in your default browser.
-  https://github.com/firmata/arduino#firmata-client-libraries
-  Copyright (C) 2006-2008 Hans-Christoph Steiner.  All rights reserved.
-  Copyright (C) 2010-2011 Paul Stoffregen.  All rights reserved.
-  Copyright (C) 2009 Shigeru Kobayashi.  All rights reserved.
-  Copyright (C) 2009-2016 Jeff Hoefs.  All rights reserved.
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or (at your option) any later version.
-  See file LICENSE.txt for further informations on licensing terms.
-  Last updated August 17th, 2017
-</pre>
-<br>
-<br>
-<a href="https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino" target="_blank">StandardFirmata.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/firmata/firmata.png"><img src='board_Arduino_Uno/atmega328p/firmata/firmata.png' width=60%></a></td>
-<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/firmata.pzw" target="_blank" >Download (pzw)</a>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>

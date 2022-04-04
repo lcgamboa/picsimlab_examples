@@ -27,7 +27,7 @@ echo "</nav><main class='main-content'>" >> ../help/Parts.html
 
 for part in "${parts[@]}";do
   echo  "<hr><br><h2><a name=\"${part// /_}\"></a><a href=\"parts_${part// /_}.html\">${part}</a></h2>" >> ../help/Parts.html
-  files=`grep -m1 "$part" */*/*/*.pcf | cut -f1 -d:`
+  files=`grep -m1 "$part," */*/*/*.pcf | cut -f1 -d:`
   for file in $files; do
     board=`echo $file | awk -F/ '{print $1}'` 
     proc=`echo $file | awk -F/ '{print $2}'`

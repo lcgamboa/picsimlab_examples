@@ -22,7 +22,7 @@ for chpart in "${parts[@]}";do
 
   if [ "$chpart" == "$part" ]; then  
   bname_old="z"
-  pfiles=`grep -m1 "$part" */*/*/*.pcf | cut -f1 -d:`
+  pfiles=`grep -m1 "$part," */*/*/*.pcf | cut -f1 -d:`
   for pfile in $pfiles; do
     board=`echo $pfile | awk -F/ '{print $1}'` 
     proc=`echo $pfile | awk -F/ '{print $2}'`
@@ -44,7 +44,7 @@ done
 
   echo "</nav><main class='main-content'>" >> "$file"  
   board_old="z"
-  pfiles=`grep -m1 "$part" */*/*/*.pcf | cut -f1 -d:`
+  pfiles=`grep -m1 "$part," */*/*/*.pcf | cut -f1 -d:`
   for pfile in $pfiles; do
     board=`echo $pfile | awk -F/ '{print $1}'` 
     proc=`echo $pfile | awk -F/ '{print $2}'`
