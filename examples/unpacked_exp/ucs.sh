@@ -2,7 +2,7 @@
 
 #. ../unpacked/ucsname.sh
 
-declare -a ucs=("PIC16F1619" "PIC16F18855" "PIC18F27K40" "PIC18F4550" "stm32f103c8t6" "stm32f103rbt6")
+declare -a ucs=("ESP32" "PIC16F1619" "PIC16F18855" "PIC18F27K40" "PIC18F4550" "stm32f103c8t6" "stm32f103rbt6")
 
 #echo "<hr><h1><a name=\"parts\"></a>Examples by parts</h1>"
 echo "<span class='chapterToc'>Examples by &#181controllers</h1></span>"
