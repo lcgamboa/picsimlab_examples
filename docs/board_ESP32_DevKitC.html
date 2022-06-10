@@ -39,8 +39,23 @@
 Original Link: <a href="https://micropython.org/" >https://micropython.org/</a>
 <br>
 
+Before use this example it is necessary to configure a serial port emulator as described in the <a href="https://lcgamboa.github.io/picsimlab_docs/0.8.11/SerialCommunication.html" target="_blank">documentation</a>.
 
-Before use this example it is necessary to configure a serial port emulator as described in the <a href="https://lcgamboa.github.io/picsimlab_docs/0.8.11/SerialCommunication.html" target="_blank">documentation</a>.<br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/micropython/micropython.png"><img src='board_ESP32_DevKitC/ESP32/micropython/micropython.png' width=60%></a></td>
+
+<br>
+<br>You can load the test code below using a serial terminal or an editor like <a href="https://thonny.org/" target="_blank">Thonny</a> or <a href="https://codewith.mu/" target="_blank">Mu</a>.
+
+<pre>
+import machine
+import time
+led = machine.Pin(2, machine.Pin.OUT)
+while True:
+	led.value(1)
+	time.sleep(1)
+	led.value(0)
+	time.sleep(1)
+
+</pre><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/micropython/micropython.png"><img src='board_ESP32_DevKitC/ESP32/micropython/micropython.png' width=60%></a></td>
 <td width="20%" align=left><a href="pzw_exp/board_ESP32_DevKitC/ESP32/micropython.pzw" target="_blank" >Download (pzw)</a>
 </td></tr></table>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
