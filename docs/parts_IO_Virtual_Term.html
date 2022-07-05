@@ -11,10 +11,15 @@
 <span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
 <span class='chapterToc'><a href="parts_7_Segments_Display.html">7 Segments Display</a></span>
 <span class='chapterToc'><a href="parts_7_Segments_Display_(Decoder).html">7 Segments Display (Decoder)</a></span>
+<span class='chapterToc'><a href="parts_BMP180_(Pressure_I2C).html">BMP180 (Pressure I2C)</a></span>
+<span class='chapterToc'><a href="parts_BMP280_(Pressure_I2C).html">BMP280 (Pressure I2C)</a></span>
 <span class='chapterToc'><a href="parts_Buzzer.html">Buzzer</a></span>
 <span class='chapterToc'><a href="parts_D._Transfer_Function.html">D. Transfer Function</a></span>
 <span class='chapterToc'><a href="parts_DC_Motor.html">DC Motor</a></span>
+<span class='chapterToc'><a href="parts_DHT11_(Temp._Hum.).html">DHT11 (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_DHT22_(Temp._Hum.).html">DHT22 (Temp. Hum.)</a></span>
 <span class='chapterToc'><a href="parts_DS1621_(Temperature_I2C).html">DS1621 (Temperature I2C)</a></span>
+<span class='chapterToc'><a href="parts_DS18B20_(Temperature).html">DS18B20 (Temperature)</a></span>
 <span class='chapterToc'><a href="parts_ETH_w5500.html">ETH w5500</a></span>
 <span class='chapterToc'><a href="parts_Encoder.html">Encoder</a></span>
 <span class='chapterToc'><a href="parts_FM50_(Temperature).html">FM50 (Temperature)</a></span>
@@ -29,7 +34,12 @@
 <span class='chapterToc'><a href="parts_IO_Virtual_Term.html">IO Virtual Term</a></span>
 <span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_AnalogInOutSerial">AnalogInOutSerial</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_BMP180">BMP180</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_BMP280">BMP280</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_cardinfo">cardinfo</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_DHT11">DHT11</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_DHT22">DHT22</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_DS18B20">DS18B20</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Encoder_basic">Encoder_basic</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_firmata_ethernet">firmata_ethernet</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_rc_receiver">rc_receiver</a></span>
@@ -37,6 +47,8 @@
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_udpntpclient">udpntpclient</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_webclientrepeating">webclientrepeating</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_webserver">webserver</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC18F4620">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4620_Aqua18F">Aqua18F</a></span>
 <span class='sectionToc'><a href="#Franzininho_DIY_attiny85">Franzininho_DIY</a></span>
 <span class='subsectionToc'><a href="#Franzininho_DIY_attiny85_Tiny85_Temp_LCD_RTC">Tiny85_Temp_LCD_RTC</a></span>
 <span class='chapterToc'><a href="parts_Jumper_Wires.html">Jumper Wires</a></span>
@@ -103,6 +115,50 @@
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_BMP180"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/BMP180]</small>  <h1>  BMP180 Pressure sensor </h1>
+<pre>
+  This is an example for the BMP085 Barometric Pressure & Temp Sensor
+  Designed specifically to work with the Adafruit BMP085 Breakout 
+  ----> https://www.adafruit.com/products/391
+  These pressure and temperature sensors use I2C to communicate, 2 pins
+  are required to interface
+  Adafruit invests time and resources providing this open source code, 
+  please support Adafruit and open-source hardware by purchasing 
+  products from Adafruit!
+  Written by Limor Fried/Ladyada for Adafruit Industries.  
+  BSD license, all text above must be included in any redistribution
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/Adafruit-BMP085-Library/blob/master/examples/BMP085test/BMP085test.ino" target="_blank">BMP085test.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/BMP180/BMP180.png"><img src='board_Arduino_Uno/atmega328p/BMP180/BMP180.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/BMP180.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/BMP180.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_BMP280"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/BMP280]</small>  <h1>  BMP280 Pressure sensor </h1>
+<pre>
+  This is a library for the BMP280 humidity, temperature & pressure sensor
+  Designed specifically to work with the Adafruit BMP280 Breakout
+  ----> http://www.adafruit.com/products/2651
+  These sensors use I2C or SPI to communicate, 2 or 4 pins are required
+  to interface.
+  Adafruit invests time and resources providing this open source code,
+  please support Adafruit andopen-source hardware by purchasing products
+  from Adafruit!
+  Written by Limor Fried & Kevin Townsend for Adafruit Industries.
+  BSD license, all text above must be included in any redistribution
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/Adafruit_BMP280_Library/blob/master/examples/bmp280test/bmp280test.ino" target="_blank">bmp280test.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/BMP280/BMP280.png"><img src='board_Arduino_Uno/atmega328p/BMP280/BMP280.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/BMP280.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/BMP280.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_cardinfo"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/cardinfo]</small>  <h1>  SD card test </h1>
 <pre>
   This example shows how use the utility libraries on which the'
@@ -130,6 +186,60 @@
 <a href="https://github.com/arduino-libraries/SD/blob/master/examples/CardInfo/CardInfo.ino" target="_blank">CardInfo.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/cardinfo/cardinfo.png"><img src='board_Arduino_Uno/atmega328p/cardinfo/cardinfo.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/cardinfo.pzw" target="_blank" >Download (pzw)</a>
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/cardinfo.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_DHT11"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/DHT11]</small>  <h1>  DHT11 humidity and temperature sensor </h1>
+<pre>
+// Example testing sketch for various DHT humidity/temperature sensors
+// Written by ladyada, public domain
+//
+// REQUIRES the following Arduino libraries:
+// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
+// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino" target="_blank">DHTtester.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DHT11/DHT11.png"><img src='board_Arduino_Uno/atmega328p/DHT11/DHT11.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DHT11.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DHT11.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_DHT22"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/DHT22]</small>  <h1>  DHT22 humidity and temperature sensor </h1>
+<pre>
+// Example testing sketch for various DHT humidity/temperature sensors
+// Written by ladyada, public domain
+//
+// REQUIRES the following Arduino libraries:
+// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
+// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino" target="_blank">DHTtester.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DHT22/DHT22.png"><img src='board_Arduino_Uno/atmega328p/DHT22/DHT22.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DHT22.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DHT22.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_DS18B20"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/DS18B20]</small>  <h1>  DS18S20 Temperature sensor </h1>
+<pre>
+// OneWire DS18S20, DS18B20, DS1822 Temperature Example
+//
+// http://www.pjrc.com/teensy/td_libs_OneWire.html
+//
+// The DallasTemperature library can do all this work for you!
+// https://github.com/milesburton/Arduino-Temperature-Control-Library
+</pre>
+<br>
+
+
+<a href="https://github.com/PaulStoffregen/OneWire/blob/master/examples/DS18x20_Temperature/DS18x20_Temperature.ino" target="_blank">DS18x20_Temperature.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DS18B20/DS18B20.png"><img src='board_Arduino_Uno/atmega328p/DS18B20/DS18B20.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DS18B20.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DS18B20.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
@@ -286,6 +396,19 @@
 <br>
 <a href="https://github.com/arduino-libraries/Ethernet/blob/master/examples/WebServer/WebServer.ino" target="_blank">WebServer.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/webserver/webserver.png"><img src='board_Arduino_Uno/atmega328p/webserver/webserver.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/webserver.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
+<a name="Breadboard_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4620_Aqua18F"></a><small>[Breadboard/<a href='#Breadboard_PIC18F4620'>PIC18F4620</a>/Aqua18F]</small><h1> Cooler controller for aquarium with meteorological measurement. </h1>
+
+The cooler output is turned on when the aquarium water temperature rises above 29C and off when it drops below 28.8C (hysteresis).
+
+<br>
+<br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4620/Aqua18F/src/aqua18f.X" target="_blank">MPLABX Aqua18F project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4620/Aqua18F/Aqua18F.png"><img src='board_Breadboard/PIC18F4620/Aqua18F/Aqua18F.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4620/Aqua18F.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4620/Aqua18F.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Franzininho_DIY_attiny85"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>

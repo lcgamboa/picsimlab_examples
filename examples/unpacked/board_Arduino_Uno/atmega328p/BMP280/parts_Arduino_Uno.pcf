@@ -1,0 +1,5 @@
+version,0,0,0:0.8.11
+scale,0,0,0:1.000000
+useAlias,0,0,0:0
+BMP280 (Pressure I2C),14,14,0:28,27,73,59
+IO Virtual Term,23,340,0:3,2,1,9600

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+<title>PICSimLab Examples Part DS18B20 (Temperature)</title>
+<meta charset='utf-8' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link href='picsimlab.css' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<nav class='TOC'>
+<span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
+<span class='chapterToc'><a href="parts_7_Segments_Display.html">7 Segments Display</a></span>
+<span class='chapterToc'><a href="parts_7_Segments_Display_(Decoder).html">7 Segments Display (Decoder)</a></span>
+<span class='chapterToc'><a href="parts_BMP180_(Pressure_I2C).html">BMP180 (Pressure I2C)</a></span>
+<span class='chapterToc'><a href="parts_BMP280_(Pressure_I2C).html">BMP280 (Pressure I2C)</a></span>
+<span class='chapterToc'><a href="parts_Buzzer.html">Buzzer</a></span>
+<span class='chapterToc'><a href="parts_D._Transfer_Function.html">D. Transfer Function</a></span>
+<span class='chapterToc'><a href="parts_DC_Motor.html">DC Motor</a></span>
+<span class='chapterToc'><a href="parts_DHT11_(Temp._Hum.).html">DHT11 (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_DHT22_(Temp._Hum.).html">DHT22 (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_DS1621_(Temperature_I2C).html">DS1621 (Temperature I2C)</a></span>
+<span class='chapterToc'><a href="parts_DS18B20_(Temperature).html">DS18B20 (Temperature)</a></span>
+<span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_DS18B20">DS18B20</a></span>
+<span class='sectionToc'><a href="#Breadboard_PIC18F4620">Breadboard</a></span>
+<span class='subsectionToc'><a href="#Breadboard_PIC18F4620_Aqua18F">Aqua18F</a></span>
+<span class='chapterToc'><a href="parts_ETH_w5500.html">ETH w5500</a></span>
+<span class='chapterToc'><a href="parts_Encoder.html">Encoder</a></span>
+<span class='chapterToc'><a href="parts_FM50_(Temperature).html">FM50 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_Fixed_Voltage.html">Fixed Voltage</a></span>
+<span class='chapterToc'><a href="parts_Gamepad.html">Gamepad</a></span>
+<span class='chapterToc'><a href="parts_Gamepad_(Analogic).html">Gamepad (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_IO_74xx573.html">IO 74xx573</a></span>
+<span class='chapterToc'><a href="parts_IO_74xx595.html">IO 74xx595</a></span>
+<span class='chapterToc'><a href="parts_IO_MCP23S17.html">IO MCP23S17</a></span>
+<span class='chapterToc'><a href="parts_IO_PCF8574.html">IO PCF8574</a></span>
+<span class='chapterToc'><a href="parts_IO_UART.html">IO UART</a></span>
+<span class='chapterToc'><a href="parts_IO_Virtual_Term.html">IO Virtual Term</a></span>
+<span class='chapterToc'><a href="parts_Jumper_Wires.html">Jumper Wires</a></span>
+<span class='chapterToc'><a href="parts_Keypad.html">Keypad</a></span>
+<span class='chapterToc'><a href="parts_LDR.html">LDR</a></span>
+<span class='chapterToc'><a href="parts_LM35_(Temperature).html">LM35 (Temperature)</a></span>
+<span class='chapterToc'><a href="parts_LCD_hd44780.html">LCD hd44780</a></span>
+<span class='chapterToc'><a href="parts_LCD_ili9341.html">LCD ili9341</a></span>
+<span class='chapterToc'><a href="parts_LCD_pcf8833.html">LCD pcf8833</a></span>
+<span class='chapterToc'><a href="parts_LCD_pcd8544.html">LCD pcd8544</a></span>
+<span class='chapterToc'><a href="parts_LCD_ssd1306.html">LCD ssd1306</a></span>
+<span class='chapterToc'><a href="parts_LED_Matrix.html">LED Matrix</a></span>
+<span class='chapterToc'><a href="parts_LEDs.html">LEDs</a></span>
+<span class='chapterToc'><a href="parts_MEM_24CXXX.html">MEM 24CXXX</a></span>
+<span class='chapterToc'><a href="parts_MPU6050.html">MPU6050</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers.html">Potentiometers</a></span>
+<span class='chapterToc'><a href="parts_Potentiometers_(Rotary).html">Potentiometers (Rotary)</a></span>
+<span class='chapterToc'><a href="parts_Push_Buttons.html">Push Buttons</a></span>
+<span class='chapterToc'><a href="parts_Push_Buttons_(Analogic).html">Push Buttons (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_RGB_LED.html">RGB LED</a></span>
+<span class='chapterToc'><a href="parts_RGB_LED_WS2812B.html">RGB LED WS2812B</a></span>
+<span class='chapterToc'><a href="parts_RTC_ds1307.html">RTC ds1307</a></span>
+<span class='chapterToc'><a href="parts_RTC_pfc8563.html">RTC pfc8563</a></span>
+<span class='chapterToc'><a href="parts_SD_Card.html">SD Card</a></span>
+<span class='chapterToc'><a href="parts_Servo_Motor.html">Servo Motor</a></span>
+<span class='chapterToc'><a href="parts_Signal_Generator.html">Signal Generator</a></span>
+<span class='chapterToc'><a href="parts_Step_Motor.html">Step Motor</a></span>
+<span class='chapterToc'><a href="parts_SHT3X_(Temp._Hum.).html">SHT3X (Temp. Hum.)</a></span>
+<span class='chapterToc'><a href="parts_Switches.html">Switches</a></span>
+<span class='chapterToc'><a href="parts_Text_Box.html">Text Box</a></span>
+<span class='chapterToc'><a href="parts_Temperature_System.html">Temperature System</a></span>
+<span class='chapterToc'><a href="parts_Ultrasonic_HC-SR04.html">Ultrasonic HC-SR04</a></span>
+<span class='chapterToc'><a href="parts_VCD_Dump.html">VCD Dump</a></span>
+<span class='chapterToc'><a href="parts_VCD_Dump_(Analogic).html">VCD Dump (Analogic)</a></span>
+<span class='chapterToc'><a href="parts_VCD_Play.html">VCD Play</a></span>
+</nav><main class='main-content'>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_DS18B20"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/DS18B20]</small>  <h1>  DS18S20 Temperature sensor </h1>
+<pre>
+// OneWire DS18S20, DS18B20, DS1822 Temperature Example
+//
+// http://www.pjrc.com/teensy/td_libs_OneWire.html
+//
+// The DallasTemperature library can do all this work for you!
+// https://github.com/milesburton/Arduino-Temperature-Control-Library
+</pre>
+<br>
+
+
+<a href="https://github.com/PaulStoffregen/OneWire/blob/master/examples/DS18x20_Temperature/DS18x20_Temperature.ino" target="_blank">DS18x20_Temperature.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DS18B20/DS18B20.png"><img src='board_Arduino_Uno/atmega328p/DS18B20/DS18B20.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DS18B20.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DS18B20.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Breadboard_PIC18F4620"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Breadboard_PIC18F4620_Aqua18F"></a><small>[Breadboard/<a href='#Breadboard_PIC18F4620'>PIC18F4620</a>/Aqua18F]</small><h1> Cooler controller for aquarium with meteorological measurement. </h1>
+
+The cooler output is turned on when the aquarium water temperature rises above 29C and off when it drops below 28.8C (hysteresis).
+
+<br>
+<br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/tree/master/docs/board_Breadboard/PIC18F4620/Aqua18F/src/aqua18f.X" target="_blank">MPLABX Aqua18F project</a>
+<br><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Breadboard/PIC18F4620/Aqua18F/Aqua18F.png"><img src='board_Breadboard/PIC18F4620/Aqua18F/Aqua18F.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Breadboard/PIC18F4620/Aqua18F.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Breadboard/PIC18F4620/Aqua18F.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+</main>
+<script src='picsimlab.js' type='text/javascript'></script>
+<script data-goatcounter='https://4017.goatcounter.com/count' src='https://gc.zgo.at/count.js'></script>
+<div class='footer'>Copyright © 2022 lcgamboa. Built with make4ht.</div></body></html>

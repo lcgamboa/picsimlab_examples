@@ -1,0 +1,5 @@
+version,0,0,0:0.8.11
+scale,0,0,0:0.900000
+useAlias,0,0,0:0
+DHT22 (Temp. Hum.),10,8,0:4,116,114
+IO Virtual Term,295,23,0:3,2,1,9600

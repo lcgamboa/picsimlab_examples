@@ -15,11 +15,16 @@
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_AnalogButtons">AnalogButtons</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_AnalogInOutSerial">AnalogInOutSerial</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_Arduino_sound">Arduino_sound</a></span>
+<span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_BMP180">BMP180</a></span>
+<span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_BMP280">BMP280</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_cardinfo">cardinfo</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_ColorPallete">ColorPallete</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_counter_dec">counter_dec</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_counter_latch">counter_latch</a></span>
+<span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_DHT11">DHT11</a></span>
+<span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_DHT22">DHT22</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_display_bargraph">display_bargraph</a></span>
+<span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_DS18B20">DS18B20</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_Encoder_basic">Encoder_basic</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_espmsim_server">espmsim_server</a></span>
 <span class='subsectionToc'><a href="#board_Arduino_Uno_atmega328p_firmata">firmata</a></span>
@@ -126,6 +131,48 @@ Nick James nicksort
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/Arduino_sound.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_BMP180"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/BMP180]</small>  <h1>  BMP180 Pressure sensor </h1>
+<pre>
+  This is an example for the BMP085 Barometric Pressure & Temp Sensor
+  Designed specifically to work with the Adafruit BMP085 Breakout 
+  ----> https://www.adafruit.com/products/391
+  These pressure and temperature sensors use I2C to communicate, 2 pins
+  are required to interface
+  Adafruit invests time and resources providing this open source code, 
+  please support Adafruit and open-source hardware by purchasing 
+  products from Adafruit!
+  Written by Limor Fried/Ladyada for Adafruit Industries.  
+  BSD license, all text above must be included in any redistribution
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/Adafruit-BMP085-Library/blob/master/examples/BMP085test/BMP085test.ino" target="_blank">BMP085test.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/BMP180/BMP180.png"><img src='board_Arduino_Uno/atmega328p/BMP180/BMP180.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/BMP180.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/BMP180.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_BMP280"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/BMP280]</small>  <h1>  BMP280 Pressure sensor </h1>
+<pre>
+  This is a library for the BMP280 humidity, temperature & pressure sensor
+  Designed specifically to work with the Adafruit BMP280 Breakout
+  ----> http://www.adafruit.com/products/2651
+  These sensors use I2C or SPI to communicate, 2 or 4 pins are required
+  to interface.
+  Adafruit invests time and resources providing this open source code,
+  please support Adafruit andopen-source hardware by purchasing products
+  from Adafruit!
+  Written by Limor Fried & Kevin Townsend for Adafruit Industries.
+  BSD license, all text above must be included in any redistribution
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/Adafruit_BMP280_Library/blob/master/examples/bmp280test/bmp280test.ino" target="_blank">bmp280test.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/BMP280/BMP280.png"><img src='board_Arduino_Uno/atmega328p/BMP280/BMP280.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/BMP280.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/BMP280.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_cardinfo"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/cardinfo]</small>  <h1>  SD card test </h1>
 <pre>
   This example shows how use the utility libraries on which the'
@@ -203,6 +250,40 @@ Simple example of how to use the latched 7-segment display with decoder
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/counter_latch.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_DHT11"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/DHT11]</small>  <h1>  DHT11 humidity and temperature sensor </h1>
+<pre>
+// Example testing sketch for various DHT humidity/temperature sensors
+// Written by ladyada, public domain
+//
+// REQUIRES the following Arduino libraries:
+// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
+// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino" target="_blank">DHTtester.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DHT11/DHT11.png"><img src='board_Arduino_Uno/atmega328p/DHT11/DHT11.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DHT11.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DHT11.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_DHT22"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/DHT22]</small>  <h1>  DHT22 humidity and temperature sensor </h1>
+<pre>
+// Example testing sketch for various DHT humidity/temperature sensors
+// Written by ladyada, public domain
+//
+// REQUIRES the following Arduino libraries:
+// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
+// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino" target="_blank">DHTtester.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DHT22/DHT22.png"><img src='board_Arduino_Uno/atmega328p/DHT22/DHT22.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DHT22.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DHT22.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_display_bargraph"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/display_bargraph]</small>  <h1>  LED bar graph</h1>
 <pre>
 
@@ -229,6 +310,23 @@ Simple example of how to use the latched 7-segment display with decoder
 <a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_Arduino_Uno/atmega328p/display_bargraph/src/barGraph.ino" target="_blank">barGraph.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/display_bargraph/display_bargraph.png"><img src='board_Arduino_Uno/atmega328p/display_bargraph/display_bargraph.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/display_bargraph.pzw" target="_blank" >Download (pzw)</a>
 <br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/display_bargraph.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_DS18B20"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/DS18B20]</small>  <h1>  DS18S20 Temperature sensor </h1>
+<pre>
+// OneWire DS18S20, DS18B20, DS1822 Temperature Example
+//
+// http://www.pjrc.com/teensy/td_libs_OneWire.html
+//
+// The DallasTemperature library can do all this work for you!
+// https://github.com/milesburton/Arduino-Temperature-Control-Library
+</pre>
+<br>
+
+
+<a href="https://github.com/PaulStoffregen/OneWire/blob/master/examples/DS18x20_Temperature/DS18x20_Temperature.ino" target="_blank">DS18x20_Temperature.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/DS18B20/DS18B20.png"><img src='board_Arduino_Uno/atmega328p/DS18B20/DS18B20.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/DS18B20.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/DS18B20.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="board_Arduino_Uno_atmega328p_Encoder_basic"></a><small>[<a href='#board_Arduino_Uno_atmega328p'>atmega328p</a>/Encoder_basic]</small>  <h1> Encoder Library - Basic Example </h1>
