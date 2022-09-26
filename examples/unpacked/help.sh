@@ -82,7 +82,7 @@ do
 done
 echo "<span class='chapterToc'><a href=\"parts_7_Segments_Display.html\">Examples by parts</a></span>" >> ../help/examples_index.html 
 echo "<span class='chapterToc'><a href=\"ucs_atmega328p.html\">Examples by &#181controllers</a></span>" >> ../help/examples_index.html 
-echo "<span class='chapterToc'><a href=\"examples_index_exp.html\">Experimental boards</a></span>" >> ../help/examples_index.html 
+#echo "<span class='chapterToc'><a href=\"examples_index_exp.html\">Experimental boards</a></span>" >> ../help/examples_index.html 
 echo "</nav><main class='main-content'>" >> ../help/examples_index.html 
 echo "<h1>PICSimLab Examples</h1>
 <div class='container'>
