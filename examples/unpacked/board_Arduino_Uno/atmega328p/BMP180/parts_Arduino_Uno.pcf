@@ -1,5 +1,5 @@
-version,0,0,0:0.8.11
+version,0,0,0:0.8.12
 scale,0,0,0:1.000000
 useAlias,0,0,0:0
 BMP180 (Pressure I2C),20,10,0:28,27,38,38
-IO Virtual Term,48,344,0:3,2,1,9600
+IO Virtual Term,48,344,0:3,2,1,9600,1,56,396

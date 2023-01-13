@@ -1,6 +1,6 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.8.12
 scale,0,0,0:1.000000
 useAlias,0,0,0:0
 Potentiometers,10,10,0:23,24,25,0,112,24,52,0
 RGB LED,296,11,0:11,12,15,1
-IO Virtual Term,294,108,0:3,2,1,9600
+IO Virtual Term,294,108,0:3,2,1,9600,1,1029,395

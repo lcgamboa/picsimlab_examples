@@ -1,5 +1,5 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.8.12
 scale,0,0,0:1.000000
 useAlias,0,0,0:0
-VCD Play,89,21,0:4,0,0,0,0,0,0,0,/tmp/picsimlab_workspace/controle.vcd
-IO Virtual Term,91,123,0:3,2,1,9600
+VCD Play,89,21,0:4,0,0,0,0,0,0,0,1,/tmp/picsimlab_workspace/controle.vcd
+IO Virtual Term,92,182,0:3,2,1,9600,1,93,457
