@@ -46,6 +46,18 @@
                     <name>18F67J94</name>
                     <type>2</type>
                 </confElem>
+                <confElem>
+                    <name>16F886</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>18F4580</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>18F26K80</name>
+                    <type>2</type>
+                </confElem>
             </confList>
             <formatting>
                 <project-formatting-style>false</project-formatting-style>

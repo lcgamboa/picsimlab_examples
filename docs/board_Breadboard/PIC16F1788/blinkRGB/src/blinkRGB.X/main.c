@@ -33,19 +33,27 @@
 #ifdef _18F67J94
 #include "config_18F67J94.h"
 #endif
-
-void 
-main(void) {
-    
-#if !defined(_18F46J50) && !defined(_18F67J94)    
-    ANSELA=0x00; //all digital
+#ifdef _16F886
+#include "config_16F886.h"
 #endif
-    
-    TRISA=0xF8; //RA0, RA1 and RA2 output
-    PORTA=0;
-    while(1)
-    {
-      PORTA++;
-      __delay_ms(500);
+#ifdef _18F4580
+#include "config_18F4580.h"
+#endif
+#ifdef _18F26K80
+#include "config_18F26K80.h"
+#endif
+
+void
+main(void) {
+
+#if !defined(_18F46J50) && !defined(_18F67J94) && !defined(_16F886)  && !defined(_18F4580)  && !defined(_18F26K80)
+    ANSELA = 0x00; //all digital
+#endif
+
+    TRISA = 0xF8; //RA0, RA1 and RA2 output
+    PORTA = 0;
+    while (1) {
+        PORTA++;
+        __delay_ms(500);
     }
 }

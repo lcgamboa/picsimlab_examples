@@ -11,9 +11,12 @@
 <span class='chapterToc'><a href="examples_index.html">Examples Index</a></span>
 <span class='chapterToc'><a href="ucs_atmega328p.html">atmega328p</a></span>
 <span class='sectionToc'><a href="#Arduino_Nano_atmega328p">Arduino_Nano</a></span>
+<span class='subsectionToc'><a href="#Arduino_Nano_atmega328p_MultiDisplay">MultiDisplay</a></span>
 <span class='subsectionToc'><a href="#Arduino_Nano_atmega328p_servo_Knob">servo_Knob</a></span>
 <span class='sectionToc'><a href="#Arduino_Uno_atmega328p">Arduino_Uno</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_3Dcube">3Dcube</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_ADXL345_I2C">ADXL345_I2C</a></span>
+<span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_ADXL345_SPI">ADXL345_SPI</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_AnalogButtons">AnalogButtons</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_AnalogInOutSerial">AnalogInOutSerial</a></span>
 <span class='subsectionToc'><a href="#Arduino_Uno_atmega328p_Arduino_sound">Arduino_sound</a></span>
@@ -79,12 +82,15 @@
 <span class='chapterToc'><a href="ucs_PIC16F84A.html">PIC16F84A</a></span>
 <span class='chapterToc'><a href="ucs_PIC16F777.html">PIC16F777</a></span>
 <span class='chapterToc'><a href="ucs_PIC16F877A.html">PIC16F877A</a></span>
+<span class='chapterToc'><a href="ucs_PIC16F886.html">PIC16F886</a></span>
 <span class='chapterToc'><a href="ucs_PIC16F887.html">PIC16F887</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F452.html">PIC18F452</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F4520.html">PIC18F4520</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F4550.html">PIC18F4550</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F4580.html">PIC18F4580</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F45K50.html">PIC18F45K50</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F4620.html">PIC18F4620</a></span>
+<span class='chapterToc'><a href="ucs_PIC18F26K80.html">PIC18F26K80</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F27K40.html">PIC18F27K40</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F46J50.html">PIC18F46J50</a></span>
 <span class='chapterToc'><a href="ucs_PIC18F47K40.html">PIC18F47K40</a></span>
@@ -94,6 +100,32 @@
 <span class='chapterToc'><a href="ucs_STM8S103.html">STM8S103</a></span>
 <span class='chapterToc'><a href="ucs_Z80.html">Z80</a></span>
 </nav><main class='main-content'>
+<a name="Arduino_Nano_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Nano_atmega328p_MultiDisplay"></a><small>[Arduino_Nano/<a href='#Arduino_Nano_atmega328p'>atmega328p</a>/MultiDisplay]</small>  <h1>LCD HD33780 with PCF8574 Multi Display</h1>
+<pre>
+// ----------------------------------------------------------------------------
+// MultiDisplay - simple demonstration of accessing multiple lcds
+// Created by Bill Perry 2016-07-02
+// bperrybap@opensource.billsworld.billandterrie.com
+//
+// This example code is unlicensed and is released into the public domain
+// ----------------------------------------------------------------------------
+// 
+// This sketch is for LCDs with PCF8574 or MCP23008 chip based backpacks
+//
+// Sketch will print lcd instance number on top line with i2c address
+// and will print the amount of time since the Arduino has been reset
+// on the second row.
+//
+</pre>
+<br>
+
+
+<a href="https://github.com/duinoWitchery/hd44780/blob/master/examples/ioClass/hd44780_I2Cexp/MultiDisplay/MultiDisplay.ino" target="_blank">MultiDisplay.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Nano/atmega328p/MultiDisplay/MultiDisplay.png"><img src='board_Arduino_Nano/atmega328p/MultiDisplay/MultiDisplay.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Nano/atmega328p/MultiDisplay.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Nano/atmega328p/MultiDisplay.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
 <a name="Arduino_Nano_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="Arduino_Nano_atmega328p_servo_Knob"></a><small>[Arduino_Nano/<a href='#Arduino_Nano_atmega328p'>atmega328p</a>/servo_Knob]</small>  <h1> Controlling a servo position using a potentiometer (variable resistor) </h1>
@@ -121,6 +153,52 @@ Time to rotate a virtual cube on a 0.96″ OLED Display! In this tutorial, I’l
 <br>
 <a href="https://cyaninfinite.com/mpu6050-and-3d-cube/" target="_blank"> Tutorial MPU6050 and 3D cube</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/3Dcube/3Dcube.gif"><img src='board_Arduino_Uno/atmega328p/3Dcube/3Dcube.gif' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/3Dcube.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_ADXL345_I2C"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/ADXL345_I2C]</small>  <h1>ADXL345 Accel example I2C</h1>
+<pre>
+/*  ********************************************* 
+ *  SparkFun_ADXL345_Example
+ *  Triple Axis Accelerometer Breakout - ADXL345 
+ *  Hook Up Guide Example 
+ *  
+ *  Utilizing Sparkfun's ADXL345 Library
+ *  Bildr ADXL345 source file modified to support 
+ *  both I2C and SPI Communication
+ *  
+ *  E.Robert @ SparkFun Electronics
+ *  *********************************************/
+</pre>
+<br>
+
+
+<a href="https://github.com/sparkfun/SparkFun_ADXL345_Arduino_Library/blob/master/examples/SparkFun_ADXL345_Example/SparkFun_ADXL345_Example.ino" target="_blank">SparkFun_ADXL345_Example.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/ADXL345_I2C/ADXL345_I2C.png"><img src='board_Arduino_Uno/atmega328p/ADXL345_I2C/ADXL345_I2C.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/ADXL345_I2C.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/ADXL345_I2C.pzw" target="_blank" >View Online</a><br><br>
+</td></tr></table>
+<a name="Arduino_Uno_atmega328p"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="Arduino_Uno_atmega328p_ADXL345_SPI"></a><small>[Arduino_Uno/<a href='#Arduino_Uno_atmega328p'>atmega328p</a>/ADXL345_SPI]</small>  <h1>ADXL345 Accel example SPI</h1>
+<pre>
+/*  ********************************************* 
+ *  SparkFun_ADXL345_Example
+ *  Triple Axis Accelerometer Breakout - ADXL345 
+ *  Hook Up Guide Example 
+ *  
+ *  Utilizing Sparkfun's ADXL345 Library
+ *  Bildr ADXL345 source file modified to support 
+ *  both I2C and SPI Communication
+ *  
+ *  E.Robert @ SparkFun Electronics
+ *  *********************************************/
+</pre>
+<br>
+
+
+<a href="https://github.com/sparkfun/SparkFun_ADXL345_Arduino_Library/blob/master/examples/SparkFun_ADXL345_Example/SparkFun_ADXL345_Example.ino" target="_blank">SparkFun_ADXL345_Example.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_Arduino_Uno/atmega328p/ADXL345_SPI/ADXL345_SPI.png"><img src='board_Arduino_Uno/atmega328p/ADXL345_SPI/ADXL345_SPI.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_Arduino_Uno/atmega328p/ADXL345_SPI.pzw" target="_blank" >Download (pzw)</a>
+<br><br><a href="../js/picsimlab.html?../picsimlab_examples/pzw/board_Arduino_Uno/atmega328p/ADXL345_SPI.pzw" target="_blank" >View Online</a><br><br>
 </td></tr></table>
 <a name="Arduino_Uno_atmega328p"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
