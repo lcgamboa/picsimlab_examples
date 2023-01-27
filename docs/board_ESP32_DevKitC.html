@@ -16,11 +16,15 @@
 <span class='chapterToc'><a href="board_Breadboard.html">Breadboard</a></span>
 <span class='chapterToc'><a href="board_ESP32_DevKitC.html">ESP32_DevKitC</a></span>
 <span class='sectionToc'><a href="#board_ESP32_DevKitC_ESP32">ESP32</a></span>
+<span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_AdcMeasuring">AdcMeasuring</a></span>
+<span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_Bmp280Test">Bmp280Test</a></span>
 <span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_idf_blink">idf_blink</a></span>
 <span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_micropython">micropython</a></span>
 <span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_NTP_client">NTP_client</a></span>
 <span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_NuttX_led">NuttX_led</a></span>
 <span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_SimpleWifiServer">SimpleWifiServer</a></span>
+<span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_SpiMaster">SpiMaster</a></span>
+<span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_UTFT_demo">UTFT_demo</a></span>
 <span class='subsectionToc'><a href="#board_ESP32_DevKitC_ESP32_zephyr_esp32_led">zephyr_esp32_led</a></span>
 <span class='chapterToc'><a href="board_Franzininho_DIY.html">Franzininho_DIY</a></span>
 <span class='chapterToc'><a href="board_gpboard.html">gpboard</a></span>
@@ -34,6 +38,35 @@
 <span class='chapterToc'><a href="board_X.html">X</a></span>
 </nav><main class='main-content'>
 <a name="board_ESP32_DevKitC_ESP32"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_ESP32_DevKitC_ESP32_AdcMeasuring"></a><small>[<a href='#board_ESP32_DevKitC_ESP32'>ESP32</a>/AdcMeasuring]</small>  <h1> ESP32 ADC with Arduino IDE </h1>
+<pre>
+Measuring voltage example
+</pre>
+<br>
+<a href="https://microcontrollerslab.com/adc-esp32-measuring-voltage-example/" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/AdcMeasuring/AdcMeasuring.png"><img src='board_ESP32_DevKitC/ESP32/AdcMeasuring/AdcMeasuring.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_ESP32_DevKitC/ESP32/AdcMeasuring.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_ESP32_DevKitC_ESP32_Bmp280Test"></a><small>[<a href='#board_ESP32_DevKitC_ESP32'>ESP32</a>/Bmp280Test]</small>  <h1>  BMP280 Pressure sensor </h1>
+<pre>
+  This is a library for the BMP280 humidity, temperature & pressure sensor
+  Designed specifically to work with the Adafruit BMP280 Breakout
+  ----> http://www.adafruit.com/products/2651
+  These sensors use I2C or SPI to communicate, 2 or 4 pins are required
+  to interface.
+  Adafruit invests time and resources providing this open source code,
+  please support Adafruit andopen-source hardware by purchasing products
+  from Adafruit!
+  Written by Limor Fried & Kevin Townsend for Adafruit Industries.
+  BSD license, all text above must be included in any redistribution
+</pre>
+<br>
+
+
+<a href="https://github.com/adafruit/Adafruit_BMP280_Library/blob/master/examples/bmp280test/bmp280test.ino" target="_blank">bmp280test.ino</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/Bmp280Test/Bmp280Test.png"><img src='board_ESP32_DevKitC/ESP32/Bmp280Test/Bmp280Test.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_ESP32_DevKitC/ESP32/Bmp280Test.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="board_ESP32_DevKitC_ESP32_idf_blink"></a><small>[<a href='#board_ESP32_DevKitC_ESP32'>ESP32</a>/idf_blink]</small>  <h1> Espressif ESP32  Blink Example</h1>
 <pre>
@@ -128,6 +161,30 @@ On PICSimLab qemu-esp32 simulator the Web server address is mapped in <a href="h
 <br>
 <a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_ESP32_DevKitC/ESP32/SimpleWifiServer/src/SimpleWifiServer.ino" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/SimpleWifiServer/SimpleWifiServer.png"><img src='board_ESP32_DevKitC/ESP32/SimpleWifiServer/SimpleWifiServer.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_ESP32_DevKitC/ESP32/SimpleWifiServer.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_ESP32_DevKitC_ESP32_SpiMaster"></a><small>[<a href='#board_ESP32_DevKitC_ESP32'>ESP32</a>/SpiMaster]</small>  <h1> ESP32 SPI Master </h1>
+<pre>
+Learn how to use the ESP32 SPI peripheral with the ESP-IDF in 
+this article. SPI instances and the APIs needed to interact 
+with them will be covered. You will create a project that 
+uses SPI to operate a MAX7219 module with an 8×8 LED matrix.
+</pre>
+<br>
+<a href="https://embeddedexplorer.com/esp32-spi-master/" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/SpiMaster/SpiMaster.png"><img src='board_ESP32_DevKitC/ESP32/SpiMaster/SpiMaster.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_ESP32_DevKitC/ESP32/SpiMaster.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="board_ESP32_DevKitC_ESP32_UTFT_demo"></a><small>[<a href='#board_ESP32_DevKitC_ESP32'>ESP32</a>/UTFT_demo]</small>  <h1> Library TFT_eSPI - UTFT Demo 320x240 </h1>
+<pre>
+  Demo based on:
+  UTFT_Demo_320x240 by Henning Karlsen
+  web: http://www.henningkarlsen.com/electronics
+</pre>
+<br>
+
+<a href="https://github.com/Bodmer/TFT_eSPI/blob/master/examples/320%20x%20240/UTFT_demo/UTFT_demo.ino" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_DevKitC/ESP32/UTFT_demo/UTFT_demo.png"><img src='board_ESP32_DevKitC/ESP32/UTFT_demo/UTFT_demo.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_ESP32_DevKitC/ESP32/UTFT_demo.pzw" target="_blank" >Download (pzw)</a>
 </td></tr></table>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>
 <tr><td colspan=2 width="100%"><a name="board_ESP32_DevKitC_ESP32_zephyr_esp32_led"></a><small>[<a href='#board_ESP32_DevKitC_ESP32'>ESP32</a>/zephyr_esp32_led]</small>  <h1> Blink LED no ESP32 e Zephyr RTOS </h1>
