@@ -4,6 +4,14 @@
 #ifndef IO_H
 #define	IO_H
 
+
+//usar macros aumenta muito a velocidade na versão free do compilador xc8
+#define USE_MACRO
+
+#ifdef USE_MACRO
+#include "bits.h"
+#endif
+
 #define OUTPUT 0
 #define INPUT  1
 #define LOW 0
@@ -40,9 +48,95 @@ enum pin_label{
 #define LED_GREEN_PIN DISP_2_PIN
 #define LED_RED_PIN   DISP_1_PIN
 
-void digitalWrite(int pin, int value);
+//void systemInit(void);
+
+#ifndef USE_MACRO
 int digitalRead(int pin);
 void pinMode(int pin, int type);
-//void systemInit(void);
+void digitalWrite(int pin, int value);
+#else
+#define digitalWrite(pin,value) { \
+    if (pin < 8) {\
+        if (value) {\
+            bitSet(PORTA, pin);\
+        } else {\
+            bitClr(PORTA, pin);\
+        }\
+    } else if (pin < 16) {\
+        if (value) {\
+            bitSet(PORTB, pin -8);\
+        } else {\
+            bitClr(PORTB, pin -8);\
+        }\
+    } else if (pin < 24) {\
+        if (value) {\
+            bitSet(PORTC, pin -16);\
+        } else {\
+            bitClr(PORTC, pin -16);\
+        }\
+    } else if (pin < 32) {\
+        if (value) {\
+            bitSet(PORTD, pin -24);\
+        } else {\
+            bitClr(PORTD, pin -24);\
+        }\
+    } else if (pin < 40) {\
+        if (value) {\
+            bitSet(PORTE, pin -32);\
+        } else {\
+            bitClr(PORTE, pin -32);\
+        }\
+    }\
+}
+
+
+#define pinMode(pin,type) {\
+    if (pin < 8) {\
+        if (type) {\
+            bitSet(TRISA, pin);\
+        } else {\
+            bitClr(TRISA, pin);\
+        }\
+    } else if (pin < 16) {\
+        if (type) {\
+            bitSet(TRISB, pin - 8);\
+        } else {\
+            bitClr(TRISB, pin - 8);\
+        }\
+    } else if (pin < 24) {\
+        if (type) {\
+            bitSet(TRISC, pin - 16);\
+        } else {\
+            bitClr(TRISC, pin - 16);\
+        }\
+    } else if (pin < 32) {\
+        if (type) {\
+            bitSet(TRISD, pin - 24);\
+        } else {\
+            bitClr(TRISD, pin - 24);\
+        }\
+    } else if (pin < 40) {\
+        if (type) {\
+            bitSet(TRISE, pin - 32);\
+        } else {\
+            bitClr(TRISE, pin - 32);\
+        }\
+    }\
+}
+
+#define digitalRead(pin)  bitTst(\
+ (pin < 8) ? (PORTA):\
+ ((pin < 16) ? (PORTB):(\
+ (pin < 24) ? (PORTC):(\
+ (pin < 32) ? (PORTD):(PORTE))))\
+,\
+ (pin < 8) ? (pin):\
+ ((pin < 16) ? (pin-8):(\
+ (pin < 24) ? (pin-16):(\
+ (pin < 32) ? (pin-24):(pin-32))))\
+)         
+         
+     
+#endif
 #endif	/* XC_HEADER_TEMPLATE_H */
 

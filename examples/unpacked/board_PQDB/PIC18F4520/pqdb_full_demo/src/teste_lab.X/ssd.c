@@ -17,7 +17,7 @@
 //   GNU General Public License for more details.
 // -----------------------------------------------------------------------
 
-
+#include <xc.h>
 #include "ssd.h"
 #include "io.h"
 #include "so.h"
@@ -25,7 +25,7 @@
 //#define DATA  PORTD
 
 //vetor para armazenar a conversão do display
-static const char valor[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+static const char valor[] = {0xD7, 0x11, 0xCD, 0x5D, 0x1B, 0x5E, 0xDE, 0x15, 0xDF, 0x5F, 0x9F, 0xDA, 0xC6, 0xD9, 0xCE, 0x8E};
 //armazena qual é o display disponivel
 static char display;
 //armazena o valor a ser enviado ao display
@@ -48,44 +48,45 @@ void ssdDigit(char val, char pos) {
 }
 
 void ssdUpdate(void) {
-    
+
 
     //desliga todos os displays
-    digitalWrite(DISP_1_PIN,LOW);
-    digitalWrite(DISP_2_PIN,LOW);
-    digitalWrite(DISP_3_PIN,LOW);
-    digitalWrite(DISP_4_PIN,LOW);
-    
-    //desliga todos os leds
-    soWrite(0x00);
+    digitalWrite(DISP_1_PIN, LOW);
+    digitalWrite(DISP_2_PIN, LOW);
+    digitalWrite(DISP_3_PIN, LOW);
+    digitalWrite(DISP_4_PIN, LOW);
+
+
 
     switch (display) //liga apenas o display da vez
     {
         case 0:
             soWrite(valor[v0]);
-            digitalWrite(DISP_1_PIN,HIGH);
+            digitalWrite(DISP_1_PIN, HIGH);
             display = 1;
             break;
 
         case 1:
             soWrite(valor[v1]);
-            digitalWrite(DISP_2_PIN,HIGH);
+            digitalWrite(DISP_2_PIN, HIGH);
             display = 2;
             break;
 
         case 2:
             soWrite(valor[v2]);
-            digitalWrite(DISP_3_PIN,HIGH);
+            digitalWrite(DISP_3_PIN, HIGH);
             display = 3;
             break;
 
         case 3:
             soWrite(valor[v3]);
-            digitalWrite(DISP_4_PIN,HIGH);
+            digitalWrite(DISP_4_PIN, HIGH);
             display = 0;
             break;
 
         default:
+            //desliga todos os leds
+            soWrite(0x00);
             display = 0;
             break;
     }
@@ -97,7 +98,7 @@ void ssdInit(void) {
     pinMode(DISP_2_PIN, OUTPUT);
     pinMode(DISP_3_PIN, OUTPUT);
     pinMode(DISP_4_PIN, OUTPUT);
-    
+
     //Porta de dados como saida
     soInit();
 

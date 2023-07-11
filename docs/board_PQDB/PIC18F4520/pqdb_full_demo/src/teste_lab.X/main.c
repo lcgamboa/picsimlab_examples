@@ -1,3 +1,4 @@
+#include <xc.h>
 #include "adc.h"
 #include "bits.h"
 #include "config.h"  
@@ -11,17 +12,10 @@
 #include "timer.h"
 #include "so.h"
 #include "rgb.h"
-
-#include <pic18f4520.h>
+#include "i2c.h"
 
 void main(void) {
 
-   /* pinMode(SCL_PIN,OUTPUT);
-    pinMode(SDA_PIN,OUTPUT);
-    for(;;){
-        digitalWrite(SCL_PIN,HIGH);
-        digitalWrite(SDA_PIN,HIGH);
-    }*/
     //Cada linha é representada por um caracter
     char logo[48] = {
         0x01, 0x03, 0x03, 0x0E, 0x1C, 0x18, 0x08, 0x08, //0,0
@@ -31,7 +25,7 @@ void main(void) {
         0x12, 0x14, 0x1F, 0x08, 0x00, 0x1F, 0x11, 0x00, //1,1
         0x02, 0x03, 0x07, 0x0E, 0x18, 0x18, 0x10, 0x00 //1,2
     };
-    
+
     lcdInit();
     int i;
     lcdCommand(0x40); //Configura para a primeira posição de memória
@@ -61,26 +55,61 @@ void main(void) {
     timerInit();
     i = 0;
     int seg = 0;
+    int rtc_seg;
     char t;
     int v;
     setSeconds(0);
-    char slot =0;
+    char slot = 0;
+    char seg_slot = 0;
     for (;;) {
-        timerReset(20000);
+        timerReset(5000);
         i++;
-        switch(slot){
+        switch (slot) {
             case 0:
-                if (i > 50) {
-                    seg++;
-                    lcdCommand(0x88);
-                    lcdChar((seg / 10) % 10 + 48);
-                    lcdChar((seg/1) % 10 + 48);
-                    lcdChar('-');
-                    lcdChar(((getSeconds() / 10) % 10) + 48);
-                    lcdChar((getSeconds() % 10) + 48);
-                    i = 0;
+                if (i >= 200) {
+                    switch (seg_slot) {
+                        case 0:
+                            seg++;
+                            lcdCommand_nodelay(0x88);
+                            seg_slot++;
+                            break;
+                        case 1:
+                            lcdChar_nodelay((seg / 10) % 10 + 48);
+                            seg_slot++;
+                            break;
+                        case 2:
+                            lcdChar_nodelay((seg / 1) % 10 + 48);
+                            seg_slot++;
+                            break;
+                        case 3:
+                            lcdChar_nodelay('-');
+                            seg_slot++;
+                            break;
+                        case 4:
+                            i2cWriteByte(1, 0, DS1307_CTRL_ID | I2C_WRITE);
+                            i2cWriteByte(0, 0, SEC);
+                            seg_slot++;
+                            break;
+                        case 5:
+                            i2cWriteByte(1, 0, DS1307_CTRL_ID | I2C_READ);
+                            rtc_seg = i2cReadByte(1, 1);
+                            rtc_seg = bcd2dec(rtc_seg & 0x7f);
+                            seg_slot++;
+                            break;
+                        case 6:
+                            lcdChar_nodelay(((rtc_seg / 10) % 10) + 48);
+                            seg_slot++;
+                            break;
+                        case 7:
+                            lcdChar_nodelay((rtc_seg % 10) + 48);
+                            i -= 200;
+                            slot++;
+                            seg_slot = 0;
+                            break;
+                    }
+                    break;
                 }
-                slot = 1;
+                slot++;
                 break;
             case 1:
                 kpDebounce();
@@ -92,7 +121,7 @@ void main(void) {
                         pwmSet(0);
                     }
                 }
-                slot = 2;
+                slot++;
                 break;
             case 2:
                 t = serialRead();
@@ -100,21 +129,19 @@ void main(void) {
                     lcdChar(t);
                     serialSend(t);
                 }
-                slot =3 ;
+                slot++;
                 break;
             case 3:
-                v = adcRead(0);
-                ssdDigit(((v/1)%10),3);
-                ssdDigit(((v/10)%10),2);
-                ssdDigit(((v/100)%10),1);
-                ssdDigit(((v/1000)%10),0);
-                slot =0 ;
-                break;
-            default :
+                v = adcRead(2);
+                ssdDigit(((v / 1) % 10), 3);
+                ssdDigit(((v / 10) % 10), 2);
+                ssdDigit(((v / 100) % 10), 1);
+                ssdDigit(((v / 1000) % 10), 0);
+            default:
                 slot = 0;
                 break;
         }
-        
+
         ssdUpdate();
         timerWait();
     }

@@ -1,6 +1,11 @@
 #ifndef DS1307RTC_h
 #define DS1307RTC_h
 
+//endereço do dispositivo, deslocado por causa do bit de RW
+#define DS1307_CTRL_ID (0x68<<1)
+#define I2C_WRITE 0
+#define I2C_READ  1
+
 //definição dos endereços
 #define SEC     0
 #define MIN     1

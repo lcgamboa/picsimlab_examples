@@ -4,8 +4,8 @@
   <defaultConf>0</defaultConf>
   <confs>
     <conf name="default" type="2">
-      <platformToolSN>noToolString</platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc8\v2.10\bin</languageToolchainDir>
+      <platformToolSN></platformToolSN>
+      <languageToolchainDir></languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>

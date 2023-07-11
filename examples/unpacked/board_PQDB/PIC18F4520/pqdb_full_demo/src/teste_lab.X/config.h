@@ -23,22 +23,22 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-    #pragma config OSC=HS                  // Oscilador c/ cristal externo HS
-    #pragma config FCMEN = OFF
+#pragma config OSC=HS                  // Oscilador c/ cristal externo HS
+#pragma config FCMEN = OFF
 #pragma config IESO = OFF
 #pragma config PWRT = OFF
 #pragma config BOREN = OFF
 #pragma config BORV = 46
-    #pragma config WDT=OFF                 // Watchdog controlado por software
-    #pragma config WDTPS = 1               // Configura prescaler do watchdog
-    #pragma config MCLRE=ON                // Master Clear desabilitado
+#pragma config WDT=OFF                 // Watchdog controlado por software
+#pragma config WDTPS = 1               // Configura prescaler do watchdog
+#pragma config MCLRE=ON                // Master Clear desabilitado
 #pragma config LPT1OSC = OFF
 #pragma config PBADEN = ON
 #pragma config CCP2MX = PORTC
 #pragma config STVREN = OFF
-    #pragma config LVP=OFF                 // Sem programação em baixa tensão
+#pragma config LVP=OFF                 // Sem programação em baixa tensão
 #pragma config XINST = OFF
-    #pragma config DEBUG = OFF             // Desabilita debug
+#pragma config DEBUG = OFF             // Desabilita debug
 
 #pragma config CP0 = OFF
 #pragma config CP1 = OFF

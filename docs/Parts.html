@@ -30,6 +30,7 @@
 <span class='sectionToc'><a href="#Fixed_Voltage">Fixed Voltage</a></span>
 <span class='sectionToc'><a href="#Gamepad">Gamepad</a></span>
 <span class='sectionToc'><a href="#Gamepad_(Analogic)">Gamepad (Analogic)</a></span>
+<span class='sectionToc'><a href="#HX711_(Load_Cell_Amp)">HX711 (Load Cell Amp)</a></span>
 <span class='sectionToc'><a href="#IO_74xx573">IO 74xx573</a></span>
 <span class='sectionToc'><a href="#IO_74xx595">IO 74xx595</a></span>
 <span class='sectionToc'><a href="#IO_MCP23S17">IO MCP23S17</a></span>
@@ -134,6 +135,7 @@
 <a href="board_Breadboard.html#board_Breadboard_atmega328p_game_marduino">Breadboard | atmega328p | game_marduino </a><br>
 <hr><br><h2><a name="Gamepad_(Analogic)"></a><a href="parts_Gamepad_(Analogic).html">Gamepad (Analogic)</a></h2>
 <a href="board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_lode_runner">Arduino_Uno | atmega328p | lode_runner </a><br>
+<hr><br><h2><a name="HX711_(Load_Cell_Amp)"></a><a href="parts_HX711_(Load_Cell_Amp).html">HX711 (Load Cell Amp)</a></h2>
 <hr><br><h2><a name="IO_74xx573"></a><a href="parts_IO_74xx573.html">IO 74xx573</a></h2>
 <a href="board_Breadboard.html#board_Breadboard_PIC16F628A_7slatch">Breadboard | PIC16F628A | 7slatch </a><br>
 <hr><br><h2><a name="IO_74xx595"></a><a href="parts_IO_74xx595.html">IO 74xx595</a></h2>
@@ -169,6 +171,8 @@
 <a href="board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_webserver">Arduino_Uno | atmega328p | webserver </a><br>
 <a href="board_Blue_Pill.html#board_Blue_Pill_stm32f103c8t6_DS1621">Blue_Pill | stm32f103c8t6 | DS1621 </a><br>
 <a href="board_Breadboard.html#board_Breadboard_PIC18F4620_Aqua18F">Breadboard | PIC18F4620 | Aqua18F </a><br>
+<a href="board_ESP32_C3_DevKitC_02.html#board_ESP32_C3_DevKitC_02_ESP32-C3_idf_blink">ESP32_C3_DevKitC_02 | ESP32-C3 | idf_blink </a><br>
+<a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_AdcMeasuring">ESP32_DevKitC | ESP32 | AdcMeasuring </a><br>
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_Bmp280Test">ESP32_DevKitC | ESP32 | Bmp280Test </a><br>
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_idf_blink">ESP32_DevKitC | ESP32 | idf_blink </a><br>
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_micropython">ESP32_DevKitC | ESP32 | micropython </a><br>
@@ -177,6 +181,7 @@
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_zephyr_esp32_led">ESP32_DevKitC | ESP32 | zephyr_esp32_led </a><br>
 <a href="board_Franzininho_DIY.html#board_Franzininho_DIY_attiny85_Tiny85_Temp_LCD_RTC">Franzininho_DIY | attiny85 | Tiny85_Temp_LCD_RTC </a><br>
 <a href="board_PICGenios.html#board_PICGenios_PIC18F4550_Serial_lcd">PICGenios | PIC18F4550 | Serial_lcd </a><br>
+<a href="board_X.html#board_X_PIC18F4550_Test_x">X | PIC18F4550 | Test_x </a><br>
 <hr><br><h2><a name="Jumper_Wires"></a><a href="parts_Jumper_Wires.html">Jumper Wires</a></h2>
 <a href="board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_wires">Arduino_Uno | atmega328p | wires </a><br>
 <hr><br><h2><a name="Keypad"></a><a href="parts_Keypad.html">Keypad</a></h2>
@@ -266,6 +271,7 @@
 <a href="board_Breadboard.html#board_Breadboard_PIC18F4550_test_b0">Breadboard | PIC18F4550 | test_b0 </a><br>
 <a href="board_Breadboard.html#board_Breadboard_PIC18F4620_Aqua18F">Breadboard | PIC18F4620 | Aqua18F </a><br>
 <a href="board_Breadboard.html#board_Breadboard_PIC18F4620_test_b0">Breadboard | PIC18F4620 | test_b0 </a><br>
+<a href="board_ESP32_C3_DevKitC_02.html#board_ESP32_C3_DevKitC_02_ESP32-C3_idf_blink">ESP32_C3_DevKitC_02 | ESP32-C3 | idf_blink </a><br>
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_idf_blink">ESP32_DevKitC | ESP32 | idf_blink </a><br>
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_micropython">ESP32_DevKitC | ESP32 | micropython </a><br>
 <a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_NuttX_led">ESP32_DevKitC | ESP32 | NuttX_led </a><br>
@@ -386,6 +392,9 @@
 <a href="board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_display_bargraph">Arduino_Uno | atmega328p | display_bargraph </a><br>
 <a href="board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_game_marduino">Arduino_Uno | atmega328p | game_marduino </a><br>
 <a href="board_Breadboard.html#board_Breadboard_PIC18F4620_Aqua18F">Breadboard | PIC18F4620 | Aqua18F </a><br>
+<a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_NuttX_led">ESP32_DevKitC | ESP32 | NuttX_led </a><br>
+<a href="board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_SimpleWifiServer">ESP32_DevKitC | ESP32 | SimpleWifiServer </a><br>
+<a href="board_STM32_H103.html#board_STM32_H103_stm32f103rbt6_SysTick">STM32_H103 | stm32f103rbt6 | SysTick </a><br>
 <hr><br><h2><a name="Temperature_System"></a><a href="parts_Temperature_System.html">Temperature System</a></h2>
 <a href="board_Breadboard.html#board_Breadboard_PIC16F777_test_b0">Breadboard | PIC16F777 | test_b0 </a><br>
 <a href="board_Breadboard.html#board_Breadboard_PIC16F877A_test_b0">Breadboard | PIC16F877A | test_b0 </a><br>
