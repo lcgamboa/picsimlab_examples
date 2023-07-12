@@ -1,5 +1,14 @@
-version,0,0,0:0.8.7
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,709,0,717:468
+boardp,0,0,708:421
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,431,648,0:1.000000,-5.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  PB2/~10
+osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  PB3/~11
 LCD pcd8544,6,2,0:18,17,16,15,14
-Gamepad,278,69,0:12,13,0,11,0,0,0,0
+Gamepad,282,1,0:12,13,0,11,0,0,0,0
+Text Box,427,297,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_atmega328p_game_marduino%Examplesource info

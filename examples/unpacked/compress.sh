@@ -15,7 +15,7 @@ do
     do
       echo "board: $board  proc: $proc  directory: $name"	
       mv $name picsimlab_workspace/
-      zip -rX $name.pzw picsimlab_workspace -x \*no_online \*.png \*src/\*
+      zip -rX $name.pzw picsimlab_workspace -x \*no_online \*.png \*.html \*src/\*
       mv picsimlab_workspace/ $name
     done
     mkdir -p "../../../pzw/$board/$proc/"

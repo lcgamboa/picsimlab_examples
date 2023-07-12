@@ -1,5 +1,14 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,620,0,376:585
+boardp,31,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,18,598,0:0.100000,-0.500000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  PD0/0
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  PD1/1
 ADXL345 (Accel),10,8,0:7,0,0,0,27,28
 IO Virtual Term,10,301,0:3,2,1,9600,1,87,394
+Text Box,235,350,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_ADXL345_I2C%Examplesource info

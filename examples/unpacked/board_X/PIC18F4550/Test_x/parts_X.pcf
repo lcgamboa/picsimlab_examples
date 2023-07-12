@@ -1,6 +1,6 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,953,63,368:344
+position,953,63,411:344
 boardp,318,64,633:581
 spare_on,0,0,0:1
 osc_on,0,0,0:0
@@ -10,3 +10,4 @@ osc_cfg,431,648,0:1.000000,-5.000000,1,1,2.500000,1,2,0,0,0
 osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  RC1
 osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  RC2
 IO Virtual Term,37,32,0:25,26,1,4800,1,954,411
+Text Box,252,82,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_X.html#board_X_PIC18F4550_Test_x%Examplesource info

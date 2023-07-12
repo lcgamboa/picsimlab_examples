@@ -1,4 +1,13 @@
-version,0,0,0:0.8.10
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,707,0,376:423
+boardp,0,0,708:421
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,431,648,0:1.000000,-5.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,1  +5V
+osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,2  RA5
 RGB LED,9,40,0:13,12,11,1
+Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC16F18324_blinkRGB%Examplesource info

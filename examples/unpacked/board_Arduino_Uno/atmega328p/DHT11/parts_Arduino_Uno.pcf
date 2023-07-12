@@ -1,5 +1,14 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,594,28,619:461
+boardp,0,34,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  PB0/8
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
 DHT11 (Temp. Hum.),50,41,0:4,63,146
 IO Virtual Term,349,56,0:3,2,1,9600,1,58,432
+Text Box,394,249,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_DHT11%Examplesource info

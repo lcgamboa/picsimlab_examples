@@ -10,4 +10,5 @@ osc_cfg,912,160,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  EN
 osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  IO36
 LEDs,29,20,0:24,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
-IO Virtual Term,189,18,0:35,34,3,9600,1,157,374
+IO Virtual Term,185,18,0:35,34,3,9600,1,157,374
+Text Box,32,142,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_micropython%Examplesource info

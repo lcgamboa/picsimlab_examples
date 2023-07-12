@@ -1,6 +1,15 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.9.0
 scale,0,0,0:0.900000
+position,589,0,568:704
+boardp,0,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,18,598,0:0.100000,-0.500000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  PD0/0
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  PD1/1
 LCD hd44780,7,7,0:70,72,8,8,8,8,74,75,76,77,1,1
 IO PCF8574,8,373,0:28,27,0,0,0,70
 Push Buttons (Analogic),7,556,0:23,1
+Text Box,467,436,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_AnalogButtons%Examplesource info

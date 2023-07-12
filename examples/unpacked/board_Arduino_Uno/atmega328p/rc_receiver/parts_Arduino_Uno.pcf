@@ -1,5 +1,14 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,629,55,754:445
+boardp,37,56,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-VCD Play,89,21,0:4,0,0,0,0,0,0,0,1,/tmp/picsimlab_workspace/controle.vcd
+debug,0,1,0:
+osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+VCD Play,91,28,0:4,0,0,0,0,0,0,0,1,/tmp/picsimlab_workspace/controle.vcd
 IO Virtual Term,92,182,0:3,2,1,9600,1,93,457
+Text Box,382,237,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_rc_receiver%Examplesource info

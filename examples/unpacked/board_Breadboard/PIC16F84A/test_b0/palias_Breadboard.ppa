@@ -2,7 +2,7 @@
 001-RA2     -RA2    
 002-RA3     -RA3    
 003-RA4     -RA4    
-004-error   -error  
+004-RST     -error  
 005-GND     -GND    
 006-RB0     -RB0    
 007-RB1     -RB1    
@@ -13,8 +13,8 @@
 012-RB6     -RB6    
 013-RB7     -RB7    
 014-+5V     -+5V    
-015-error   -error  
-016-error   -error  
+015-OSC     -error  
+016-OSC     -error  
 017-RA0     -RA0    
 018-RA1     -RA1    
 019-        -       

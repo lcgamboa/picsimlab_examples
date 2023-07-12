@@ -1,7 +1,16 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,586,0,688:591
+boardp,0,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  PB0/8
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
 ETH w5500,321,171,0:17,1,16,19,18,0
-Potentiometers,26,44,0:23,24,25,26,58,82,2,122
+Potentiometers,26,44,0:23,24,25,26,58,82,2,122,4
 IO Virtual Term,29,277,0:3,2,1,9600,1,53,395
 RGB LED,338,45,0:11,12,15,1
+Text Box,270,416,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_firmata_ethernet%Examplesource info

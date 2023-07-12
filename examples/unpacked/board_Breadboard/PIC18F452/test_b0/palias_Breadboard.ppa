@@ -1,5 +1,5 @@
 //N-PinName -ALias   --The pin name alias must start in column fourteen and have size less than seven chars 
-001-error   -error  
+001-RST     -error  
 002-RA0     -RA0    
 003-RA1     -RA1    
 004-RA2     -RA2    
@@ -11,7 +11,7 @@
 010-RE2     -RE2    
 011-+5V     -+5V    
 012-GND     -GND    
-013-error   -error  
+013-OSC     -error  
 014-RA6     -RA6    
 015-RC0     -RC0    
 016-RC1     -RC1    

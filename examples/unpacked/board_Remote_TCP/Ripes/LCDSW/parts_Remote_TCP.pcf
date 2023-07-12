@@ -1,5 +1,14 @@
-version,0,0,0:0.8.10
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,695,0,617:707
+boardp,23,0,672:399
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LCD hd44780,61,51,0:10,9,1,2,3,4,5,6,7,8,47,1
-Switches,63,421,0:24,23,22,21,20,19,18,17,1,1,1,1,0,0,0,0
+debug,0,1,0:
+osc_cfg,592,455,0:0.020000,0.000000,1,2,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,1  PA0
+osc_ch2,0,0,0:2.000000,-6.000000,1,#00FF00,0,2  PA1
+LCD hd44780,17,29,0:10,9,1,2,3,4,5,6,7,8,47,1
+Switches,22,408,0:24,23,22,21,20,19,18,17,1,1,1,1,0,0,0,0,1,0,8
+Text Box,463,435,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Remote_TCP.html#board_Remote_TCP_Ripes_LCDSW%Examplesource info

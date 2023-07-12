@@ -1,5 +1,14 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,707,105,527:419
+boardp,27,109,669:310
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:1
+debug,0,1,0:
+osc_cfg,0,425,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  PC13   
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  PC14   
 DS1621 (Temperature I2C),22,21,0:43,42,0,0,0,0,92
 IO Virtual Term,308,21,0:30,31,1,9600,1,164,424
+Text Box,374,214,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Blue_Pill.html#board_Blue_Pill_stm32f103c8t6_DS1621%Examplesource info

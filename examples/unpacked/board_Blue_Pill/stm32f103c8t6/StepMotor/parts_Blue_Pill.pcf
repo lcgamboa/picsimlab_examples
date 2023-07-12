@@ -1,4 +1,13 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,676,25,500:604
+boardp,5,29,669:310
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,0,0:
+osc_cfg,0,425,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  PC13
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  PC14
 Step Motor,16,18,0:42,43,45,46,0
+Text Box,335,61,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Blue_Pill.html#board_Blue_Pill_stm32f103c8t6_StepMotor%Examplesource info

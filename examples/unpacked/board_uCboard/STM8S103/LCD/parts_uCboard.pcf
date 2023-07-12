@@ -1,4 +1,13 @@
-version,0,0,0:0.8.6
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,681,32,535:565
+boardp,5,29,672:399
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LCD hd44780,42,29,0:19,18,7,7,7,7,20,1,2,3,7,1
+debug,0,0,0:
+osc_cfg,431,648,0:1.000000,-0.100000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  PC6
+osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  PC7
+LCD hd44780,14,10,0:19,18,7,7,7,7,20,1,2,3,7,1
+Text Box,195,398,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_uCboard.html#board_uCboard_STM8S103_LCD%Examplesource info

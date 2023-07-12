@@ -1,8 +1,17 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,585,0,874:477
+boardp,0,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LED Matrix,16,25,0:17,16,19,70,90
-LED Matrix,182,25,0:70,16,19,71,90
-LED Matrix,348,26,0:71,16,19,72,90
-LED Matrix,513,25,0:72,16,19,73,90
-LED Matrix,678,26,0:73,16,19,74,90
+debug,0,1,0:
+osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  PB0/8
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+LED Matrix,16,25,0:17,16,19,70,90,0
+LED Matrix,182,25,0:70,16,19,71,90,0
+LED Matrix,348,26,0:71,16,19,72,90,0
+LED Matrix,513,25,0:72,16,19,73,90,0
+LED Matrix,678,26,0:73,16,19,74,90,0
+Text Box,378,306,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_LED_matrix_scroll%Examplesource info

@@ -1,7 +1,16 @@
-version,0,0,0:0.8.10
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,708,14,586:795
+boardp,0,11,708:421
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,431,648,0:1.000000,-5.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,1  RA2
+osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,2  RA3
 7 Segments Display,9,9,0:117,116,115,114,113,112,111,13,0,0,0,0,1,1
-7 Segments Display,286,9,0:125,124,123,122,121,120,119,118,0,0,0,0,1,1
+7 Segments Display,288,8,0:125,124,123,122,121,120,119,118,0,0,0,0,1,1
 IO 74xx573,22,275,0:6,7,8,9,10,11,12,13,18,110
 IO 74xx573,302,277,0:6,7,8,9,10,11,12,13,17,118
+Text Box,221,603,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC16F628A_7slatch%Examplesource info

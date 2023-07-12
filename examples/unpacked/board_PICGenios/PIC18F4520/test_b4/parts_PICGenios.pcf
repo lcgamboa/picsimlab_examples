@@ -1,0 +1,13 @@
+version,0,0,0:0.9.0
+scale,0,0,0:1.000000
+position,1427,0,368:366
+boardp,0,0,1426:1049
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,132,671,0:0.200000,-0.500000,1,1,2.500000,1,2,5,7,6
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  RC1
+osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  RC2
+Text Box,18,7,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_PICGenios.html#board_PICGenios_PIC18F4520_test_b4%Examplesource info
+IO Virtual Term,18,86,0:25,26,0,4800,1,1428,369

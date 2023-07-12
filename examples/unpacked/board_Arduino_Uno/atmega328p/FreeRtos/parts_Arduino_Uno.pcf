@@ -1,7 +1,16 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,585,13,941:670
+boardp,0,12,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-IO PCF8574,598,372,0:28,27,0,0,0,110
+debug,0,1,0:
+osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  PB0/8
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+IO PCF8574,324,366,0:28,27,0,0,0,110
 LCD hd44780,301,-8,0:110,112,8,8,8,8,114,115,116,117,8,1
-Potentiometers,9,34,0:23,0,0,0,161,27,0,0
-LEDs,5,371,0:18,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Potentiometers,9,34,0:23,0,0,0,158,27,0,0,1
+LEDs,134,90,0:18,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+Text Box,94,294,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_FreeRtos%Examplesource info

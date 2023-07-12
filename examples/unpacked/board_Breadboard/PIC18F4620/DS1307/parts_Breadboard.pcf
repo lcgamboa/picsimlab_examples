@@ -1,5 +1,14 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,731,34,852:579
+boardp,20,34,708:421
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:1
-LCD hd44780,32,27,0:10,9,19,20,21,22,27,28,29,30,12,1
+debug,0,1,0:
+osc_cfg,18,598,0:0.100000,-0.500000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  RA0    
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  RA1    
+LCD hd44780,19,27,0:10,9,19,20,21,22,27,28,29,30,12,1
 RTC ds1307,527,29,0:23,18,0
+Text Box,577,268,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC18F4620_DS1307%Examplesource info

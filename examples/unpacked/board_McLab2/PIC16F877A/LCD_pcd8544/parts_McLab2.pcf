@@ -1,4 +1,13 @@
-version,0,0,0:0.8.6
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,1234,33,455:510
+boardp,12,32,1222:654
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LCD pcd8544,148,113,0:16,12,15,24,18
+debug,0,1,0:
+osc_cfg,57,633,0:10.000000,-50.000000,1,1,2.500000,1,2,5,7,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  RC2
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,7  RA5
+LCD pcd8544,12,25,0:16,12,15,24,18
+Text Box,292,74,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_McLab2.html#board_McLab2_PIC16F877A_LCD_pcd8544%Examplesource info

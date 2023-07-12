@@ -1,6 +1,6 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,655,0,621:604
+position,655,0,715:703
 boardp,67,0,587:394
 spare_on,0,0,0:1
 osc_on,0,0,0:0
@@ -9,5 +9,7 @@ debug,0,1,0:
 osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
 osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
-LCD hd44780,16,15,0:18,17,22,22,22,22,11,6,5,4,1,1
+LCD hd44780,12,2,0:18,17,22,22,22,22,11,6,5,4,1,1
 Push Buttons,16,384,0:12,0,0,0,0,0,0,0,1,0,1
+Text Box,273,396,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_srtank_test%Examplesource info
+Text Box,15,509,0:12,4,6, %Open the Serial remote tank in tools menu and connect the serial.To use the serial port, first configure the com0com or tty0tty as  described in the help.

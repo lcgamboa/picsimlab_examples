@@ -1,4 +1,13 @@
-version,0,0,0:0.8.6
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,672,60,527:678
+boardp,82,57,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LCD ili9341,27,36,0:27,28,25,13,26,2,0,0,0,0,0,0,0,0,24,16,23,15,14
+debug,0,1,0:
+osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+LCD ili9341,8,4,0:27,28,25,13,26,2,0,0,0,0,0,0,0,0,24,16,23,15,14
+Text Box,198,522,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_URTouch_QuickPaint%Examplesource info

@@ -1,6 +1,6 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,679,28,648:563
+position,679,28,648:503
 boardp,14,28,669:332
 spare_on,0,0,0:1
 osc_on,0,0,0:0
@@ -12,3 +12,4 @@ osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  IO36
 Potentiometers,243,29,0:23,0,0,0,130,0,0,0,1
 LCD ssd1306,21,31,0:36,33,0,0,0,1
 IO Virtual Term,354,81,0:35,34,1,9600,1,147,362
+Text Box,366,288,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_AdcMeasuring%Examplesource info

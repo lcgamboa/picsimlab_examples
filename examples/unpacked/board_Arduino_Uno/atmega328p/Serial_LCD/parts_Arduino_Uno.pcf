@@ -1,6 +1,15 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,587,0,709:774
+boardp,0,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LCD hd44780,7,5,0:70,72,8,8,8,8,74,75,76,77,1,1
+debug,0,1,0:
+osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+LCD hd44780,0,8,0:70,72,8,8,8,8,74,75,76,77,1,1
 IO PCF8574,490,5,1:28,27,0,0,0,70
-VCD Dump,5,447,0:27,28,70,72,74,75,76,77,/usr/bin/pulseview
+VCD Dump,5,447,0:27,28,70,72,74,75,76,77,0
+Text Box,235,605,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_Serial_LCD%Examplesource info

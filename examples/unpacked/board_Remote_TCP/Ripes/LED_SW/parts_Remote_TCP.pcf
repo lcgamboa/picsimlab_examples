@@ -1,5 +1,14 @@
-version,0,0,0:0.8.10
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,673,15,554:435
+boardp,0,16,672:399
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LEDs,9,7,0:5,6,7,8,0,0,0,0,1
-Switches,36,141,0:1,2,3,4,0,0,0,0,1,0,1,0,0,0,0,0
+debug,0,1,0:
+osc_cfg,592,455,0:0.020000,0.000000,1,2,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,1  PA0
+osc_ch2,0,0,0:2.000000,-6.000000,1,#00FF00,0,2  PA1
+LEDs,9,7,0:5,6,7,8,0,0,0,0,1,0,0,0,0,0,0,0,0,4
+Switches,30,139,0:1,2,3,4,0,0,0,0,1,0,1,0,0,0,0,0,1,0,4
+Text Box,343,194,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Remote_TCP.html#board_Remote_TCP_Ripes_LED_SW%Examplesource info

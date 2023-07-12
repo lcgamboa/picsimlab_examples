@@ -1,6 +1,6 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,634,33,755:593
+position,634,33,755:616
 boardp,44,36,587:394
 spare_on,0,0,0:1
 osc_on,0,0,0:0
@@ -9,7 +9,9 @@ debug,0,1,0:
 osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
 osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
-ETH w5500,307,276,0:17,1,16,19,18,0
+ETH w5500,219,273,0:17,1,16,19,18,0
 Potentiometers,26,44,0:23,24,25,26,128,104,56,48,4
-Potentiometers,308,44,0:27,28,0,0,22,5,0,0,2
+Potentiometers,310,40,0:27,28,0,0,58,5,0,0,2
 IO Virtual Term,20,275,0:3,2,1,9600,1,97,434
+Text Box,555,62,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_webserver%Examplesource info
+Text Box,500,165,0:12,5,8,http://127.0.0.1:2080%Access:http://127.0.0.1:2080

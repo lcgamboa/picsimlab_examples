@@ -1,4 +1,13 @@
-version,0,0,0:0.8.11
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,726,103,543:505
+boardp,57,106,669:332
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,912,160,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  EN
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  IO36
 LCD pcd8544,33,15,0:10,23,11,15,12
+Text Box,316,19,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_NTP_client%Examplesource info

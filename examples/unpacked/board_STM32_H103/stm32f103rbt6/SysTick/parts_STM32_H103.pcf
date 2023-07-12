@@ -1,12 +1,13 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,679,16,415:338
+position,679,16,393:338
 boardp,22,14,657:340
 spare_on,0,0,0:1
 osc_on,0,0,0:0
 useAlias,0,0,0:0
 debug,0,0,0:
-osc_cfg,431,648,0:1.000000,-5.000000,1,1,2.500000,1,2,0,0,0
+osc_cfg,431,648,0:1.000000,-0.100000,1,1,2.500000,1,2,0,0,0
 osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  PA2
 osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  PA3
-Text Box,26,46,0:14,5,8,Use the Button to togglebetween 1/8s to 1s LED blink
+Text Box,6,113,0:14,5,8, %Use the Button to togglebetween 1/8s to 1s LED blink
+Text Box,122,32,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_STM32_H103.html#board_STM32_H103_stm32f103rbt6_SysTick%Examplesource info

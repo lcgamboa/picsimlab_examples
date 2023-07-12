@@ -10,4 +10,5 @@ osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  PB0/8
 osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
 LED Matrix,16,25,2:18,16,17,70,180,0
-Potentiometers,199,186,1:28,0,0,0,88,32,0,0,1
+Potentiometers,199,186,1:28,0,0,0,90,32,0,0,1
+Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_LED_matrix_MAX72xx%Examplesource info

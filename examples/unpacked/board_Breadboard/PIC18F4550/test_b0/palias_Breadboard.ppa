@@ -11,12 +11,12 @@
 010-RE2     -RE2    
 011-+5V     -+5V    
 012-GND     -GND    
-013-error   -error  
+013-OSC     -error  
 014-RA6     -RA6    
 015-RC0     -RC0    
 016-RC1     -RC1    
 017-RC2     -RC2    
-018-error   -error  
+018-USB     -error  
 019-RD0     -RD0    
 020-RD1     -RD1    
 021-RD2     -RD2    

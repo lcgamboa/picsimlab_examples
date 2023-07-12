@@ -1,0 +1,13 @@
+version,0,0,0:0.9.0
+scale,0,0,0:1.000000
+position,1225,0,368:357
+boardp,0,0,1222:654
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,132,671,0:0.200000,-0.500000,1,1,2.500000,1,2,5,7,6
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  RC1
+osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  RC2
+Text Box,18,20,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_McLab2.html#board_McLab2_PIC18F452_test_b3%Examplesource info
+IO Virtual Term,19,85,0:25,26,0,4800,1,1224,359

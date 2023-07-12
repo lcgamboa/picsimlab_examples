@@ -1,6 +1,15 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,590,0,682:634
+boardp,0,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:1
 useAlias,0,0,0:0
-LCD pcd8544,23,62,0:5,6,11,12,13
+debug,0,1,0:
+osc_cfg,0,396,0:2.600000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,23  PC0/A0
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,11  PD5/~5
+LCD pcd8544,11,48,0:5,6,11,12,13
 Signal Generator,282,52,0:23,98,109,0,100,0,101
-Potentiometers,296,298,0:24,0,0,0,127,0,0,0
+Potentiometers,296,298,0:24,0,0,0,90,0,0,0,1
+Text Box,86,420,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_Oscilloscope%Examplesource info

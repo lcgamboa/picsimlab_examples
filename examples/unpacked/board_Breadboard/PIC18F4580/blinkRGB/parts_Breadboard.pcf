@@ -2,3 +2,4 @@ version,0,0,0:0.8.12
 scale,0,0,0:1.000000
 useAlias,0,0,0:0
 RGB LED,62,84,0:2,3,4,1
+Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC18F4580_blinkRGB%Examplesource info

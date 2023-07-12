@@ -1,8 +1,17 @@
-version,0,0,0:0.8.9
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,587,0,646:653
+boardp,0,0,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LEDs,9,300,0:4,5,6,11,12,13,14,15,1
+debug,0,1,0:
+osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  PB0/8
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+LEDs,9,300,0:4,5,6,11,12,13,14,15,1,0,0,0,0,0,0,0,0,8
 RGB LED,21,201,0:16,17,0,1
-Switches,10,418,0:18,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Switches,10,418,0:18,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2
 Servo Motor,388,10,0:28
-Potentiometers (Rotary),22,46,0:23,24,25,26,82,89,131,57
+Potentiometers (Rotary),22,46,0:23,24,25,26,82,89,131,57,4
+Text Box,226,207,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_firmata%Examplesource info

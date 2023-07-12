@@ -1,4 +1,13 @@
-version,0,0,0:0.8.12
+version,0,0,0:0.9.0
 scale,0,0,0:1.000000
+position,721,128,695:628
+boardp,51,128,669:332
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:0
-LCD ili9341,23,1,2:30,37,26,24,23,2,0,0,0,0,0,0,0,0,12,36,15,13,33
+debug,0,0,0:
+osc_cfg,912,160,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  EN
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  IO36
+LCD ili9341,5,4,2:30,37,26,24,23,2,0,0,0,0,0,0,0,0,12,36,15,13,33
+Text Box,522,28,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_DevKitC.html#board_ESP32_DevKitC_ESP32_UTFT_demo%Examplesource info

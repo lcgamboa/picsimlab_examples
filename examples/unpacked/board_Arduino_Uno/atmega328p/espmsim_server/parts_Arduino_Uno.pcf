@@ -12,3 +12,4 @@ osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
 LCD hd44780,16,15,0:18,17,22,22,22,22,11,6,5,4,22,2
 Push Buttons,507,265,0:12,0,0,0,0,0,0,0,1,0,1
 Potentiometers,504,33,0:23,24,0,0,106,12,0,0,2
+Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_espmsim_server%Examplesource info

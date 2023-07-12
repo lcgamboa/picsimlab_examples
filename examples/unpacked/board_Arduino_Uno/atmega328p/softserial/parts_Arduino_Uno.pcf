@@ -1,4 +1,14 @@
-scale,0,0:1.000000
-useAlias,0,0:1
-IO UART,87,166:17,16,9600,/dev/tnt6
-VCD Dump,95,25:2,3,16,17,0,0,0,0
+version,0,0,0:0.9.0
+scale,0,0,0:1.000000
+position,622,31,651:447
+boardp,32,27,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
+IO UART,29,169,0:17,16,9600,/dev/tnt6
+VCD Dump,27,11,0:2,3,16,17,0,0,0,0,0
+Text Box,299,177,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_softserial%Examplesource info

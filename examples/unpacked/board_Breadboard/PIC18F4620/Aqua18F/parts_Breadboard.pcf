@@ -1,10 +1,19 @@
-version,0,0,0:0.8.12
-scale,0,0,0:0.800000
+version,0,0,0:0.9.0
+scale,0,0,0:0.900000
+position,709,0,1037:804
+boardp,0,0,708:421
+spare_on,0,0,0:1
+osc_on,0,0,0:0
 useAlias,0,0,0:1
-LCD hd44780,10,11,0:10,9,31,31,31,31,27,28,29,30,31,2
+debug,0,1,0:
+osc_cfg,18,598,0:0.100000,-0.500000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  RA0    
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  RA1    
+LCD hd44780,15,14,0:10,9,31,31,31,31,27,28,29,30,31,2
 DHT22 (Temp. Hum.),504,12,0:5,87,48
 DS18B20 (Temperature),21,481,0:4,71,4468440958486511400
-LEDs,499,320,0:34,35,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+LEDs,499,320,0:34,35,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,8
 BMP180 (Pressure I2C),215,479,0:18,23,44,31
 IO Virtual Term,792,13,0:25,26,1,9600,1,172,424
-Text Box,493,478,0:18,4,6,Cooler controller for aquarium with meteorological measurement. The cooler output is turned on when the water  temperature rises above 29C and off when it drops below 28.8C (hysteresis).
+Text Box,506,462,0:18,4,6, %Cooler controller for aquarium with meteorological measurement. The cooler output is turned on when the water  temperature rises above 29C and off when it drops below 28.8C (hysteresis).
+Text Box,845,235,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC18F4620_Aqua18F%Examplesource info

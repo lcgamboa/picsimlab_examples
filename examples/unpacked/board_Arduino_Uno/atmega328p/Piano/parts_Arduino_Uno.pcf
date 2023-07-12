@@ -9,6 +9,7 @@ debug,0,1,0:
 osc_cfg,13,392,0:1.000000,0.000000,1,1,2.500000,1,5,1,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,17  PB3/~11
 osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  PD0/0
-LEDs,72,103,0:16,15,14,13,12,11,6,0,1,0,0,0,0,0,0,0,0,7
+LEDs,72,103,0:16,15,14,13,12,11,6,0,1,0,1,2,3,4,3,2,1,7
 Buzzer,81,364,0:17,2,1
 Push Buttons,72,238,0:16,15,14,13,12,11,6,0,0,0,7
+Text Box,326,378,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_Piano%Examplesource info
