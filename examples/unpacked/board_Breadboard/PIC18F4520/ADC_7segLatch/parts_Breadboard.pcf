@@ -1,6 +1,6 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,707,0,729:549
+position,707,0,595:549
 boardp,0,0,708:421
 spare_on,0,0,0:1
 osc_on,0,0,0:0
@@ -10,5 +10,5 @@ osc_cfg,431,648,0:1.000000,-5.000000,1,1,2.500000,1,2,0,0,0
 osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,1  RE3
 osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,2  RA0
 7 Segments Display (Decoder),4,4,0:19,20,21,22,27,28,29,30,1
-Potentiometers,398,6,0:2,0,0,0,103,0,0,0,4
-Text Box,482,290,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC18F4520_ADC_7segLatch%Examplesource info
+Potentiometers,398,6,0:2,0,0,0,103,0,0,0,1
+Text Box,427,276,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Breadboard.html#board_Breadboard_PIC18F4520_ADC_7segLatch%Examplesource info

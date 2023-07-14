@@ -1,6 +1,6 @@
 version,0,0,0:0.9.0
 scale,0,0,0:1.000000
-position,1424,0,471:417
+position,1436,0,471:417
 boardp,12,0,1426:1049
 spare_on,0,0,0:1
 osc_on,0,0,0:0
@@ -9,5 +9,5 @@ debug,0,1,0:
 osc_cfg,132,671,0:0.200000,-0.500000,1,1,2.500000,1,2,5,7,6
 osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,16  RC1
 osc_ch2,0,0,0:2.000000,-5.000000,1,#00FF00,0,17  RC2
-Text Box,15,13,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_PICGenios.html#board_PICGenios_PIC18F4550_srtank_test%Examplesource info
-Text Box,15,98,0:12,5,8, %Open the Serial remote tank in tools menu and connect the serial.To use the serial port, first configure the com0com or tty0tty as described in the help .
+Text Box,175,18,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_PICGenios.html#board_PICGenios_PIC18F4550_srtank_test%Examplesource info
+Text Box,15,98,0:12,4,6, %Open the Serial remote tank in tools menu and connect the serial.To use the serial port, first configure the com0com or tty0tty as described in the help.

@@ -9,6 +9,6 @@ debug,0,0,0:
 osc_cfg,0,425,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  PC13
 osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  PC14
-Switches,11,16,0:18,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,8
-RGB LED,14,161,0:2,0,0,1
+Switches,11,16,0:18,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1
+RGB LED,122,40,0:2,0,0,1
 Text Box,294,186,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Blue_Pill.html#board_Blue_Pill_stm32f103c8t6_GPIO%Examplesource info
