@@ -1,0 +1,14 @@
+version,0,0,0:0.9.0
+scale,0,0,0:1.000000
+position,1350,19,445:585
+boardp,0,17,1349:681
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,0,0:
+osc_cfg,81,576,0:8.000000,-0.100000,1,1,2.500000,5,6,7,8,9
+osc_ch1,0,0,0:2.000000,1.000000,1,#FF0000,0,19  RA0
+osc_ch2,0,0,0:2.000000,-6.000000,1,#00FF00,0,2  RA5
+Text Box,149,30,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Curiosity.html#board_Curiosity_PIC16F1619_Led_Sequencer%Examplesource info
+LEDs,35,109,0:5,17,18,2,0,0,0,0,1,0,1,2,3,0,0,0,0,4
+Text Box,9,268,0:12,4,6, %Press the switch to change direction and use the potentiometer to change speed. 
