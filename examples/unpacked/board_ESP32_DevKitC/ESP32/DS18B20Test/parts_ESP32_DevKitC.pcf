@@ -1,0 +1,15 @@
+version,0,0,0:0.9.0
+scale,0,0,0:0.900000
+position,1128,41,397:515
+boardp,0,22,587:394
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,19,345,0:0.500000,0.000000,1,1,2.500000,1,5,1,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,14  GND
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,2  EN
+DS18B20 (Temperature),15,17,0:9,59,1197732526976300584
+DS18B20 (Temperature),206,19,0:9,114,3294116162565753128
+IO Virtual Term,17,284,0:35,34,1,9600,1,41,474
+Text Box,246,346,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Uno.html#board_Arduino_Uno_atmega328p_DS18B20%Examplesource info
