@@ -1,0 +1,15 @@
+version,0,0,0:0.9.1
+scale,0,0,0:1.000000
+position,845,44,613:436
+boardp,168,47,669:332
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,0,0:
+osc_cfg,912,160,0:0.100000,0.000000,1,1,2.500000,1,2,0,0,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  3V3
+osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  3V3
+LEDs,28,20,0:7,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1
+Text Box,240,179,0:16,5,8,http://localhost:16555%Access: http://localhost:16555
+IO Virtual Term,31,146,0:21,22,1,9600,1,168,381,672,408
+Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_C3_DevKitC_02.html#board_ESP32_C3_DevKitC_02_ESP32-C3_SimpleWifiServer%Examplesource info

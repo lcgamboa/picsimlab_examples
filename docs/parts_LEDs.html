@@ -70,6 +70,7 @@
 <span class='subsectionToc'><a href="#Curiosity_PIC16F1619_Led_Sequencer">Led_Sequencer</a></span>
 <span class='sectionToc'><a href="#ESP32_C3_DevKitC_02_ESP32-C3">ESP32_C3_DevKitC_02</a></span>
 <span class='subsectionToc'><a href="#ESP32_C3_DevKitC_02_ESP32-C3_idf_blink">idf_blink</a></span>
+<span class='subsectionToc'><a href="#ESP32_C3_DevKitC_02_ESP32-C3_SimpleWifiServer">SimpleWifiServer</a></span>
 <span class='sectionToc'><a href="#ESP32_DevKitC_ESP32">ESP32_DevKitC</a></span>
 <span class='subsectionToc'><a href="#ESP32_DevKitC_ESP32_idf_blink">idf_blink</a></span>
 <span class='subsectionToc'><a href="#ESP32_DevKitC_ESP32_micropython">micropython</a></span>
@@ -468,6 +469,39 @@ Simple LED Sequencer code example. Press the switch to change direction and use 
 <br>
 <a href="https://github.com/espressif/esp-idf/tree/master/examples/get-started/blink" target="_blank">Build instructions and Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_C3_DevKitC_02/ESP32-C3/idf_blink/idf_blink.png"><img src='board_ESP32_C3_DevKitC_02/ESP32-C3/idf_blink/idf_blink.png' width=60%></a></td>
 <td width="20%" align=left ><a href="pzw/board_ESP32_C3_DevKitC_02/ESP32-C3/idf_blink.pzw" target="_blank" >Download (pzw)</a>
+</td></tr></table>
+<a name="ESP32_C3_DevKitC_02_ESP32-C3"></a>
+<hr><table style="width:100%" border="0" bgcolor='#efefef'>
+<tr><td colspan=2 width="100%"><a name="ESP32_C3_DevKitC_02_ESP32-C3_SimpleWifiServer"></a><small>[ESP32_C3_DevKitC_02/<a href='#ESP32_C3_DevKitC_02_ESP32-C3'>ESP32-C3</a>/SimpleWifiServer]</small>  <h1> WiFi Web Server LED Blink </h1>
+<pre>
+
+ A simple web server that lets you blink an LED via the web.
+ This sketch will print the IP address of your WiFi Shield (once connected)
+ to the Serial monitor. From there, you can open that address in a web browser
+ to turn on and off the LED on pin 5.
+
+ If the IP address of your shield is yourAddress:
+ http://yourAddress/H turns the LED on
+ http://yourAddress/L turns it off
+
+ This example is written for a network using WPA encryption. For
+ WEP or WPA, change the Wifi.begin() call accordingly.
+
+ Circuit:
+ * WiFi shield attached
+ * LED attached to pin 5
+
+ created for arduino 25 Nov 2012
+ by Tom Igoe
+
+ported for sparkfun esp32 
+31.01.2017 by Jan Hendrik Berlin
+</pre>
+<br>
+On PICSimLab qemu-esp32 simulator the Web server address is mapped in <a href="http://localhost:16555" target="_blank">http://localhost:16555</a> 
+<br>
+<a href="https://github.com/lcgamboa/picsimlab_examples/blob/master/docs/board_ESP32_C3_DevKitC_02/ESP32-C3/SimpleWifiServer/src/SimpleWifiServer.ino" target="_blank">Source code</a><br><br></td></tr><tr><td width="80%" align=center><a target="blank_" href="board_ESP32_C3_DevKitC_02/ESP32-C3/SimpleWifiServer/SimpleWifiServer.png"><img src='board_ESP32_C3_DevKitC_02/ESP32-C3/SimpleWifiServer/SimpleWifiServer.png' width=60%></a></td>
+<td width="20%" align=left ><a href="pzw/board_ESP32_C3_DevKitC_02/ESP32-C3/SimpleWifiServer.pzw" target="_blank" >Download (pzw)</a>
 </td></tr></table>
 <a name="ESP32_DevKitC_ESP32"></a>
 <hr><table style="width:100%" border="0" bgcolor='#efefef'>

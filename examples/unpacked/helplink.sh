@@ -25,7 +25,7 @@ do
           fname="$board.pcf"
           fname=$(sed "s/board/parts/" <<< "${fname}")
           
-          echo "version,0,0,0:0.9.0" > ${fname} 
+          echo "version,0,0,0:0.9.1" > ${fname} 
           echo "scale,0,0,0:1.000000" >> ${fname}
           echo "useAlias,0,0,0:0" >> ${fname}
           echo "$line" >> ${fname}
