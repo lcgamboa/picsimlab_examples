@@ -1,0 +1,15 @@
+version,0,0,0:0.9.2
+scale,0,0,0:1.000000
+position,624,50,495:584
+boardp,60,53,561:239
+spare_on,0,0,0:1
+osc_on,0,0,0:0
+useAlias,0,0,0:0
+debug,0,1,0:
+osc_cfg,58,574,0:4.000000,0.000000,1,1,2.500000,1,5,7,8,0
+osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,13  PB1/~9
+osc_ch2,0,0,0:2.000000,0.000000,0,#00FF00,0,3  GND
+IO MCP23017,35,-7,0:28,27,21,21,21,18,0,0,110
+LEDs,26,336,0:110,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
+Switches,210,323,0:111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+Text Box,311,336,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_Arduino_Nano.html#board_Arduino_Nano_atmega328p_I2C_IOexpander%Examplesource info

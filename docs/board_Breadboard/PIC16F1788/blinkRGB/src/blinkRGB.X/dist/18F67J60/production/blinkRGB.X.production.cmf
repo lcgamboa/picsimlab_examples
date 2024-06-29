@@ -1,0 +1,308 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/18F67J60/production/blinkRGB.X.production.o
+cinit CODE 0 1FFC6 1FFC6 6 1 2
+text0 CODE 0 1FFCC 1FFCC 2C 1 2
+cstackCOMRAM COMRAM 1 1 1 2 1 1
+config CONFIG 4 1FFF8 1FFF8 6 1 1
+$/tmp/xcXnFmOab.o
+init CODE 0 0 0 4 1 2
+config CONFIG 4 1FFF8 1FFF8 6 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-E7F 1
+RAM F00-F5F 1
+SFR E80-EFF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-1FFC5 1
+SMALLCONST 1000-1FFC5 1
+CODE 4-1FFC5 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-E7F 1
+BANK15 F00-F5F 1
+BIGRAM 3-E7F 1
+BIGRAM F00-F5F 1
+BIGSFR E80-EFF 1
+BIGSFR F60-FFF 1
+COMRAM 3-5F 1
+MEDIUMCONST 1000-FFFF 1
+MEDIUMCONST 11000-1FFC5 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/18F67J60/production/blinkRGB.X.production.o
+1FFCC text0 CODE >50:/home/gamboa/ownCloud/projetos/picsimlab_examples/examples/unpacked/board_Breadboard/PIC16F18324/blinkRGB/src/blinkRGB.X/main.c
+1FFCC text0 CODE >55:/home/gamboa/ownCloud/projetos/picsimlab_examples/examples/unpacked/board_Breadboard/PIC16F18324/blinkRGB/src/blinkRGB.X/main.c
+1FFD0 text0 CODE >58:/home/gamboa/ownCloud/projetos/picsimlab_examples/examples/unpacked/board_Breadboard/PIC16F18324/blinkRGB/src/blinkRGB.X/main.c
+1FFD4 text0 CODE >59:/home/gamboa/ownCloud/projetos/picsimlab_examples/examples/unpacked/board_Breadboard/PIC16F18324/blinkRGB/src/blinkRGB.X/main.c
+1FFD8 text0 CODE >61:/home/gamboa/ownCloud/projetos/picsimlab_examples/examples/unpacked/board_Breadboard/PIC16F18324/blinkRGB/src/blinkRGB.X/main.c
+1FFDA text0 CODE >62:/home/gamboa/ownCloud/projetos/picsimlab_examples/examples/unpacked/board_Breadboard/PIC16F18324/blinkRGB/src/blinkRGB.X/main.c
+1FFC6 cinit CODE >672:/tmp/xcXmJFjDI.s
+1FFC6 cinit CODE >674:/tmp/xcXmJFjDI.s
+1FFC6 cinit CODE >677:/tmp/xcXmJFjDI.s
+1FFC6 cinit CODE >683:/tmp/xcXmJFjDI.s
+1FFC6 cinit CODE >685:/tmp/xcXmJFjDI.s
+1FFC8 cinit CODE >686:/tmp/xcXmJFjDI.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/18F67J60/production/blinkRGB.X.production.o
+__Hspace_0 1FFF8 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hspace_1 3 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hspace_4 3FFF6 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/18F67J60/production/blinkRGB.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXnFmOab.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/18F67J60/production/blinkRGB.X.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXnFmOab.o
+_main 1FFCC 0 CODE 0 text0 dist/18F67J60/production/blinkRGB.X.production.o
+start 0 0 CODE 0 init /tmp/xcXnFmOab.o
+__Hpowerup 0 0 CODE 0 powerup dist/18F67J60/production/blinkRGB.X.production.o
+__accesstop 60 0 ABS 0 - /tmp/xcXnFmOab.o
+intlevel0 0 0 CODE 0 text /tmp/xcXnFmOab.o
+intlevel1 0 0 CODE 0 text /tmp/xcXnFmOab.o
+intlevel2 0 0 CODE 0 text /tmp/xcXnFmOab.o
+intlevel3 0 0 CODE 0 text /tmp/xcXnFmOab.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/18F67J60/production/blinkRGB.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/18F67J60/production/blinkRGB.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/18F67J60/production/blinkRGB.X.production.o
+_ADCON1 FC1 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXnFmOab.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXnFmOab.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/18F67J60/production/blinkRGB.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/18F67J60/production/blinkRGB.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/18F67J60/production/blinkRGB.X.production.o
+__Hintcodelo 0 0 CODE 0 intcodelo dist/18F67J60/production/blinkRGB.X.production.o
+__Lintcodelo 0 0 CODE 0 intcodelo dist/18F67J60/production/blinkRGB.X.production.o
+start_initialization 1FFC6 0 CODE 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/18F67J60/production/blinkRGB.X.production.o
+___rparam_used 1 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXnFmOab.o
+__Hbank0 0 0 ABS 0 bank0 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/18F67J60/production/blinkRGB.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__Hconst 0 0 CONST 0 const dist/18F67J60/production/blinkRGB.X.production.o
+__Hidata 0 0 CODE 0 idata dist/18F67J60/production/blinkRGB.X.production.o
+__Hidloc 0 0 IDLOC 5 idloc dist/18F67J60/production/blinkRGB.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/18F67J60/production/blinkRGB.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/18F67J60/production/blinkRGB.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/18F67J60/production/blinkRGB.X.production.o
+__Hstack 0 0 STACK 2 stack dist/18F67J60/production/blinkRGB.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/18F67J60/production/blinkRGB.X.production.o
+__Ljflash_buffer 1F800 0 CODE 0 jflash_buffer dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/18F67J60/production/blinkRGB.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/18F67J60/production/blinkRGB.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/18F67J60/production/blinkRGB.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/18F67J60/production/blinkRGB.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXnFmOab.o
+__Hcomram 0 0 ABS 0 comram dist/18F67J60/production/blinkRGB.X.production.o
+__Hconfig 1FFFE 0 CONFIG 4 config dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/18F67J60/production/blinkRGB.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__Lconst 0 0 CONST 0 const dist/18F67J60/production/blinkRGB.X.production.o
+__Lidata 0 0 CODE 0 idata dist/18F67J60/production/blinkRGB.X.production.o
+__Lidloc 0 0 IDLOC 5 idloc dist/18F67J60/production/blinkRGB.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/18F67J60/production/blinkRGB.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/18F67J60/production/blinkRGB.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/18F67J60/production/blinkRGB.X.production.o
+__Lstack 0 0 STACK 2 stack dist/18F67J60/production/blinkRGB.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/18F67J60/production/blinkRGB.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/18F67J60/production/blinkRGB.X.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/18F67J60/production/blinkRGB.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/18F67J60/production/blinkRGB.X.production.o
+__Hdata 0 0 ABS 0 data dist/18F67J60/production/blinkRGB.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/18F67J60/production/blinkRGB.X.production.o
+__Hinit 4 0 CODE 0 init dist/18F67J60/production/blinkRGB.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/18F67J60/production/blinkRGB.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/18F67J60/production/blinkRGB.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/18F67J60/production/blinkRGB.X.production.o
+__Htext 0 0 ABS 0 text dist/18F67J60/production/blinkRGB.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/18F67J60/production/blinkRGB.X.production.o
+__Ldata 0 0 ABS 0 data dist/18F67J60/production/blinkRGB.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/18F67J60/production/blinkRGB.X.production.o
+__Linit 0 0 CODE 0 init dist/18F67J60/production/blinkRGB.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/18F67J60/production/blinkRGB.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/18F67J60/production/blinkRGB.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/18F67J60/production/blinkRGB.X.production.o
+__Ltext 0 0 ABS 0 text dist/18F67J60/production/blinkRGB.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/18F67J60/production/blinkRGB.X.production.o
+__Hintret 0 0 ABS 0 intret dist/18F67J60/production/blinkRGB.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/18F67J60/production/blinkRGB.X.production.o
+__S0 1FFF8 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__S1 3 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__S4 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hjflash_buffer 1F800 0 CODE 0 jflash_buffer dist/18F67J60/production/blinkRGB.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/18F67J60/production/blinkRGB.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/18F67J60/production/blinkRGB.X.production.o
+__Lintentry 0 0 ABS 0 intentry dist/18F67J60/production/blinkRGB.X.production.o
+__Hramtop 1000 0 RAM 0 ramtop dist/18F67J60/production/blinkRGB.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/18F67J60/production/blinkRGB.X.production.o
+__activetblptr 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/18F67J60/production/blinkRGB.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/18F67J60/production/blinkRGB.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/18F67J60/production/blinkRGB.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/18F67J60/production/blinkRGB.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/18F67J60/production/blinkRGB.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/18F67J60/production/blinkRGB.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/18F67J60/production/blinkRGB.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/18F67J60/production/blinkRGB.X.production.o
+isa$std 1 0 ABS 0 - /tmp/xcXnFmOab.o
+stackhi 0 0 ABS 0 - /tmp/xcXnFmOab.o
+stacklo 0 0 ABS 0 - /tmp/xcXnFmOab.o
+__Lintcode 0 0 CODE 0 intcode dist/18F67J60/production/blinkRGB.X.production.o
+__Lintret 0 0 ABS 0 intret dist/18F67J60/production/blinkRGB.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/18F67J60/production/blinkRGB.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/18F67J60/production/blinkRGB.X.production.o
+end_of_initialization 1FFC6 0 CODE 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/18F67J60/production/blinkRGB.X.production.o
+__Hintentry 0 0 ABS 0 intentry dist/18F67J60/production/blinkRGB.X.production.o
+__Hreset_vec 0 0 CODE 0 reset_vec dist/18F67J60/production/blinkRGB.X.production.o
+__Lramtop 1000 0 RAM 0 ramtop dist/18F67J60/production/blinkRGB.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/18F67J60/production/blinkRGB.X.production.o
+__pcinit 1FFC6 0 CODE 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__ptext0 1FFCC 0 CODE 0 text0 dist/18F67J60/production/blinkRGB.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/18F67J60/production/blinkRGB.X.production.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xcXnFmOab.o
+__Lpowerup 0 0 CODE 0 powerup dist/18F67J60/production/blinkRGB.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/18F67J60/production/blinkRGB.X.production.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXnFmOab.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXnFmOab.o
+___param_bank 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/18F67J60/production/blinkRGB.X.production.o
+__end_of__initialization 1FFC6 0 CODE 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/18F67J60/production/blinkRGB.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/18F67J60/production/blinkRGB.X.production.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/18F67J60/production/blinkRGB.X.production.o
+__end_of_main 1FFF8 0 CODE 0 text0 dist/18F67J60/production/blinkRGB.X.production.o
+_PORTA F80 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+_TRISA F92 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__HRAM 0 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Hbss 0 0 RAM 1 bss dist/18F67J60/production/blinkRGB.X.production.o
+__Hram 0 0 ABS 0 ram dist/18F67J60/production/blinkRGB.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/18F67J60/production/blinkRGB.X.production.o
+__LRAM 1 0 ABS 0 - dist/18F67J60/production/blinkRGB.X.production.o
+__Lbss 0 0 RAM 1 bss dist/18F67J60/production/blinkRGB.X.production.o
+__Lram 0 0 ABS 0 ram dist/18F67J60/production/blinkRGB.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/18F67J60/production/blinkRGB.X.production.o
+___extmem_base 20000 0 ABS 0 - /tmp/xcXnFmOab.o
+__initialization 1FFC6 0 CODE 0 cinit dist/18F67J60/production/blinkRGB.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/18F67J60/production/blinkRGB.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/18F67J60/production/blinkRGB.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/18F67J60/production/blinkRGB.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/18F67J60/production/blinkRGB.X.production.o
+__Hintcode 0 0 CODE 0 intcode dist/18F67J60/production/blinkRGB.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 1FFC6 1FFC6 6 1
+text0 0 1FFCC 1FFCC 2C 1
+cstackCOMRAM 1 1 1 2 1
+reset_vec 0 0 0 4 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
