@@ -11,5 +11,5 @@ osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,2  3V3
 osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  3V3
 LEDs,28,20,0:7,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1
 Text Box,240,179,0:16,5,8,http://localhost:16555%Access: http://localhost:16555
-IO Virtual Term,31,146,0:21,22,1,9600,1,168,381,672,408
+IO Virtual Term,31,146,0:21,22,1,115200,1,168,381,672,408
 Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_C3_DevKitC_02.html#board_ESP32_C3_DevKitC_02_ESP32-C3_SimpleWifiServer%Examplesource info

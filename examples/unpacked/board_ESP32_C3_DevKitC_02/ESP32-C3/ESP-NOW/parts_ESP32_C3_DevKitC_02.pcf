@@ -10,5 +10,5 @@ osc_cfg,614,446,0:200.000000,0.000000,1,1,2.500000,1,2,0,0,0
 osc_ch1,0,0,0:2.000000,0.000000,1,#FF0000,0,19  IO18
 osc_ch2,0,0,0:2.000000,0.000000,1,#00FF00,0,3  3V3
 LEDs,42,71,0:19,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1
-IO Virtual Term,38,191,0:21,22,1,9600,1,66,508,766,431
+IO Virtual Term,38,191,0:21,22,1,115200,1,66,508,766,431
 Text Box,237,80,0:12,5,4,https://lcgamboa.github.io/picsimlab_examples/board_ESP32_C3_DevKitC_02.html#board_ESP32_C3_DevKitC_02_ESP32-C3_ESP-NOW%Examplesource info
