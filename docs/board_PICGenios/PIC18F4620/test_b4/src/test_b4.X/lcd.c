@@ -24,6 +24,7 @@
    ######################################################################## */
 
 #include <xc.h>
+#include "config.h"
 #include "lcd.h"
 #include "atraso.h"
 

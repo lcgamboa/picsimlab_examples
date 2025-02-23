@@ -40,7 +40,7 @@ unsigned char getu(unsigned char nn)
   return (nn  & 0x0F)+0x30;
 }
 
-//--------------------- Reads time and date information from RTC (PCF8563)
+//--------------------- Reads time and date information from RTC (DS1307)
 void rtc_r(void) 
 {
   unsigned char tmp;

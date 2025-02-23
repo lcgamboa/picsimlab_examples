@@ -23,7 +23,6 @@
    For e-mail suggestions :  lcgamboa@yahoo.com
    ######################################################################## */
 
-  #define _XTAL_FREQ 8000000
 
   void PWM1_Init(unsigned int);
   void PWM1_Start(void);

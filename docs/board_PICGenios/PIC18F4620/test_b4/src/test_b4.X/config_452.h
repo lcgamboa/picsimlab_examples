@@ -36,7 +36,7 @@ extern "C" {
 // Use project enums instead of #define for ON and OFF.
 
 // CONFIG1H
-#pragma config OSC = HSPLL      // Oscillator Selection bits (HS oscillator with PLL enabled/Clock frequency = (4 x FOSC))
+#pragma config OSC = HS      // Oscillator Selection bits (HS oscillator with PLL enabled/Clock frequency = (4 x FOSC))
 #pragma config OSCS = OFF       // Oscillator System Clock Switch Enable bit (Oscillator system clock switch option is disabled (main oscillator is source))
 
 // CONFIG2L

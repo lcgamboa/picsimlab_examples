@@ -27,7 +27,9 @@
 
 #define ICLK PORTCbits.RC3
 #define IDAT PORTCbits.RC4
+#define TICLK TRISCbits.TRISC3
 #define TIDAT TRISCbits.TRISC4
+
 
 void i2c_init(void);
 void i2c_start(void);

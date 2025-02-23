@@ -25,87 +25,83 @@
 
 #include <xc.h>
 
-#include"pwm.h"
+#include"config.h"
+
+void PWM1_Init(unsigned int f) {
+    unsigned int temp;
+    //PWM Period = [(PR2) + 1] * 4 * TOSC *(TMR2 Prescale Value)
+    //PWM Duty Cycle = (CCPRXL:CCPXCON<5:4>) *TOSC * (TMR2 Prescale Value)
 
 
- void PWM1_Init(unsigned int f)
-  {
-   unsigned int temp;
- //PWM Period = [(PR2) + 1] * 4 * TOSC *(TMR2 Prescale Value)
- //PWM Duty Cycle = (CCPRXL:CCPXCON<5:4>) *TOSC * (TMR2 Prescale Value)
+    //desliga PWM
+    CCP1CON = 0x00; //CCP disabled
+    TRISCbits.TRISC2 = 1; //desliga saídas PWM
+    //TRISDbits.TRISD5=1;
+
+    PORTCbits.RC2 = 0; //deliga saídas PWM
+    PORTDbits.RD5 = 0;
+
+    CCPR1L = 0; //ou 255?
 
 
-   //desliga PWM
-     CCP1CON=0x00;//CCP disabled
-     TRISCbits.TRISC2=1; //desliga saídas PWM
-     TRISDbits.TRISD5=1;
+    //calculo TMR2
 
-     PORTCbits.RC2=0; //deliga saídas PWM
-     PORTDbits.RD5=0;
+    T2CONbits.TMR2ON = 0;
 
-      CCPR1L=0;//ou 255?
+    temp = _XTAL_FREQ / (f * 4l);
 
+    if (temp < 256) {
+        T2CONbits.T2CKPS = 0; //1
+        PR2 = temp;
+    } else if (temp / 4 < 256) {
+        T2CONbits.T2CKPS = 1; //4
+        PR2 = (temp + 2) / 4;
+    } else {
+        PR2 = (temp + 8) / 16;
+        T2CONbits.T2CKPS = 2; //16
+    }
 
-     //calculo TMR2
+#if !defined(_18F45K50) &&  !defined(_18F47K40) &&  !defined(_18F4520)
+    T2CONbits.TOUTPS = 0x00; //1-16
+#else     
+    T2CONbits.T2OUTPS = 0x00;
+#endif
 
-      T2CONbits.TMR2ON=0;
-             
-     temp=_XTAL_FREQ/(f*4l);
-    
-     if (temp < 256)
-     {
-       T2CONbits.T2CKPS=0;  //1
-       PR2=temp;
-     }
-     else if(temp/4 < 256 )
-     {
-       T2CONbits.T2CKPS=1;  //4
-       PR2=(temp+2)/4;
-     }
-     else
-     {
-       PR2=(temp+8)/16;
-       T2CONbits.T2CKPS=2;  //16
-     }
+}
 
-     T2CONbits.TOUTPS=0;  //1-16
-     
-  }
+void PWM1_Start(void) {
+
+    TRISCbits.TRISC2 = 0; //liga saídas PWM
+    //TRISDbits.TRISD5=0;
 
 
-  void PWM1_Start(void)
-  {
-
-      TRISCbits.TRISC2=0; //liga saídas PWM
-      TRISDbits.TRISD5=0;
+    CCP1CON = 0x0C; //CCP -> PWM mode 0x0C to 0x0F
 
 
-      CCP1CON=0x0F; //CCP -> PWM mode 0x0F
+    T2CONbits.TMR2ON = 1;
 
-      
-      T2CONbits.TMR2ON=1;
- 
-      //espera PWM normalizar
+    //espera PWM normalizar
+#ifdef _18F47K40
+    PIR4bits.TMR2IF = 0;
+    while (PIR4bits.TMR2IF == 0);
+    PIR4bits.TMR2IF = 0;
+    while (PIR4bits.TMR2IF == 0);
+#else      
+    PIR1bits.TMR2IF = 0;
+    while (PIR1bits.TMR2IF == 0);
+    PIR1bits.TMR2IF = 0;
+    while (PIR1bits.TMR2IF == 0);
+#endif      
 
-      PIR1bits.TMR2IF=0;
-      while(PIR1bits.TMR2IF == 0);
-      PIR1bits.TMR2IF=0;
-      while(PIR1bits.TMR2IF == 0);
+}
 
-     
+void PWM1_Set_Duty(unsigned char d) {
+    unsigned int temp;
+
+    temp = (((unsigned long) (d))*((PR2 << 2) | 0x03)) / 255;
+
+    CCPR1L = (0x03FC & temp) >> 2;
+    CCP1CON = ((0x0003 & temp) << 4) | 0x0F;
+}
 
 
-  }
-
-
-  void PWM1_Set_Duty(unsigned char d)
-  {
-      unsigned int temp;
-      
-      temp=(((unsigned long)(d))*((PR2<<2)|0x03))/255;
-
-      CCPR1L= (0x03FC&temp)>>2;
-      CCP1CON=((0x0003&temp)<<4)|0x0F;
-  }
-
-  

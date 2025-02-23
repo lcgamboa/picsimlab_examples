@@ -24,13 +24,13 @@
    ######################################################################## */
 
 
-#define TL1 0x01
-#define TL2 0x02
-#define TL3 0x04
+#define TL1 0x08
+#define TL2 0x04
+#define TL3 0x02
+#define TL4 0x01
 
-#define TC1 PORTDbits.RD3
-#define TC2 PORTDbits.RD2
-#define TC3 PORTDbits.RD1
-#define TC4 PORTDbits.RD0
+#define TC1 PORTBbits.RB0
+#define TC2 PORTBbits.RB1
+#define TC3 PORTBbits.RB2
 
 unsigned char tc_tecla(unsigned int timeout); /*timeout=0 no time out*/ 

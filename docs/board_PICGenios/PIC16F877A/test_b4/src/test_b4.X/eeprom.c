@@ -25,7 +25,7 @@
 #include <xc.h>
 #include"eeprom.h"
 
-#ifndef _16F777
+#if !defined(_16F777) && !defined(_18F47K40)
 unsigned char e2prom_r(unsigned char addr)
 {
  EEADR= addr;

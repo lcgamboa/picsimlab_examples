@@ -23,11 +23,14 @@
    For e-mail suggestions :  lcgamboa@yahoo.com
    ######################################################################## */
 
+
 #include <xc.h>
+#include "config.h"
 #include "teclado.h"
 #include "atraso.h"
 
-const unsigned char linha[4]= {TL1,TL2,TL3};
+const unsigned char linha[4]= {TL1,TL2,TL3,TL4};
+
 
 unsigned char tc_tecla(unsigned int timeout)
 {
@@ -39,17 +42,16 @@ unsigned char tc_tecla(unsigned int timeout)
 
   while(((to < timeout)||(!timeout))&&(!ret))  
   {
-    for(i=0;i<3;i++)
+    for(i=0;i<4;i++)
     {
-      PORTB|=~linha[i];
-      if(!TC1){atraso_ms(20);if(!TC1){while(!TC1);ret= 1+i;break;}};
-      if(!TC2){atraso_ms(20);if(!TC2){while(!TC2);ret= 4+i;break;}};
-      if(!TC3){atraso_ms(20);if(!TC3){while(!TC3);ret= 7+i;break;}};
-      if(!TC4){atraso_ms(20);if(!TC4){while(!TC4);ret= 10+i;break;}};
-      PORTB &=linha[i];
-    };
-    atraso_ms(5);
-    to+=5;
+      PORTD = ~linha[i];
+      atraso_ms(5);
+      if(!TC1){atraso_ms(20);if(!TC1){while(!TC1);ret= 1+i*3;break;}};
+      if(!TC2){atraso_ms(20);if(!TC2){while(!TC2);ret= 2+i*3;break;}};
+      if(!TC3){atraso_ms(20);if(!TC3){while(!TC3);ret= 3+i*3;break;}};
+      PORTD  = 0XFF;
+      to+=5;
+    }
   }
   
   if(!ret)ret=255;
