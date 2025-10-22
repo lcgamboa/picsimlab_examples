@@ -63,11 +63,11 @@
 unsigned char cnt;
 unsigned int t1cont;
 
-void interrupt isrh(void);
+void __interrupt(high_priority) isrh(void);
 
 #if defined(_16F877A) || defined(_16F777)  
 #else
-void interrupt low_priority isrl(void);
+void __interrupt(low_priority) isrl(void);
 #endif
 
 char buffer[45];
@@ -539,7 +539,7 @@ void main()
 
 
 
-void interrupt isrh() 
+void __interrupt(high_priority) isrh() 
 {
   cnt--; 
   if(!cnt)
@@ -566,11 +566,9 @@ void interrupt isrh()
 
 #if defined(_16F877A) || defined(_16F777)  
 #else
-void interrupt low_priority isrl()
+void __interrupt(low_priority) isrl()
 {
-#asm
-	NOP
-#endasm;
+  asm("NOP");
 }
 #endif
 

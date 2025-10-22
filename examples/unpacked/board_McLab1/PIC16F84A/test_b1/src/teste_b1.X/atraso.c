@@ -33,13 +33,11 @@ unsigned char j;
  
   for (j =0 ; j < 200; j++)
    {
-     #asm
-	NOP
-	NOP
-	NOP
-	NOP
-    NOP
-    #endasm;
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
    }
  }
 }

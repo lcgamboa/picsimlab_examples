@@ -73,16 +73,14 @@ unsigned int adc_sample(unsigned char canal)
         break;
     }   
 #endif
-#asm
-     NOP
-     NOP
-     NOP
-     NOP
-     NOP
-     NOP
-     NOP
-     NOP
-#endasm;
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
              
     ADCON0bits.GO=1;
     while(ADCON0bits.GO == 1);

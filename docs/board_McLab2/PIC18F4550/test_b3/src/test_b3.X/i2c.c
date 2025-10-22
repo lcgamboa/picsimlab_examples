@@ -29,12 +29,10 @@
  
 void delay(void)
 {
-  #asm
-        NOP 
-        NOP 
-        NOP 
-        NOP
-  #endasm; 
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
+     asm("NOP");
 }
 
 void i2c_init(void)

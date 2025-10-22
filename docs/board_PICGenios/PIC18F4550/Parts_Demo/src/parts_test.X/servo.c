@@ -38,7 +38,7 @@
 unsigned char T0PULSEH;
 unsigned char T0PULSEL;
 
-void interrupt isr()
+void __interrupt(high_priority) isr()
 {
   if(INTCONbits.TMR0IF)//every ~= 15ms
   {

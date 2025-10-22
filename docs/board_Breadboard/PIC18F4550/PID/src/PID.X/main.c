@@ -61,7 +61,7 @@ void loop(void) {
 
 }
 
-void interrupt isr(void) {
+void __interrupt(high_priority) isr(void) {
     if (INTCONbits.T0IF)//acionado a cada 0.1 s
     {
         TMR0H = 0xE7;

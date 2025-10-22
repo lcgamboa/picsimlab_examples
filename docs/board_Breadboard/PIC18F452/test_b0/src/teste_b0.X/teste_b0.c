@@ -731,7 +731,7 @@ void main()
 //----------------------------------------------------------------------------
 // High priority interrupt routine
 
-void  interrupt isrh()
+void  void __interrupt(high_priority) isrh()
 {
   cnt--; 
   if(!cnt)
@@ -755,10 +755,8 @@ void  interrupt isrh()
 
 #if defined(_16F877A) || defined(_16F777) || defined(_16F1939)  
 #else
-void  interrupt low_priority isrl()
+void  void __interrupt(low_priority) isrl()
 {
-#asm
-	NOP
-#endasm
+     asm("NOP");
 }
 #endif

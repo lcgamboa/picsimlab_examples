@@ -176,7 +176,7 @@ void main() {
 //----------------------------------------------------------------------------
 // High priority interrupt routine
 
-void interrupt isrh() {
+void __interrupt(high_priority) isrh() {
     cnt--;
     if (!cnt) {
         //executada a cada 1 segundo
@@ -203,10 +203,8 @@ void interrupt isrh() {
 #if defined(_16F877A) || defined(_16F777)  
 #else
 
-void interrupt low_priority isrl() {
-#asm
-    NOP
-#endasm
+void __interrupt(low_priority) isrl() {
+  asm("NOP");
 }
 #endif
 

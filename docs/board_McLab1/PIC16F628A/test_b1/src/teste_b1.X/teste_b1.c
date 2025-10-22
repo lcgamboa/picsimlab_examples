@@ -34,7 +34,7 @@
 #include "eeprom.h"
 
 
-void interrupt isr() {                                                                                                  /* interrupt service routine */
+void __interrupt() isr() {                                                                                                  /* interrupt service routine */
     /* << insert interrupt code >> */
 }
 
