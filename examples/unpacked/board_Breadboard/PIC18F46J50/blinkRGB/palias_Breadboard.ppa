@@ -1,4 +1,4 @@
-//N-PinName -ALias   --The pin name alias must start in column fourteen and have size less than seven chars 
+//N-PinName -Alias   --The pin name alias must start in column fourteen and have size less than seven chars 
 001-RC7     -       
 002-RD4     -       
 003-RD5     -       

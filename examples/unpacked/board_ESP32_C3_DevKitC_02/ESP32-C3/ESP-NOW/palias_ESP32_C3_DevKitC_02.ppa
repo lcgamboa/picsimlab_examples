@@ -1,7 +1,7 @@
-//N-PinName -ALias   --The pin name alias must start in column fourteen and have size less than seven chars 
+//N-PinName -Alias   --The pin name alias must start in column fourteen and have size less than seven chars 
 001-GND     -       
-002-3V3     -       
-003-3V3     -       
+002-VDD     -       
+003-VDD     -       
 004-RST     -       
 005-GND     -       
 006-IO4     -       
@@ -11,8 +11,8 @@
 010-GND     -       
 011-IO8     -       
 012-IO9     -       
-013-5V      -       
-014-5V      -       
+013-VIN     -       
+014-VIN     -       
 015-GND     -       
 016-GND     -       
 017-GND     -       

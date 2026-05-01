@@ -1,9 +1,9 @@
-//N-PinName -ALias   --The pin name alias must start in column fourteen and have size less than seven chars 
+//N-PinName -Alias   --The pin name alias must start in column fourteen and have size less than seven chars 
 001-RA2     -porta2 
 002-RA3     -porta3 
 003-RA4     -porta4 
 004-MCLR    -MCLR   
-005-        -       
+005-nd      -       
 006-RB0     -portb0 
 007-RB1     -portb1 
 008-RB2     -portb2 
@@ -12,7 +12,7 @@
 011-RB5     -portb5 
 012-RB6     -portb6 
 013-RB7     -portb7 
-014-        -       
+014-nd      -       
 015-RA6     -porta6 
 016-RA7     -porta7 
 017-RA0     -porta0 
