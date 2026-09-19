@@ -1,0 +1,11 @@
+This is a template project designed for use with PICSimLab (https://github.com/lcgamboa/picsimlab). 
+
+To utilize this template, open the project in VS Code with the PlatformIO extension installed (https://platformio.org/platformio-ide).
+
+The first time you open the project, it may take some time because PlatformIO needs to download the necessary compilers and tools for the target platform.
+
+The source code for programming the PICSimLab can be found in the "src" folder of the project. 
+
+With PlatformIO, the code running on PICSimLab can be programmed(uploaded), and debugged. Additionally, you can use testing with the rcontrol interface of PICSimLab. 
+
+Please note: If the board you are using does not have a built-in LED, use the Pin Viewer tool (Tools -> Pin Viewer) to check if the example is working correctly.

@@ -40,4 +40,4 @@ for part in "${parts[@]}";do
   done
 done 
 
-echo "</main><div class='footer'>Copyright © 2022 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/Parts.html
+echo "</main><div class='footer'>Copyright © 2026 lcgamboa. Built with make4ht.</div></body></html>" >> ../help/Parts.html

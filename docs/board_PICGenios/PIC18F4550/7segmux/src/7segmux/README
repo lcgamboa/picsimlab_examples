@@ -1,0 +1,11 @@
+This is a template project designed for use with PICSimLab ( https://github.com/lcgamboa/picsimlab ). 
+
+To utilize this template, open the project in MPLABX with the PICSimLab MPLABX Debugger plugin installed 
+( https://github.com/lcgamboa/picsimlab_md/releases ).
+
+The source code for programming the PICSimLab can be found in the "Source Files" logic folder of the project. 
+
+With  PICSimLab MPLABX Debugger plugin, the code running on PICSimLab can be programmed(uploaded), and debugged
+( https://lcgamboa.github.io/picsimlab_docs/stable/UsewithMPLABX.html ).
+
+Please note: If the board you are using does not have a built-in LED, use the Pin Viewer tool (Tools -> Pin Viewer) to check if the example is working correctly.
